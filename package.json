@@ -1,6 +1,6 @@
 {
   "name": "tinkerbell-ui",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "An Open Source Library of easy to use components.",
   "main": "lib/tinkerbell-ui.umd.min.js",
   "private": false,

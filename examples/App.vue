@@ -1,13 +1,24 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-03-22 10:09:22
+ * @LastEditTime: 2021-03-22 13:31:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
+
+    <tb-container>
+      <tb-header height="200px">Header</tb-header>
+      <tb-container>
+        <tb-aside width="300px">Aside</tb-aside>
+        <tb-main>Main</tb-main>
+      </tb-container>
+      <tb-footer  height="200px">Footer</tb-footer>
+    </tb-container>
+
+    <Xiaoxiannan></Xiaoxiannan>
     <!-- tb-link -->
     <div style="width:400px;display:flex;justify-content:space-between;">
       <tb-link :underline="false" target="_blank" href="https://baidu.com">默认链接</tb-link>
@@ -123,4 +134,8 @@ export default {
 };
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+.tb-container,.tb-aside,.tb-main{
+  height: 100%;
+}
+</style>
