@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-19 17:32:10
- * @LastEditTime: 2021-03-20 17:52:29
+ * @LastEditTime: 2021-03-22 08:34:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbCol/main.vue
 -->
 <template>
-  <div :class="`tb-col ${tbxs} ${tbsm} ${tbmd} ${tblg} ${tbxl} `" :style="`width:${num * span}%;${gutter ? gutter + ';' : ''} ${tbOffset} ${tbPush} ${tbPull}`"><slot></slot></div>
+  <div v-on="$listeners" :class="`tb-col ${tbxs} ${tbsm} ${tbmd} ${tblg} ${tbxl} `" :style="`width:${num * span}%;${gutter ? gutter + ';' : ''} ${tbOffset} ${tbPush} ${tbPull}`"><slot></slot></div>
 </template>
 <script>
 export default {

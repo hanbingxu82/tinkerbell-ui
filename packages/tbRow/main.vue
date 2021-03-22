@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-19 16:00:38
- * @LastEditTime: 2021-03-20 16:14:44
+ * @LastEditTime: 2021-03-22 09:25:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbRow/main.vue
 -->
 <template>
-  <div :class="`tb-row`" :style="`${tbjustify} ${tbalign}`"><slot></slot></div>
+  <div v-on="$listeners" :class="`tb-row`" :style="`${tbjustify} ${tbalign}`"><slot></slot></div>
 </template>
 <script>
 export default {
@@ -38,7 +38,6 @@ export default {
     };
   },
   created() {
-      console.log(this.justify,this.align)
     this.Pjustify();
     this.Palign();
   },

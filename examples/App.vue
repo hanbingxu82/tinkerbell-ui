@@ -1,20 +1,39 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-03-20 17:37:43
+ * @LastEditTime: 2021-03-22 10:09:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <tb-row :gutter="20"  align="bottom">
-      <tb-col :xs="{span:8,offset:2}" :sm="{span:6,offset:4}" :md="{span:4,offset:6}" :lg="{span:2,offset:8}" :xl="{span:1,offset:9}"> 
+    <!-- tb-link -->
+    <div style="width:400px;display:flex;justify-content:space-between;">
+      <tb-link :underline="false" target="_blank" href="https://baidu.com">默认链接</tb-link>
+      <tb-link type="primary">主要链接</tb-link>
+      <tb-link :underline="false" type="success">成功链接</tb-link>
+      <tb-link :underline="false" type="warning">警告链接</tb-link>
+      <!-- <tb-link  type="danger">危险链接</tb-link>
+      <tb-link  type="info">信息链接</tb-link> -->
+      <tb-link icon="icon-layers" type="danger">危险链接</tb-link>
+      <tb-link type="info">信息链接<i class="iconfont">&#xe6ad;</i></tb-link>
+    </div>
+    <Xiaoxiannan></Xiaoxiannan>
+    <!-- tb-row  tb-col -->
+    <tb-row :gutter="20" align="bottom">
+      <tb-col :xs="{ span: 8, offset: 2 }" :sm="{ span: 6, offset: 4 }" :md="{ span: 4, offset: 6 }" :lg="{ span: 2, offset: 8 }" :xl="{ span: 1, offset: 9 }">
         <!-- 默认最小高度为36px  所以如果不设置height:100%的话会根据流动高度来走 -->
         <div style="background:red;">123</div>
       </tb-col>
-      <tb-col :span="4" :offset="4"> <div style="background:red;"></div>456</tb-col>
-      <tb-col :span="4"> <div style="background:red;"></div>789</tb-col>
+      <tb-col :span="4" :offset="4">
+        <div style="background:red;"></div>
+        456</tb-col
+      >
+      <tb-col :span="4">
+        <div style="background:red;"></div>
+        789</tb-col
+      >
     </tb-row>
 
     <Xiaoxiannan></Xiaoxiannan>
