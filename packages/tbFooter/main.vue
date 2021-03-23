@@ -7,7 +7,7 @@
  * @FilePath: /hx/packages/tbFooter/main.vue
 -->
 <template>
-  <div class="tb-footer footer" :style="`height:${height}`">
+  <div v-on="$listeners" class="tb-footer footer" :style="`height:${height}`">
     <slot></slot>
   </div>
 </template>

@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-22 10:30:58
- * @LastEditTime: 2021-03-22 13:25:48
+ * @LastEditTime: 2021-03-22 17:32:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbHeader/main.vue
 -->
 <template>
-  <div class="tb-header header" :style="`height:${height}`">
+  <div v-on="$listeners" class="tb-header header" :style="`height:${height}`">
     <slot></slot>
   </div>
 </template>

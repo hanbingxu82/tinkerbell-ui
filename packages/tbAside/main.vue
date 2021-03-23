@@ -7,7 +7,7 @@
  * @FilePath: /hx/packages/tbAside/main.vue
 -->
 <template>
-  <div class="tb-aside aside" :style="`width:${width};`">
+  <div v-on="$listeners" class="tb-aside aside" :style="`width:${width};`">
     <slot></slot>
   </div>
 </template>

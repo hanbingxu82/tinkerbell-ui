@@ -1,13 +1,50 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-03-22 13:31:06
+ * @LastEditTime: 2021-03-23 14:09:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
+    <div>
+      <tb-radio name="think1" v-model="radio" label="小仙男" border>小仙男</tb-radio>
+      <tb-radio name="think2" v-model="radio" :disabled="dis" label="小仙女" border>小仙女</tb-radio>
+      <tb-radio v-model="radio" size="mini" label="小仙子" border>小仙子</tb-radio>
+      <tb-radio v-model="radio" size="small" label="小仙子" border>小仙子</tb-radio>
+      <tb-radio v-model="radio" size="medium" label="小仙子" border>小仙子</tb-radio>
+    </div>
+
+    <tb-radio-group size="mini" name="think3" v-model="radio1" @change="radioChange">
+      <tb-radio label="小仙男" border>小仙男</tb-radio>
+      <tb-radio label="小仙女" border>小仙女</tb-radio>
+      <tb-radio label="小仙子" border>小仙子</tb-radio>
+    </tb-radio-group>
+
+    <tb-radio-group size="mini" v-model="radio1" @change="radioChange">
+      <tb-radio-button label="小仙男" border>小仙男</tb-radio-button>
+      <tb-radio-button label="小仙女" border>小仙女</tb-radio-button>
+      <tb-radio-button label="小仙子" border>小仙子</tb-radio-button>
+    </tb-radio-group>
+    <tb-radio-group size="small" v-model="radio1" @change="radioChange">
+      <tb-radio-button label="小仙男" border>小仙男</tb-radio-button>
+      <tb-radio-button label="小仙女" border>小仙女</tb-radio-button>
+      <tb-radio-button label="小仙子" border>小仙子</tb-radio-button>
+    </tb-radio-group>
+    <tb-radio-group size="medium" v-model="radio1" @change="radioChange">
+      <tb-radio-button label="小仙男" border>小仙男</tb-radio-button>
+      <tb-radio-button label="小仙女" border>小仙女</tb-radio-button>
+      <tb-radio-button label="小仙子" border>小仙子</tb-radio-button>
+    </tb-radio-group>
+        <tb-radio-group  v-model="radio1" @change="radioChange">
+      <tb-radio-button label="小仙男" border>小仙男</tb-radio-button>
+      <tb-radio-button label="小仙女" border>小仙女</tb-radio-button>
+      <tb-radio-button label="小仙子" border>小仙子</tb-radio-button>
+    </tb-radio-group>
+
+    <tb-button @click="dis = !dis" type="primary">dianji</tb-button>
+    <Xiaoxiannan></Xiaoxiannan>
 
     <tb-container>
       <tb-header height="200px">Header</tb-header>
@@ -15,7 +52,7 @@
         <tb-aside width="300px">Aside</tb-aside>
         <tb-main>Main</tb-main>
       </tb-container>
-      <tb-footer  height="200px">Footer</tb-footer>
+      <tb-footer height="200px">Footer</tb-footer>
     </tb-container>
 
     <Xiaoxiannan></Xiaoxiannan>
@@ -122,6 +159,9 @@ export default {
   data() {
     return {
       load: true,
+      radio: "小仙男",
+      radio1: "小仙男",
+      dis: true,
     };
   },
   methods: {
@@ -130,12 +170,21 @@ export default {
       this.load = !this.load;
       // console.log(this.load)
     },
+    abc() {
+      this.dis = !this.dis;
+      console.log(this.radio);
+    },
+    radioChange(val) {
+      console.log(val);
+    },
   },
 };
 </script>
 
 <style lang="less">
-.tb-container,.tb-aside,.tb-main{
+.tb-container,
+.tb-aside,
+.tb-main {
   height: 100%;
 }
 </style>

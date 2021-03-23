@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-19 17:32:10
- * @LastEditTime: 2021-03-22 08:34:17
+ * @LastEditTime: 2021-03-22 15:17:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbCol/main.vue
@@ -109,17 +109,14 @@ export default {
       // 判断数据类型
       const vm = this;
       // 如果是数值类型
-      // console.log(/ Number/.test(Object.prototype.toString.call(vm.xs)))
       if (vm.xs > 0 && / Number/.test(Object.prototype.toString.call(vm.xs))) {
         vm.tbxs = "tb-col-xs-" + vm.xs;
       } else if (vm.xs && / Object/.test(Object.prototype.toString.call(vm.xs))) {
         vm.tbxs = "tb-col-xs-" + vm.xs.span +" tb-col-xs-offset-"+vm.xs.span;
         // vm.Poffset(vm.xs.offset);
-        // console.log(123123)
       } else {
         vm.tbxs = "";
       }
-      console.log()
     },
     Psm() {
       // 判断数据类型
@@ -178,7 +175,6 @@ export default {
       if (vm.offset > 0) {
         vm.tbOffset = "margin-left:" + vm.num * offset + "%;";
       }
-      console.log(vm.tbOffset);
     },
     Ppush(push) {
       const vm = this;

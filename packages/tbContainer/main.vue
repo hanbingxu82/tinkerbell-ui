@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-22 10:30:39
- * @LastEditTime: 2021-03-22 13:29:46
+ * @LastEditTime: 2021-03-22 17:32:37
  * @LastEditors: Please set LastEditors
  * @Description: container容器  flex布局,header，footer都是flex1 独占一行
  * @FilePath: /hx/packages/tbContainer/main.vue
 -->
 <template>
-  <div :class="`tb-container ${direction === 'vertical' ? 'container-col' : 'container'}`">
+  <div v-on="$listeners" :class="`tb-container ${direction === 'vertical' ? 'container-col' : 'container'}`">
     <slot></slot>
   </div>
 </template>
@@ -20,14 +20,12 @@ export default {
     };
   },
   beforeMount() {
-    console.log(this.$slots.default);
     // 如果插槽中有header  或者  footer说明是横向的
     this.$slots.default.forEach((element) => {
       if (/tbHeader|tbFooter/.test(element.tag)) {
         this.direction = "vertical";
       }
     });
-    console.log(this.direction)
   },
 };
 </script>
