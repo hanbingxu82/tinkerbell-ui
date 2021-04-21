@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-03-22 13:31:58
+ * @LastEditTime: 2021-03-23 14:13:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -25,6 +25,8 @@ yarn add tinkerbell-ui
 #### 0.1.4  完成tb-link链接组件
 
 #### 0.1.5  完成tb-container布局容器组件
+
+#### 0.1.6  完成tb-radio、tb-radio-button、tb-radio-group三个单选框组件
 
 ### 如有需要及时联系
 ```

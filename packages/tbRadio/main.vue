@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-22 13:47:52
- * @LastEditTime: 2021-03-23 13:31:06
+ * @LastEditTime: 2021-03-24 10:01:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbRadio/main.vue
@@ -10,8 +10,8 @@
 <template>
   <div :class="`tb-radio radio ${tbDisabled} ${tbBorder} ${tbSize} ${tbBorder && labelChecked ? 'is-boder-active' : ''}`" v-inpClick>
     <div class="radio-box ">
-      <input :name="name||radioGroup.name" v-if="!radioGroupValue" :class="`${tbDisabled}`" :disabled="disabled" :checked="labelChecked" :value="label" @change="$emit('change', $event.target.value)" type="radio" />
-      <input :name="name||radioGroup.name" v-else :class="`${tbDisabled}`" :disabled="disabled" :checked="labelChecked" :value="label" @change="tbRadioGroupParentMethod($event.target.value)" type="radio" />
+      <input v-on:click.stop :name="name||radioGroup.name" v-if="!radioGroupValue" :class="`${tbDisabled}`" :disabled="disabled" :checked="labelChecked" :value="label" @change="$emit('change', $event.target.value)" type="radio" />
+      <input v-on:click.stop :name="name||radioGroup.name" v-else :class="`${tbDisabled}`" :disabled="disabled" :checked="labelChecked" :value="label" @change="tbRadioGroupParentMethod($event.target.value)" type="radio" />
       <span :class="`radio-text ${labelChecked ? 'check-this' : ''}`"><slot></slot></span>
     </div>
   </div>
@@ -67,7 +67,7 @@ export default {
   },
   watch: {
     checked(val, oldVal) {
-      this.isChecked();
+      this.isGroup();
     },
     disabled(val, oldVal) {
       this.PDisabled();
