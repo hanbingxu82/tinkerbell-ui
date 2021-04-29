@@ -1,15 +1,20 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-04-21 23:12:14
+ * @LastEditTime: 2021-04-29 15:23:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <!-- <div>
-      <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
+    <div>
+      <tb-tag effect="dark">蓝色</tb-tag>
+      <tb-tag size="mini" type="success" >绿色</tb-tag>
+      <tb-tag @click="click1" @close="close" size="medium" type="warning">黄色</tb-tag>
+      <tb-tag @close="close" type="info">灰色</tb-tag>
+      <tb-tag effect="plain" type="danger">红色</tb-tag>
+      <!-- <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
       <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
       <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
       <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
@@ -19,10 +24,10 @@
     <div>
       <tb-checkbox-group :min="1" :max="2" v-model="checkedCities" @change="handleCheckedCitiesChange">
         <tb-checkbox v-for="city in cities" :label="city" :key="city">{{ city }}</tb-checkbox>
-      </tb-checkbox-group> -->
+      </tb-checkbox-group>
       <tb-checkbox-group :min="1" :max="2" v-model="checkedCities" @change="handleCheckedCitiesChange">
         <tb-checkbox-button v-for="city in cities" :label="city" :key="city">{{ city }}</tb-checkbox-button>
-      </tb-checkbox-group>
+      </tb-checkbox-group> -->
     </div>
   </div>
 </template>
@@ -39,6 +44,12 @@ export default {
     };
   },
   methods: {
+    click1(){
+      console.log('我点击了按钮')
+    },
+    close(){
+      console.log('我点击了关闭')
+    },
     handleCheckAllChange(val) {
       this.checkedCities = val ? cityOptions : [];
       this.isIndeterminate = false;

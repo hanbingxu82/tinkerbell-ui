@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-04-21 22:53:49
+ * @LastEditTime: 2021-04-29 11:32:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -27,10 +27,12 @@ import tbCheckbox from "./tbCheckbox/index"; // tb-checkbox容器多选框组件
 import tbCheckboxButton from "./tbCheckboxButton/index"; // tb-checkbox-button容器多选框按钮组件
 import tbCheckboxGroup from "./tbCheckboxGroup/index"; // tb-checkbox-group容器单选框组件
 
+import tbTag from "./tbTag/index"
+
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
 // 以数组的结构保存组件，便于遍历
-const components = [Xiaoxiannan, tbButton, tbRow, tbCol, tbLink, tbContainer, tbAside, tbMain, tbHeader, tbFooter, tbRadio,tbRadioButton,tbRadioGroup,tbCheckbox,tbCheckboxGroup,tbCheckboxButton];
+const components = [Xiaoxiannan, tbButton, tbRow, tbCol, tbLink, tbContainer, tbAside, tbMain, tbHeader, tbFooter, tbRadio,tbRadioButton,tbRadioGroup,tbCheckbox,tbCheckboxGroup,tbCheckboxButton,tbTag];
 
 // 定义 install 方法
 const install = function(Vue) {
