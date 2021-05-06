@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-04-29 17:01:57
+ * @LastEditTime: 2021-05-06 13:40:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
@@ -9,10 +9,12 @@
 <template>
   <div id="app">
     <div>
+      <tb-calendar :options="calendarArr" class="calendar" @handleClickDay="handleClickDay" @handlePrevMonth="handlePrevMonth" @handleNextMonth="handleNextMonth" />
+
       <!-- 完成  颜色选择器组件 -->
-      <input type="text" id="color-picker" v-model="color" auto-complete="off" @focus="openPicker" :style="'background-color:' + color" />
+      <!-- <input type="text" id="color-picker" v-model="color" auto-complete="off" @focus="openPicker" :style="'background-color:' + color" />
       <tb-color ref="tbColor" :color="color" :targetElem="'#color-picker'" @onChange="onChange"> </tb-color>
-      <tb-color-picker v-model="color" @change="headleChangeColor"></tb-color-picker>
+      <tb-color-picker v-model="color" @change="headleChangeColor"></tb-color-picker> -->
 
       <!-- <tb-tag effect="dark">蓝色</tb-tag>
       <tb-tag size="mini" type="success" >绿色</tb-tag>
@@ -48,9 +50,37 @@ export default {
       checkedCities: ["上海", "北京"],
       cities: cityOptions,
       isIndeterminate: true,
+
+      // 日历options特定  样式
+      calendarArr: {
+        type: "combination", // 是否为特定的组合方式
+        // 如果不是特定的组合方式   那么下方的todayBtn、checkBtn样式就会起作用 两者最好不要一起使用
+        headStyle: {
+          todayBtn: "left",
+          combination: "center",
+          checkBtn: "left",
+        },
+        // 文本对齐位置
+        viewStyle: {
+          // 视图day天数  文本对齐位置
+          day: "right",
+        },
+      },
     };
   },
   methods: {
+    // 点击某一天触发的事件
+    handleClickDay(day) {
+      // console.log(day);
+    },
+    // 上一个月  time 是当前年月日  日期默认为1号
+    handlePrevMonth(time) {
+      console.log(time)
+    },
+    // 下一个月  time 是当前年月日  日期默认为1号
+    handleNextMonth(time) {
+      console.log(time)
+    },
     headleChangeColor(val) {
       console.log(val);
     },

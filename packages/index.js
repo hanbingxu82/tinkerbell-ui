@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-04-29 16:53:41
+ * @LastEditTime: 2021-05-06 13:19:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -31,21 +31,23 @@ import tbTag from "./tbTag/index"; // 引入tag标签组件
 
 import tbColor from "./tbColor/index"; // 引入圆形色板
 import tbColorPicker from "./tbColorPicker/index"; // 引入色板
+
+import tbCalendar from "./tbCalendar/index"; // 引入日历组件
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
 // 以数组的结构保存组件，便于遍历
-const components = [Xiaoxiannan, tbButton, tbRow, tbCol, tbLink, tbContainer, tbAside, tbMain, tbHeader, tbFooter, tbRadio, tbRadioButton, tbRadioGroup, tbCheckbox, tbCheckboxGroup, tbCheckboxButton, tbTag, tbColor, tbColorPicker];
+const components = [Xiaoxiannan, tbButton, tbRow, tbCol, tbLink, tbContainer, tbAside, tbMain, tbHeader, tbFooter, tbRadio, tbRadioButton, tbRadioGroup, tbCheckbox, tbCheckboxGroup, tbCheckboxButton, tbTag, tbColor, tbColorPicker, tbCalendar];
 
 // 定义 install 方法
-const install = function (Vue) {
+const install = function(Vue) {
   if (install.installed) return;
   install.installed = true;
   // Vue.radioGroup=""
   Vue.directive("inpClick", {
     // 当被绑定的元素插入到 DOM 中时……
-    inserted: function (el) {
+    inserted: function(el) {
       // 聚焦元素
-      el.onclick = function () {
+      el.onclick = function() {
         el.getElementsByTagName("input")[0].click();
       };
     },

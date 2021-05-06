@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-04-29 17:15:03
+ * @LastEditTime: 2021-05-06 13:46:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -33,6 +33,9 @@ yarn add tinkerbell-ui
 #### 0.1.8  完成tb-tag 标签组件(使用jsx)
 
 #### 0.1.9  完成tb-color-picker、tb-color  两个颜色选择器组件
+
+#### 0.2.0  完成tb-calendar 日历组件
+
 ### 如有需要及时联系
 ```
 hbx831@126.com
