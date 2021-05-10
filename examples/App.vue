@@ -1,15 +1,18 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-06 13:40:38
+ * @LastEditTime: 2021-05-10 13:56:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <div>
-      <tb-calendar :options="calendarArr" class="calendar" @handleClickDay="handleClickDay" @handlePrevMonth="handlePrevMonth" @handleNextMonth="handleNextMonth" />
+    <div style="margin-left:1000px;margin-top:1000px;">
+      <tb-popconfirm @confirm="confirm" @cancel="cancel" confirm-button-text="111" cancel-button-text="222" confirm-button-type="success" cancel-button-type="danger" title="我是不是一个？" icon="icon-unlock" icon-color="red" >
+        <tb-button slot="reference">123</tb-button>
+      </tb-popconfirm>
+      <!-- <tb-calendar :options="calendarArr" class="calendar" @handleClickDay="handleClickDay" @handlePrevMonth="handlePrevMonth" @handleNextMonth="handleNextMonth" /> -->
 
       <!-- 完成  颜色选择器组件 -->
       <!-- <input type="text" id="color-picker" v-model="color" auto-complete="off" @focus="openPicker" :style="'background-color:' + color" />
@@ -69,17 +72,23 @@ export default {
     };
   },
   methods: {
+    confirm(){
+      console.log('成功')
+    },
+    cancel(){
+      console.log('取消')
+    },
     // 点击某一天触发的事件
     handleClickDay(day) {
       // console.log(day);
     },
     // 上一个月  time 是当前年月日  日期默认为1号
     handlePrevMonth(time) {
-      console.log(time)
+      console.log(time);
     },
     // 下一个月  time 是当前年月日  日期默认为1号
     handleNextMonth(time) {
-      console.log(time)
+      console.log(time);
     },
     headleChangeColor(val) {
       console.log(val);
