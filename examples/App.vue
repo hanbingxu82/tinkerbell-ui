@@ -1,17 +1,33 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-10 13:56:48
+ * @LastEditTime: 2021-05-11 13:54:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <div style="margin-left:1000px;margin-top:1000px;">
-      <tb-popconfirm @confirm="confirm" @cancel="cancel" confirm-button-text="111" cancel-button-text="222" confirm-button-type="success" cancel-button-type="danger" title="我是不是一个？" icon="icon-unlock" icon-color="red" >
+    <div>
+      <div>
+        <span>头上一片晴天，心中一个想念</span>
+        <tb-divider content-position="left">少年包青天</tb-divider>
+        <span>饿了别叫妈, 叫饿了么</span>
+        <tb-divider><i class="iconfont icon-smile"></i></tb-divider>
+        <span>为了无法计算的价值</span>
+        <tb-divider content-position="right">阿里云</tb-divider>
+      </div>
+      <div>
+        <span>雨纷纷</span>
+        <tb-divider direction="vertical"></tb-divider>
+        <span>旧故里</span>
+        <tb-divider direction="vertical"></tb-divider>
+        <span>草木深</span>
+      </div>
+
+      <!-- <tb-popconfirm @confirm="confirm" @cancel="cancel" confirm-button-text="111" cancel-button-text="222" confirm-button-type="success" cancel-button-type="danger" title="我是不是一个？" icon="icon-unlock" icon-color="red" >
         <tb-button slot="reference">123</tb-button>
-      </tb-popconfirm>
+      </tb-popconfirm> -->
       <!-- <tb-calendar :options="calendarArr" class="calendar" @handleClickDay="handleClickDay" @handlePrevMonth="handlePrevMonth" @handleNextMonth="handleNextMonth" /> -->
 
       <!-- 完成  颜色选择器组件 -->
@@ -72,11 +88,11 @@ export default {
     };
   },
   methods: {
-    confirm(){
-      console.log('成功')
+    confirm() {
+      console.log("成功");
     },
-    cancel(){
-      console.log('取消')
+    cancel() {
+      console.log("取消");
     },
     // 点击某一天触发的事件
     handleClickDay(day) {

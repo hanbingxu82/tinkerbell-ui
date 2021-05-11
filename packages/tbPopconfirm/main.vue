@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 10:56:05
- * @LastEditTime: 2021-05-10 15:27:28
+ * @LastEditTime: 2021-05-11 13:15:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbPopconfirm/main.vue
@@ -26,7 +26,7 @@ export default {
     if (this.isTop) {
       topStyle.top = this.boxHeight;
     }
-    console.log(topStyle);
+
     // 使用jsx 模板插槽的话  传入的slots.reference[0]其实就会将虚拟dom渲染到页面上
     return (
       // 外层嵌套一层
@@ -206,7 +206,6 @@ export default {
 .tb-popover {
   margin-top: 12px;
   position: absolute;
-
   background: #fff;
   min-width: 150px;
   border-radius: 4px;

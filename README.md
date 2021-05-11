@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-05-10 15:32:34
+ * @LastEditTime: 2021-05-11 13:56:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -38,6 +38,7 @@ yarn add tinkerbell-ui
 
 #### 0.2.1  完成tb-popconfirm 弹出确认框组件
 
+#### 0.2.2  完成tb-divider 分割线组件
 ### 如有需要及时联系
 ```
 hbx831@126.com
