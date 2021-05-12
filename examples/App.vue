@@ -1,15 +1,52 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-11 13:54:16
+ * @LastEditTime: 2021-05-12 22:26:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <div>
+    <div style="margin:20px;">
+      <tb-badge :hidden="false" :value="12" class="item" type="info">
+        <tb-button size="small">评论</tb-button>
+      </tb-badge>
+      <tb-badge :value="3" class="item" type="success">
+        <tb-button size="small">回复</tb-button>
+      </tb-badge>
+      <tb-badge :value="1" class="item" type="primary">
+        <tb-button size="small">评论</tb-button>
+      </tb-badge>
+      <tb-badge :value="2" class="item" type="warning">
+        <tb-button size="small">回复</tb-button>
+      </tb-badge>
+
       <div>
+        <tb-badge :value="200" :max="99" class="item">
+          <tb-button size="small">评论</tb-button>
+        </tb-badge>
+        <tb-badge :value="100" :max="10" class="item">
+          <tb-button size="small">回复</tb-button>
+        </tb-badge>
+      </div>
+      <div>
+        <tb-badge value="new" class="item">
+          <tb-button size="small">评论</tb-button>
+        </tb-badge>
+        <tb-badge value="hot" class="item">
+          <tb-button size="small">回复</tb-button>
+        </tb-badge>
+      </div>
+
+      <div>
+        <tb-badge is-dot class="item">数据查询</tb-badge>
+        <tb-badge is-dot class="item">
+          <tb-button  icon="icon-layers" type="primary"></tb-button>
+        </tb-badge>
+      </div>
+
+      <!-- <div>
         <span>头上一片晴天，心中一个想念</span>
         <tb-divider content-position="left">少年包青天</tb-divider>
         <span>饿了别叫妈, 叫饿了么</span>
@@ -23,7 +60,7 @@
         <span>旧故里</span>
         <tb-divider direction="vertical"></tb-divider>
         <span>草木深</span>
-      </div>
+      </div> -->
 
       <!-- <tb-popconfirm @confirm="confirm" @cancel="cancel" confirm-button-text="111" cancel-button-text="222" confirm-button-type="success" cancel-button-type="danger" title="我是不是一个？" icon="icon-unlock" icon-color="red" >
         <tb-button slot="reference">123</tb-button>
@@ -143,5 +180,9 @@ export default {
 .tb-aside,
 .tb-main {
   height: 100%;
+}
+.item {
+  margin-top: 10px;
+  margin-right: 40px;
 }
 </style>
