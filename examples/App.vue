@@ -1,52 +1,22 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-12 22:26:44
+ * @LastEditTime: 2021-05-13 11:50:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <div style="margin:20px;">
-      <tb-badge :hidden="false" :value="12" class="item" type="info">
-        <tb-button size="small">评论</tb-button>
-      </tb-badge>
-      <tb-badge :value="3" class="item" type="success">
-        <tb-button size="small">回复</tb-button>
-      </tb-badge>
-      <tb-badge :value="1" class="item" type="primary">
-        <tb-button size="small">评论</tb-button>
-      </tb-badge>
-      <tb-badge :value="2" class="item" type="warning">
-        <tb-button size="small">回复</tb-button>
-      </tb-badge>
-
-      <div>
-        <tb-badge :value="200" :max="99" class="item">
-          <tb-button size="small">评论</tb-button>
-        </tb-badge>
-        <tb-badge :value="100" :max="10" class="item">
-          <tb-button size="small">回复</tb-button>
-        </tb-badge>
-      </div>
-      <div>
-        <tb-badge value="new" class="item">
-          <tb-button size="small">评论</tb-button>
-        </tb-badge>
-        <tb-badge value="hot" class="item">
-          <tb-button size="small">回复</tb-button>
-        </tb-badge>
-      </div>
-
-      <div>
-        <tb-badge is-dot class="item">数据查询</tb-badge>
-        <tb-badge is-dot class="item">
-          <tb-button  icon="icon-layers" type="primary"></tb-button>
-        </tb-badge>
-      </div>
-
-      <!-- <div>
+    <tb-avatar :size="60" src="https://empty" :error="errorHandler">
+      <img src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png" />
+    </tb-avatar>
+    <!-- 
+    <div class="block" v-for="fit in fits" :key="fit">
+      <span class="title">{{ fit }}</span>
+      <tb-avatar shape="square" :size="100" :fit="fit" :src="url"></tb-avatar>
+    </div> -->
+    <!-- <div>
         <span>头上一片晴天，心中一个想念</span>
         <tb-divider content-position="left">少年包青天</tb-divider>
         <span>饿了别叫妈, 叫饿了么</span>
@@ -62,23 +32,23 @@
         <span>草木深</span>
       </div> -->
 
-      <!-- <tb-popconfirm @confirm="confirm" @cancel="cancel" confirm-button-text="111" cancel-button-text="222" confirm-button-type="success" cancel-button-type="danger" title="我是不是一个？" icon="icon-unlock" icon-color="red" >
+    <!-- <tb-popconfirm @confirm="confirm" @cancel="cancel" confirm-button-text="111" cancel-button-text="222" confirm-button-type="success" cancel-button-type="danger" title="我是不是一个？" icon="icon-unlock" icon-color="red" >
         <tb-button slot="reference">123</tb-button>
       </tb-popconfirm> -->
-      <!-- <tb-calendar :options="calendarArr" class="calendar" @handleClickDay="handleClickDay" @handlePrevMonth="handlePrevMonth" @handleNextMonth="handleNextMonth" /> -->
+    <!-- <tb-calendar :options="calendarArr" class="calendar" @handleClickDay="handleClickDay" @handlePrevMonth="handlePrevMonth" @handleNextMonth="handleNextMonth" /> -->
 
-      <!-- 完成  颜色选择器组件 -->
-      <!-- <input type="text" id="color-picker" v-model="color" auto-complete="off" @focus="openPicker" :style="'background-color:' + color" />
+    <!-- 完成  颜色选择器组件 -->
+    <!-- <input type="text" id="color-picker" v-model="color" auto-complete="off" @focus="openPicker" :style="'background-color:' + color" />
       <tb-color ref="tbColor" :color="color" :targetElem="'#color-picker'" @onChange="onChange"> </tb-color>
       <tb-color-picker v-model="color" @change="headleChangeColor"></tb-color-picker> -->
 
-      <!-- <tb-tag effect="dark">蓝色</tb-tag>
+    <!-- <tb-tag effect="dark">蓝色</tb-tag>
       <tb-tag size="mini" type="success" >绿色</tb-tag>
       <tb-tag @click="click1" @close="close" size="medium" type="warning">黄色</tb-tag>
       <tb-tag @close="close" type="info">灰色</tb-tag>
       <tb-tag effect="plain" type="danger">红色</tb-tag> -->
 
-      <!-- <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
+    <!-- <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
       <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
       <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
       <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
@@ -92,7 +62,6 @@
       <tb-checkbox-group :min="1" :max="2" v-model="checkedCities" @change="handleCheckedCitiesChange">
         <tb-checkbox-button v-for="city in cities" :label="city" :key="city">{{ city }}</tb-checkbox-button>
       </tb-checkbox-group> -->
-    </div>
   </div>
 </template>
 <script>
@@ -100,6 +69,11 @@ const cityOptions = ["上海", "北京", "广州", "深圳"];
 export default {
   data() {
     return {
+      fits: ["fill", "contain", "cover", "none", "scale-down"],
+      url: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
+      circleUrl: "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
+      squareUrl: "https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png",
+      sizeList: ["large", "medium", "small"],
       color: "#DDDDDD",
       checkbox: false,
       checkAll: false,
@@ -125,6 +99,10 @@ export default {
     };
   },
   methods: {
+    errorHandler() {
+      console.log("我是abc！");
+      return false;
+    },
     confirm() {
       console.log("成功");
     },
@@ -184,5 +162,11 @@ export default {
 .item {
   margin-top: 10px;
   margin-right: 40px;
+}
+.demo-avatar.demo-basic .demo-basic--circle,
+.demo-avatar.demo-basic .demo-basic--square {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>
