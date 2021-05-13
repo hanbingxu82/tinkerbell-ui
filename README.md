@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-05-13 13:07:16
+ * @LastEditTime: 2021-05-13 14:27:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -43,6 +43,8 @@ yarn add tinkerbell-ui
 #### 0.2.3  完成tb-badge 右上角小红点组件
 
 #### 0.2.4  完成tb-avatar 头像组件
+
+#### 0.2.5  完成tb-backtop 回到顶部组件
 ### 如有需要及时联系
 ```
 hbx831@126.com

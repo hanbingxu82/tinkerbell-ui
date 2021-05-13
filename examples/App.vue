@@ -1,16 +1,20 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-13 11:50:34
+ * @LastEditTime: 2021-05-13 14:25:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <tb-avatar :size="60" src="https://empty" :error="errorHandler">
+    <tb-backtop text="小仙男" :visibleY="460" :duration="300" @scrolledOnTop="yourFunction()"> </tb-backtop>
+    <div style="height:3000px;background:green;">
+      123
+    </div>
+    <!-- <tb-avatar :size="60" src="https://empty" :error="errorHandler">
       <img src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png" />
-    </tb-avatar>
+    </tb-avatar> -->
     <!-- 
     <div class="block" v-for="fit in fits" :key="fit">
       <span class="title">{{ fit }}</span>
@@ -99,6 +103,7 @@ export default {
     };
   },
   methods: {
+    yourFunction() {},
     errorHandler() {
       console.log("我是abc！");
       return false;
