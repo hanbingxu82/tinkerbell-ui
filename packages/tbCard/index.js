@@ -7,11 +7,11 @@
  * @FilePath: /hx/packages/tbCard/index.js
  */
 // 导入组件，组件必须声明 name
-import tbCheckbox from './main.vue'
+import tbCard from './main.vue'
 
 // 为组件添加 install 方法，用于按需引入
-tbCheckbox.install = function (Vue) {
-    Vue.component(tbCheckbox.name, tbCheckbox)
+tbCard.install = function (Vue) {
+    Vue.component(tbCard.name, tbCard)
 }
 
-export default tbCheckbox
+export default tbCard

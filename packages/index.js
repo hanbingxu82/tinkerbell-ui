@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-05-18 10:47:21
+ * @LastEditTime: 2021-05-18 16:42:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -47,10 +47,12 @@ import tbBacktop from "./tbBacktop/index"; // 引入回到顶部组件
 import tbCarousel from "./tbCarousel/index"; // 引入轮播图组件
 import tbCarouselItem from "./tbCarouselItem/index"; // 引入轮播图单个节点组件
 
+import tbCard from "./tbCard/index";
+
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
 // 以数组的结构保存组件，便于遍历
-const components = [Xiaoxiannan, tbButton, tbRow, tbCol, tbLink, tbContainer, tbAside, tbMain, tbHeader, tbFooter, tbRadio, tbRadioButton, tbRadioGroup, tbCheckbox, tbCheckboxGroup, tbCheckboxButton, tbTag, tbColor, tbColorPicker, tbCalendar, tbPopconfirm, tbDivider, tbBadge, tbAvatar, tbBacktop, tbCarousel, tbCarouselItem];
+const components = [Xiaoxiannan, tbButton, tbRow, tbCol, tbLink, tbContainer, tbAside, tbMain, tbHeader, tbFooter, tbRadio, tbRadioButton, tbRadioGroup, tbCheckbox, tbCheckboxGroup, tbCheckboxButton, tbTag, tbColor, tbColorPicker, tbCalendar, tbPopconfirm, tbDivider, tbBadge, tbAvatar, tbBacktop, tbCarousel, tbCarouselItem, tbCard];
 
 // 定义 install 方法
 const install = function(Vue) {

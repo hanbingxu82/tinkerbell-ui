@@ -1,15 +1,16 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:59:49
- * @LastEditTime: 2021-04-29 13:45:49
+ * @LastEditTime: 2021-05-18 16:50:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/table/table.vue
  * 除按钮组、autofocus、autofocus两个api属性 也未实现
 -->
 <template>
-  <div v-on="$listeners" v-if="!tbIcon" :class="`tb-button button ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled} ${loading?'is_disabled':' '}`"><i v-if="loading" class="iconfont icon-loading load"></i><slot></slot></div>
-  <div v-on="$listeners" v-else-if="tbIcon" :class="`tb-button button ${tbIcon} ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled}`"><slot></slot></div>
+  <button v-on="$listeners" v-if="!tbIcon && type != 'text'" :class="`tb-button button ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled} ${loading ? 'is_disabled' : ' '}`"><i v-if="loading" class="iconfont icon-loading load"></i><slot></slot></button>
+  <button v-on="$listeners" v-else-if="tbIcon && type != 'text'" :class="`tb-button button ${tbIcon} ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled}`"><slot></slot></button>
+  <span v-on="$listeners" v-else-if="type == 'text'" :class="`tb-button ${tbType} ${tbDisabled}`"><slot></slot></span>
 </template>
 
 <script>
@@ -71,9 +72,9 @@ export default {
     // size(newValue, oldValue) {
     //   console.log(newValue);
     // },
-    loading(newValue,oldValue){
-      console.log(newValue)
-    }
+    loading(newValue, oldValue) {
+      console.log(newValue);
+    },
   },
   created() {
     this.Psize();
@@ -109,6 +110,8 @@ export default {
         vm.tbType = "button_warning";
       } else if (vm.type == "danger") {
         vm.tbType = "button_danger";
+      } else if (vm.type == "text") {
+        vm.tbType = "button_text";
       }
     },
     // 页面加载判断当前是否是朴素按钮
@@ -169,6 +172,11 @@ export default {
   pointer-events: none;
   // cursor:not-allowed!important;
   opacity: 0.6;
+}
+// 文字按钮
+.button_text {
+  color: #409eff;
+  cursor: pointer;
 }
 // loading加载动画
 

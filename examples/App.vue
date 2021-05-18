@@ -1,14 +1,55 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-18 16:11:59
+ * @LastEditTime: 2021-05-18 16:56:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <div class="demo">
+    <tb-card class="box-card">
+      <div slot="header" class="clearfix">
+        <span>卡片名称</span>
+        <tb-button style="float: right; padding: 3px 0" type="text">操作按钮</tb-button>
+      </div>
+      <div v-for="o in 4" :key="o" class="text item">
+        {{ "列表内容 " + o }}
+      </div>
+    </tb-card>
+    <tb-row>
+      <tb-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
+        <tb-card :body-style="{ padding: '0px' }">
+          <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image" />
+          <div style="padding: 14px;">
+            <span>好吃的汉堡</span>
+            <div class="bottom clearfix">
+              <time class="time">{{ currentDate }}</time>
+              <tb-button type="text" class="button">操作按钮</tb-button>
+            </div>
+          </div>
+        </tb-card>
+      </tb-col>
+    </tb-row>
+
+    <tb-row :gutter="12">
+      <tb-col :span="8">
+        <tb-card shadow="always">
+          总是显示
+        </tb-card>
+      </tb-col>
+      <tb-col :span="8">
+        <tb-card shadow="hover">
+          鼠标悬浮时显示
+        </tb-card>
+      </tb-col>
+      <tb-col :span="8">
+        <tb-card shadow="never">
+          从不显示
+        </tb-card>
+      </tb-col>
+    </tb-row>
+    <!-- <div class="demo">
       <tb-carousel ref="tbCarousel" @change="carouselChange" trigger="click" :interval="7000" height="260px" type="card" arrow="never">
         <tb-carousel-item :name="'小仙男' + i"  v-for="i in 6" :key="i">
           <h1 v-text="i"></h1>
@@ -22,7 +63,7 @@
     </div>
     <tb-button type="primary" @click="next">1111</tb-button>
     <tb-button type="primary" @click="prev">2222</tb-button>
-    <tb-button type="primary" @click="setActiveItem">3333</tb-button>
+    <tb-button type="primary" @click="setActiveItem">3333</tb-button> -->
 
     <!-- <tb-backtop text="小仙男" :visibleY="460" :duration="300" @scrolledOnTop="yourFunction()"> </tb-backtop>
     <div style="height:3000px;background:green;">
@@ -91,6 +132,7 @@ const cityOptions = ["上海", "北京", "广州", "深圳"];
 export default {
   data() {
     return {
+      currentDate: new Date(),
       fits: ["fill", "contain", "cover", "none", "scale-down"],
       url: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
       circleUrl: "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
@@ -121,8 +163,8 @@ export default {
     };
   },
   methods: {
-    carouselChange(data){
-      console.log(data)
+    carouselChange(data) {
+      console.log(data);
     },
     setActiveItem(e) {
       this.$refs.tbCarousel.setActiveItem("小仙男6");
@@ -225,5 +267,54 @@ h1 {
   align-items: center;
   color: #fff;
   background: linear-gradient(90deg, rgba(88, 140, 236, 1), rgba(106, 106, 207, 1));
+}
+.time {
+  font-size: 13px;
+  color: #999;
+}
+
+.bottom {
+  margin-top: 13px;
+  line-height: 12px;
+}
+
+.button {
+  padding: 0;
+  float: right;
+}
+
+.image {
+  width: 100%;
+  display: block;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+.text {
+  font-size: 14px;
+}
+
+.item {
+  margin-bottom: 18px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+
+.box-card {
+  width: 480px;
 }
 </style>
