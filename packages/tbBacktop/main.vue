@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-13 13:56:42
- * @LastEditTime: 2021-05-13 14:24:26
+ * @LastEditTime: 2021-05-18 16:09:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbBackTop/main.vue
@@ -9,8 +9,8 @@
 <template>
   <div class="tb-backtop tb-div-wrapper">
     <transition name="fade">
-      <tb-button circle icon="icon-arrow-up-filling" class="tb-scroll-button" v-if="isVisible && !text" @click="goToTop(duration)"></tb-button>
-      <tb-button class="tb-scroll-button" v-if="isVisible && text" @click="goToTop(duration)">{{ this.text }}</tb-button>
+      <tb-button circle icon="icon-arrow-up-filling" class="tb-scroll-button" v-if="tbIsVisible && !text" @click="tbGoToTop(duration)"></tb-button>
+      <tb-button class="tb-scroll-button" v-if="tbIsVisible && text" @click="tbGoToTop(duration)">{{ this.text }}</tb-button>
     </transition>
   </div>
 </template>
@@ -34,38 +34,42 @@ export default {
       type: Number,
       default: 600,
     },
+    
   },
   data() {
     return {
-      isVisible: false,
+      tbIsVisible: false,
     };
   },
   created() {
     // 滚动事件监听  addEventListener用此标签防止onScroll清除其他的事件
-    window.addEventListener("scroll", this.scrollEvent);
+    window.addEventListener("scroll", this.tbScrollEvent);
   },
   destroyed() {
     // 销毁滚动事件
-    window.removeEventListener("scroll", this.scrollEvent);
+    window.removeEventListener("scroll", this.tbScrollEvent);
   },
   methods: {
-    scrollEvent() {
+    tbScrollEvent() {
       // 被卷曲的高度是否大于我们设置的值
-      this.isVisible = this.visibleY < window.scrollY;
+      this.tbIsVisible = this.visibleY < window.scrollY;
     },
     // 点击 触发回滚事件
-    goToTop(duration) {
+    tbGoToTop(duration) {
       if (document.scrollingElement.scrollTop === 0) return;
       const totalScrollDistance = document.scrollingElement.scrollTop;
       let scrollY = totalScrollDistance;
       let oldTimestamp = null;
       function step(newTimestamp) {
+        // requestAnimationFrame默认参数  类似于一个执行时间的这样一个时间戳 当前执行时间  和上一次执行时间  /  一个固定的值也就是传进来的时间值，从而也就实现了效果
         if (oldTimestamp !== null) {
+          // 一个指定的计算计算公式
           scrollY -= (totalScrollDistance * (newTimestamp - oldTimestamp)) / duration;
           if (scrollY <= 0) return (document.scrollingElement.scrollTop = 0);
           document.scrollingElement.scrollTop = scrollY;
         }
         oldTimestamp = newTimestamp;
+        // 每zhen  不会有视觉差
         window.requestAnimationFrame(step);
       }
       window.requestAnimationFrame(step);

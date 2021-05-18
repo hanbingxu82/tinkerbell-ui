@@ -1,6 +1,6 @@
 {
   "name": "tinkerbell-ui",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "An Open Source Library of easy to use components.",
   "main": "lib/tinkerbell-ui.umd.min.js",
   "private": false,
@@ -16,6 +16,8 @@
     "@vue/babel-helper-vue-jsx-merge-props": "^1.2.1",
     "@vue/babel-preset-jsx": "^1.2.4",
     "core-js": "^3.6.5",
+    "resize-observer-polyfill": "^1.5.0",
+    "throttle-debounce": "^1.0.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },

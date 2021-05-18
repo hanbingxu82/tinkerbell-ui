@@ -1,17 +1,35 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-13 14:25:33
+ * @LastEditTime: 2021-05-18 16:11:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <tb-backtop text="小仙男" :visibleY="460" :duration="300" @scrolledOnTop="yourFunction()"> </tb-backtop>
-    <div style="height:3000px;background:green;">
-      123
+    <div class="demo">
+      <tb-carousel ref="tbCarousel" @change="carouselChange" trigger="click" :interval="7000" height="260px" type="card" arrow="never">
+        <tb-carousel-item :name="'小仙男' + i"  v-for="i in 6" :key="i">
+          <h1 v-text="i"></h1>
+        </tb-carousel-item>
+      </tb-carousel>
+      <tbCarousel :interval="7000" height="300px" arrow="always">
+        <tbCarouselItem v-for="i in 6" :key="i">
+          <h1 v-text="i"></h1>
+        </tbCarouselItem>
+      </tbCarousel>
     </div>
+    <tb-button type="primary" @click="next">1111</tb-button>
+    <tb-button type="primary" @click="prev">2222</tb-button>
+    <tb-button type="primary" @click="setActiveItem">3333</tb-button>
+
+    <!-- <tb-backtop text="小仙男" :visibleY="460" :duration="300" @scrolledOnTop="yourFunction()"> </tb-backtop>
+    <div style="height:3000px;background:green;">
+      <div @click="yourFunction" class="gotop">
+        123
+      </div>
+    </div> -->
     <!-- <tb-avatar :size="60" src="https://empty" :error="errorHandler">
       <img src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png" />
     </tb-avatar> -->
@@ -103,7 +121,21 @@ export default {
     };
   },
   methods: {
-    yourFunction() {},
+    carouselChange(data){
+      console.log(data)
+    },
+    setActiveItem(e) {
+      this.$refs.tbCarousel.setActiveItem("小仙男6");
+    },
+    prev(e) {
+      this.$refs.tbCarousel.prev();
+    },
+    next(e) {
+      this.$refs.tbCarousel.next();
+    },
+    yourFunction() {
+      document.scrollingElement.scrollTop = 0;
+    },
     errorHandler() {
       console.log("我是abc！");
       return false;
@@ -173,5 +205,25 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.gotop {
+  position: fixed;
+  bottom: 0;
+  right: 5px;
+  background: red;
+}
+.demo {
+  width: 800px;
+  margin: 0 auto;
+}
+h1 {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(90deg, rgba(88, 140, 236, 1), rgba(106, 106, 207, 1));
 }
 </style>
