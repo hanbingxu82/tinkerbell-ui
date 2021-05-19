@@ -1,20 +1,21 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-19 11:14:50
+ * @LastEditTime: 2021-05-19 14:28:53
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
+    <tb-page-header @back="goBack" content="详情页面"> </tb-page-header>
     <!-- <div v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
       <div v-for="item in data" :key="item.name">
         {{ item.name }}
       </div>
     </div> -->
     <tb-button>123</tb-button>
-    <tb-showmore  :len="10" text="文本超出显示长度，折叠起来，通过len属性显示从何处开始折叠"> </tb-showmore>
+    <tb-showmore :len="10" text="文本超出显示长度，折叠起来，通过len属性显示从何处开始折叠"> </tb-showmore>
     <tb-showmore allowFold :len="10" show-text="show" hidden-text="hidden" text="文本超出显示长度，折叠起来，通过len属性显示从何处开始折叠"> </tb-showmore>
     <!-- <div class="demo">
       <tb-carousel ref="tbCarousel" @change="carouselChange" trigger="click" :interval="7000" height="260px" type="card" arrow="never">
@@ -142,6 +143,9 @@ export default {
     }
   },
   methods: {
+    goBack() {
+      console.log("go back");
+    },
     loadMore: function() {
       this.busy = true;
       setTimeout(() => {
