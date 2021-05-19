@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-05-18 16:56:58
+ * @LastEditTime: 2021-05-19 10:07:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -49,6 +49,8 @@ yarn add tinkerbell-ui
 #### 0.2.6  完成tb-carousel、tb-carousel-item 跑马灯轮播图组件
 
 #### 0.2.7  完成tb-card 卡片组件
+
+#### 0.2.8  完成（新增）InfiniteScroll 无线滚动组件
 ### 如有需要及时联系
 ```
 hbx831@126.com

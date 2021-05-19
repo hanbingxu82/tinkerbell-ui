@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-05-18 16:42:08
+ * @LastEditTime: 2021-05-19 10:04:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -47,7 +47,9 @@ import tbBacktop from "./tbBacktop/index"; // 引入回到顶部组件
 import tbCarousel from "./tbCarousel/index"; // 引入轮播图组件
 import tbCarouselItem from "./tbCarouselItem/index"; // 引入轮播图单个节点组件
 
-import tbCard from "./tbCard/index";
+import tbCard from "./tbCard/index"; // 引入卡片组件
+
+import InfiniteScroll from "./v-infinite-scroll/index"; // 引入滚动组件
 
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
@@ -58,7 +60,13 @@ const components = [Xiaoxiannan, tbButton, tbRow, tbCol, tbLink, tbContainer, tb
 const install = function(Vue) {
   if (install.installed) return;
   install.installed = true;
-  // Vue.radioGroup=""
+
+  /**
+   * @description: 单选复选对应选中事件指令
+   * @param {*}
+   * @return {*}
+   */
+
   Vue.directive("inpClick", {
     // 当被绑定的元素插入到 DOM 中时……
     inserted: function(el) {
@@ -73,6 +81,13 @@ const install = function(Vue) {
       el.onclick = null;
     },
   });
+  /**
+   * @description: 2021-05-19 调用element  InfiniteScroll组件
+   * @param {*}
+   * @return {*}
+   */
+
+  Vue.directive("InfiniteScroll", InfiniteScroll);
   // 遍历并注册全局组件
   components.map((component) => {
     Vue.component(component.name, component);

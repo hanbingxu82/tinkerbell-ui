@@ -1,54 +1,18 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-18 16:56:14
+ * @LastEditTime: 2021-05-19 10:01:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <tb-card class="box-card">
-      <div slot="header" class="clearfix">
-        <span>卡片名称</span>
-        <tb-button style="float: right; padding: 3px 0" type="text">操作按钮</tb-button>
+    <div v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
+      <div v-for="item in data" :key="item.name">
+        {{ item.name }}
       </div>
-      <div v-for="o in 4" :key="o" class="text item">
-        {{ "列表内容 " + o }}
-      </div>
-    </tb-card>
-    <tb-row>
-      <tb-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
-        <tb-card :body-style="{ padding: '0px' }">
-          <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image" />
-          <div style="padding: 14px;">
-            <span>好吃的汉堡</span>
-            <div class="bottom clearfix">
-              <time class="time">{{ currentDate }}</time>
-              <tb-button type="text" class="button">操作按钮</tb-button>
-            </div>
-          </div>
-        </tb-card>
-      </tb-col>
-    </tb-row>
-
-    <tb-row :gutter="12">
-      <tb-col :span="8">
-        <tb-card shadow="always">
-          总是显示
-        </tb-card>
-      </tb-col>
-      <tb-col :span="8">
-        <tb-card shadow="hover">
-          鼠标悬浮时显示
-        </tb-card>
-      </tb-col>
-      <tb-col :span="8">
-        <tb-card shadow="never">
-          从不显示
-        </tb-card>
-      </tb-col>
-    </tb-row>
+    </div>
     <!-- <div class="demo">
       <tb-carousel ref="tbCarousel" @change="carouselChange" trigger="click" :interval="7000" height="260px" type="card" arrow="never">
         <tb-carousel-item :name="'小仙男' + i"  v-for="i in 6" :key="i">
@@ -129,6 +93,8 @@
 </template>
 <script>
 const cityOptions = ["上海", "北京", "广州", "深圳"];
+window.COUNT = 1;
+let count = 1;
 export default {
   data() {
     return {
@@ -144,7 +110,10 @@ export default {
       checkedCities: ["上海", "北京"],
       cities: cityOptions,
       isIndeterminate: true,
+      list: [],
 
+      data: [],
+      busy: false,
       // 日历options特定  样式
       calendarArr: {
         type: "combination", // 是否为特定的组合方式
@@ -162,7 +131,26 @@ export default {
       },
     };
   },
+  created() {
+    for (var i = 0; i < 200; i++) {
+      this.list.push({
+        title: "item " + COUNT++,
+      });
+    }
+  },
   methods: {
+    loadMore: function() {
+      this.busy = true;
+      setTimeout(() => {
+        for (var i = 0, j = 200; i < j; i++) {
+          this.data.push({ name: count++ });
+        }
+        this.busy = false;
+      }, 0);
+    },
+    setData(data) {
+      this.data = data;
+    },
     carouselChange(data) {
       console.log(data);
     },
