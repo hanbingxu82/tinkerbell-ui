@@ -1,13 +1,36 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-20 09:57:00
+ * @LastEditTime: 2021-05-20 11:17:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
+    <tb-alert type="success">
+      123123
+    </tb-alert>
+    <tb-alert type="info">消息提示的文案</tb-alert>
+    <tb-alert type="warning" title="警告提示的文案"></tb-alert>
+    <tb-alert type="danger" title="错误提示的文案"></tb-alert>
+    <br />
+    <tb-alert type="success" show-icon>成功提示的文案</tb-alert>
+    <tb-alert type="info" show-icon>消息提示的文案</tb-alert>
+    <tb-alert type="warning" show-icon>警告提示的文案</tb-alert>
+    <tb-alert type="danger" show-icon>错误提示的文案</tb-alert>
+    <br />
+    <tb-alert type="success" center show-icon>成功提示的文案</tb-alert>
+    <tb-alert type="info" center show-icon icon="icon-dynamic-filling">消息提示的文案</tb-alert>
+    <tb-alert type="warning" center show-icon>警告提示的文案</tb-alert>
+    <tb-alert type="danger" center show-icon>错误提示的文案</tb-alert>
+    <br />
+    <tb-alert type="success" :closable="false">不可关闭的 alert</tb-alert>
+    <tb-alert type="info" close-text="知道了">自定义关闭的 alert</tb-alert>
+    <tb-alert type="warning" @close="hello">设置了回调的 alert</tb-alert>
+    <br />
+    <tb-alert type="success" description="这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰……">带辅助性文字介绍</tb-alert>
+    <tb-alert type="info" show-icon description="这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰……">带有 icon 和辅助性文字介绍</tb-alert>
     <!-- <tb-breadcrumb separator="/" separator-class="icon-mic">
       <tb-breadcrumb-item :to="{ path: '/' }" replace>首页</tb-breadcrumb-item>
       <tb-breadcrumb-item><a href="/">活动管理</a></tb-breadcrumb-item>
@@ -171,6 +194,9 @@ export default {
     }
   },
   methods: {
+    hello() {
+      alert("hello world!");
+    },
     goBack() {
       console.log("go back");
     },
