@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-05-19 17:32:39
+ * @LastEditTime: 2021-05-20 10:00:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -60,6 +60,8 @@ yarn add tinkerbell-ui
 #### 0.3.0 完成 tb-page-header 返回页头组件
 
 #### 0.3.1 完成 tb-rate 评分组件
+
+#### 0.3.2 完成 tb-breadcrumb、tb-breadcrumb-item 面包屑组件
 
 ### 如有需要及时联系
 

@@ -1,14 +1,20 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-19 17:33:20
+ * @LastEditTime: 2021-05-20 09:57:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <tb-rate v-model="myCurrentRate" :length="5" :activecolor="activecolor" />
+    <!-- <tb-breadcrumb separator="/" separator-class="icon-mic">
+      <tb-breadcrumb-item :to="{ path: '/' }" replace>首页</tb-breadcrumb-item>
+      <tb-breadcrumb-item><a href="/">活动管理</a></tb-breadcrumb-item>
+      <tb-breadcrumb-item :to="{ path: '/' }" replace>活动列表</tb-breadcrumb-item>
+      <tb-breadcrumb-item>活动详情</tb-breadcrumb-item>
+    </tb-breadcrumb> -->
+    <!-- <tb-rate v-model="myCurrentRate" :length="5" :activecolor="activecolor" />
 
     <tb-rate :length="5" :value="3" />
 
@@ -26,7 +32,7 @@
 
     <tb-rate disabled showcount :length="5" :value="3" />
 
-    <tb-rate disabled :length="5" :value="3" :ratedesc="desc" />
+    <tb-rate disabled :length="5" :value="3" :ratedesc="desc" /> -->
 
     <!-- <tb-page-header @back="goBack" content="详情页面"> </tb-page-header> -->
     <!-- <div v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
