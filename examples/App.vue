@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-21 14:20:57
+ * @LastEditTime: 2021-05-21 16:19:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
@@ -28,7 +28,8 @@
     <tb-progress :percent="60" status="success" :show-text="false"></tb-progress>
     <tb-progress :percent="80" status="warning" :format="format"></tb-progress>
     <tb-progress :percent="100" status="error" :format="format"></tb-progress> -->
-    <tb-input-number :min="0" :max="100" :step="0.111111111111111"  v-model="yourVModel" />
+    <!-- <tb-input-number :min="0" :max="100" :step="0.111111111111111"  v-model="yourVModel" /> -->
+    <tb-switch  v-model="value" reverse height="50" width="200" checked-bg="linear-gradient(to bottom right, red, #5850ec)" unchecked-bg="linear-gradient(to bottom right, grey, grey)" checked-text="😄" unchecked-text="😑"  />
   </div>
 </template>
 <script>
@@ -39,6 +40,7 @@ export default {
       percent: 10,
       ifUp: true,
       yourVModel: 0,
+      value: false,
     };
   },
   created() {

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-05-21 14:27:16
+ * @LastEditTime: 2021-05-21 16:31:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -68,6 +68,8 @@ yarn add tinkerbell-ui
 #### 0.3.4 完成 tb-progress 进度条组件
 
 #### 0.3.5 完成 tb-input-number 计数器组件
+
+#### 0.3.6 完成 tb-switch 开关组件
 
 ### 如有需要及时联系
 
