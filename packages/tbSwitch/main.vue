@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-21 14:44:05
- * @LastEditTime: 2021-05-21 16:24:18
+ * @LastEditTime: 2021-05-21 16:43:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbSwitch/main.vue
@@ -68,7 +68,7 @@ export default {
     // 选中后的背景色
     checkedBg: {
       type: String,
-      default: "#5850ec",
+      default: "#409eff",
     },
     // 未选中的背景色
     uncheckedBg: {
@@ -99,6 +99,12 @@ export default {
     fontWeight: {
       type: [Number, String],
       default: "normal",
+    },
+  },
+  watch: {
+    // 监听value变化  触发change事件
+    value: function(newVal, oldVal) {
+      this.$emit("change", newVal);
     },
   },
   computed: {

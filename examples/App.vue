@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-21 16:19:17
+ * @LastEditTime: 2021-05-21 16:40:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
@@ -29,7 +29,7 @@
     <tb-progress :percent="80" status="warning" :format="format"></tb-progress>
     <tb-progress :percent="100" status="error" :format="format"></tb-progress> -->
     <!-- <tb-input-number :min="0" :max="100" :step="0.111111111111111"  v-model="yourVModel" /> -->
-    <tb-switch  v-model="value" reverse height="50" width="200" checked-bg="linear-gradient(to bottom right, red, #5850ec)" unchecked-bg="linear-gradient(to bottom right, grey, grey)" checked-text="😄" unchecked-text="😑"  />
+    <tb-switch @change="change"  v-model="value"  checked-text="开" unchecked-text="关"  />
   </div>
 </template>
 <script>
@@ -56,6 +56,9 @@ export default {
     this.$once("hook:beforeDestroy", () => clearInterval(timer));
   },
   methods: {
+    change(data){
+      console.log(data)
+    },
     format(percent) {
       if (percent == 100) {
         return "^_^";
