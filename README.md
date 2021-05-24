@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-05-24 14:59:55
+ * @LastEditTime: 2021-05-24 21:56:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -72,6 +72,8 @@ yarn add tinkerbell-ui
 #### 0.3.6 完成 tb-switch 开关组件
 
 #### 0.3.7 完成 this.$loading 顶部加载进度条组件
+
+#### 0.3.8 完成 tb-timeline、tb-timeline-item 时间线组件
 
 ### 如有需要及时联系
 

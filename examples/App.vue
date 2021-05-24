@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-24 14:58:08
+ * @LastEditTime: 2021-05-24 21:51:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
@@ -33,6 +33,43 @@
     <tb-button @click="loading">开</tb-button>
     <tb-button @click="loading1">关</tb-button>
     <tb-button @click="loading2">错误</tb-button>
+    <tb-timeline>
+      <tb-timeline-item>
+        <p class="time">2019年4月12日</p>
+        <p class="content">初始化bin-ui</p>
+      </tb-timeline-item>
+      <tb-timeline-item>
+        <p class="time">2019年4月21日</p>
+        <p class="content">发布1.1.0版本，新增几个基础组件</p>
+      </tb-timeline-item>
+      <tb-timeline-item>
+        <p class="time">2019年7月24日</p>
+        <p class="content">发布1.5.0版本，增加大量表单组件和常用组件</p>
+      </tb-timeline-item>
+      <tb-timeline-item>
+        <p class="time">2019年8月23日</p>
+        <p class="content">发布2.0.0版本，正式实现表格菜单等组件</p>
+      </tb-timeline-item>
+    </tb-timeline>
+
+    <tb-timeline>
+      <tb-timeline-item color="primary">发布1.0版本</tb-timeline-item>
+      <tb-timeline-item color="info">发布1.5版本</tb-timeline-item>
+      <tb-timeline-item color="warning">错误修复</tb-timeline-item>
+      <tb-timeline-item color="danger">严重故障</tb-timeline-item>
+      <tb-timeline-item color="success">发布2.0版本</tb-timeline-item>
+      <tb-timeline-item color="#ff30b5">里程碑发布</tb-timeline-item>
+    </tb-timeline>
+
+    <tb-timeline pending>
+      <tb-timeline-item color="success" dot-top="8px">
+        <i slot="dot" class="iconfont icon-navigation"></i>
+        <span>正式版上线</span>
+      </tb-timeline-item>
+      <tb-timeline-item>发布2.0版本</tb-timeline-item>
+      <tb-timeline-item>发布1.5版本</tb-timeline-item>
+      <tb-timeline-item>发布1.0版本</tb-timeline-item>
+    </tb-timeline>
   </div>
 </template>
 <script>
