@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-21 16:40:47
+ * @LastEditTime: 2021-05-24 14:58:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
@@ -29,7 +29,10 @@
     <tb-progress :percent="80" status="warning" :format="format"></tb-progress>
     <tb-progress :percent="100" status="error" :format="format"></tb-progress> -->
     <!-- <tb-input-number :min="0" :max="100" :step="0.111111111111111"  v-model="yourVModel" /> -->
-    <tb-switch @change="change"  v-model="value"  checked-text="开" unchecked-text="关"  />
+    <tb-switch @change="change" v-model="value" checked-text="开" unchecked-text="关" />
+    <tb-button @click="loading">开</tb-button>
+    <tb-button @click="loading1">关</tb-button>
+    <tb-button @click="loading2">错误</tb-button>
   </div>
 </template>
 <script>
@@ -56,8 +59,32 @@ export default {
     this.$once("hook:beforeDestroy", () => clearInterval(timer));
   },
   methods: {
-    change(data){
-      console.log(data)
+    loading() {
+      // this.$loading.error()
+      // this.$loading.start();
+      // this.$loading.config({
+      //   showSpinner: false,
+      // });
+      // this.$loading.config({
+      //   percentNum: 1,
+      // });
+      // this.$loading.config({
+      //   easing: "ease",
+      // });
+      this.$loading.config({
+        speed: 10,
+      });
+    },
+    loading1() {
+      // this.$loading.error()
+      this.$loading.end();
+    },
+    loading2() {
+      // this.$loading.error()
+      this.$loading.error();
+    },
+    change(data) {
+      console.log(data);
     },
     format(percent) {
       if (percent == 100) {

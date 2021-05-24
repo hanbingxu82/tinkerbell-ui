@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-05-21 14:50:42
+ * @LastEditTime: 2021-05-24 11:32:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -68,6 +68,8 @@ import tbInputNumber from "./tbInputNumber/index"; // 引入计数器组件
 
 import tbSwitch from "./tbSwitch/index"; // 引入开关组件
 
+import tbLoadingBar from "./tbLoadingBar/index"
+
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
 // 以数组的结构保存组件，便于遍历
@@ -109,6 +111,12 @@ const install = function(Vue) {
   components.map((component) => {
     Vue.component(component.name, component);
   });
+  /**
+   * @description: 2021-05-24 新增loading加载条组件
+   * @param {*}
+   * @return {*}
+   */  
+  Vue.prototype.$loading = tbLoadingBar
 };
 
 if (typeof window !== "undefined" && window.Vue) {
