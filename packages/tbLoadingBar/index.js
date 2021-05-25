@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-24 09:26:57
- * @LastEditTime: 2021-05-24 14:52:57
+ * @LastEditTime: 2021-05-25 10:47:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbLoadingBar/index.js
@@ -9,11 +9,6 @@
 // 导入组件，组件必须声明 name
 import Vue from "vue";
 import LoadingBar from "./main.vue";
-// 为组件添加 install 方法，用于按需引入
-// LoadingBar.install = function(Vue) {
-//   Vue.component(LoadingBar.name, LoadingBar);
-// };
-// export default tbMain;
 
 /**
  * @description: 此步用于获取实例   Vue.extend(LoadingBar) 用于构建模板：但注意此时对应的数据还并没有实例化就相当于  是Vue 还没有new
@@ -68,8 +63,11 @@ LoadingBarConstructor.prototype.init = function() {
 
   // 是否错误状态设置为false初始值
   this.isError = false;
+
   // 手动挂载将一个模板，new出来成为一个实例  对应的返回值就是这个vue实例  对应的我们挂载到this.vm上面
   this.vm = this.$mount();
+  // 其实此处挂与不挂都是可以的，因为两者指向的都是vue实例
+  // console.log(this === this.vm);
   // 因为我们已经实例化了，所以我们就可以调用this.vm.$el  这样的话就相当于于将一个creatElement 填充到document上面
   /**
    * Vue2 官网实例  所以我们就可以采用在文档之外渲染并且随后挂载的方式进行挂载

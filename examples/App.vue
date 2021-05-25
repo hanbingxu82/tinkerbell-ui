@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-24 21:51:42
+ * @LastEditTime: 2021-05-25 15:39:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
@@ -36,19 +36,19 @@
     <tb-timeline>
       <tb-timeline-item>
         <p class="time">2019年4月12日</p>
-        <p class="content">初始化bin-ui</p>
+        <p class="content">初始化</p>
       </tb-timeline-item>
       <tb-timeline-item>
         <p class="time">2019年4月21日</p>
-        <p class="content">发布1.1.0版本，新增几个基础组件</p>
+        <p class="content">发布1.1.0版本，</p>
       </tb-timeline-item>
       <tb-timeline-item>
         <p class="time">2019年7月24日</p>
-        <p class="content">发布1.5.0版本，增加大量表单组件和常用组件</p>
+        <p class="content">发布1.5.0版本，</p>
       </tb-timeline-item>
       <tb-timeline-item>
         <p class="time">2019年8月23日</p>
-        <p class="content">发布2.0.0版本，正式实现表格菜单等组件</p>
+        <p class="content">发布2.0.0版本，</p>
       </tb-timeline-item>
     </tb-timeline>
 
@@ -97,6 +97,34 @@ export default {
   },
   methods: {
     loading() {
+      // this.$message({ type: "success", duration: 0, content: "look" });
+      // this.$message("this is default message");
+      // this.$message({ type: "primary", content: "primary 的提示" });
+      // this.$message({ type: "success", content: "success 的提示" });
+      // this.$message({ type: "warning", content: "warning 的提示" });
+      // this.$message({ type: "danger", content: "danger 的提示" });
+      // this.$message({ content: "我10秒消失", duration: 10 });
+      // this.$message({ content: "我是可关闭的的提示", duration: 10, closable: true });
+      // this.$message({ type: "success", content: "我永远不会关闭除非手动", duration: 0, closable: true, zIndex: 3000 });
+      // this.$message({ type: "warning", content: "我永远不会关闭除非手动", duration: 0, closable: true, zIndex: 3000 });
+      // this.$message({ type: "danger",content: "我永远不会关闭除非手动", duration: 0, closable: true, zIndex: 3000 });
+      this.$message({
+        render: (h) => {
+          return h("span", [
+            "This is created by ",
+            h(
+              "a",
+              {
+                style: {
+                  color: "red",
+                },
+              },
+              "render"
+            ),
+            " function",
+          ]);
+        },
+      });
       // this.$loading.error()
       // this.$loading.start();
       // this.$loading.config({
@@ -108,17 +136,22 @@ export default {
       // this.$loading.config({
       //   easing: "ease",
       // });
-      this.$loading.config({
-        speed: 10,
-      });
+      // this.$loading.config({
+      //   speed: 10,
+      // });
     },
     loading1() {
+      let num = this.$message({ type: "success", duration: 0, content: "look" });
+      setTimeout(function() {
+        debugger;
+        // num();
+      }, 3000);
       // this.$loading.error()
-      this.$loading.end();
+      // this.$loading.end();
     },
     loading2() {
       // this.$loading.error()
-      this.$loading.error();
+      // this.$loading.error();
     },
     change(data) {
       console.log(data);
