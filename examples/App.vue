@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-25 15:39:21
+ * @LastEditTime: 2021-05-26 15:14:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
@@ -96,22 +96,18 @@ export default {
     this.$once("hook:beforeDestroy", () => clearInterval(timer));
   },
   methods: {
-    loading() {
-      // this.$message({ type: "success", duration: 0, content: "look" });
-      // this.$message("this is default message");
-      // this.$message({ type: "primary", content: "primary 的提示" });
-      // this.$message({ type: "success", content: "success 的提示" });
-      // this.$message({ type: "warning", content: "warning 的提示" });
-      // this.$message({ type: "danger", content: "danger 的提示" });
-      // this.$message({ content: "我10秒消失", duration: 10 });
-      // this.$message({ content: "我是可关闭的的提示", duration: 10, closable: true });
-      // this.$message({ type: "success", content: "我永远不会关闭除非手动", duration: 0, closable: true, zIndex: 3000 });
-      // this.$message({ type: "warning", content: "我永远不会关闭除非手动", duration: 0, closable: true, zIndex: 3000 });
-      // this.$message({ type: "danger",content: "我永远不会关闭除非手动", duration: 0, closable: true, zIndex: 3000 });
-      this.$message({
+    loading(nodesc) {
+      // this.$notify.config({
+      //   top: 300,
+      //   duration: 3,
+      // });
+      this.$notify.info({
+        title: "标题",
+        desc: "使用render函数时会忽略desc",
+        duration: 0,
         render: (h) => {
           return h("span", [
-            "This is created by ",
+            "This is created by This is created byThis is created byThis is created byThis is created by",
             h(
               "a",
               {
@@ -125,6 +121,43 @@ export default {
           ]);
         },
       });
+      // this.$notify.open({
+      //   title: "Notice 标题",
+      //   desc: nodesc ? "" : "这是通知内容,这是通知内容. 这是通知内容,这是通知内容.",
+      // });
+      this.$notify.info({
+        title: "Notify 标题",
+        duration: 0,
+        desc: "这是通知内容,这是通知内容. 这是通知内容,这是通知内容.",
+      });
+      // this.$message({ type: "success", duration: 0, content: "look" });
+      // this.$message("this is default message");
+      // this.$message({ type: "primary", content: "primary 的提示" });
+      // this.$message({ type: "success", content: "success 的提示" });
+      // this.$message({ type: "warning", content: "warning 的提示" });
+      // this.$message({ type: "danger", content: "danger 的提示" });
+      // this.$message({ content: "我10秒消失", duration: 10 });
+      // this.$message({ content: "我是可关闭的的提示", duration: 10, closable: true });
+      // this.$message({ type: "success", content: "我永远不会关闭除非手动", duration: 0, closable: true, zIndex: 3000 });
+      // this.$message({ type: "warning", content: "我永远不会关闭除非手动", duration: 0, closable: true, zIndex: 3000 });
+      // this.$message({ type: "danger",content: "我永远不会关闭除非手动", duration: 0, closable: true, zIndex: 3000 });
+      // this.$message({
+      //   render: (h) => {
+      //     return h("span", [
+      //       "This is created by ",
+      // h(
+      //   "a",
+      //   {
+      //     style: {
+      //       color: "red",
+      //     },
+      //   },
+      //   "render"
+      // ),
+      //       " function",
+      //     ]);
+      //   },
+      // });
       // this.$loading.error()
       // this.$loading.start();
       // this.$loading.config({

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-05-25 15:39:57
+ * @LastEditTime: 2021-05-26 13:53:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -75,6 +75,8 @@ import tbTimelineItem from "./tbTimelineItem/index"; // 引入时间线子项组
 
 import tbMessage from "./tbMessage/index"; // 引入message弹窗组件
 
+import tbNotification from "./tbNotification/index" // 引入notification通知组件
+
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
 // 以数组的结构保存组件，便于遍历
@@ -130,6 +132,12 @@ const install = function(Vue) {
    */
 
   Vue.prototype.$message = tbMessage.message;
+  /**
+   * @description: 2021-05-26 新增notify弹窗组件
+   * @param {*}
+   * @return {*}
+   */  
+  Vue.prototype.$notify = tbNotification
 };
 
 if (typeof window !== "undefined" && window.Vue) {

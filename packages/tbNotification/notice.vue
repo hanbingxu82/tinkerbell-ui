@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
- * @Date: 2021-05-25 11:29:53
- * @LastEditTime: 2021-05-26 13:37:49
+ * @Date: 2021-05-26 13:35:15
+ * @LastEditTime: 2021-05-26 15:19:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: /hx/packages/tbMessage/notic.vue
+ * @FilePath: /hx/packages/tbNotification/notice.vue
 -->
 <template>
   <transition :name="transitionName" @enter="handleEnter" @leave="handleLeave" appear>
-    <!-- notice通知类型 -->
+    <!-- 如果是通知类型的话 -->
     <template v-if="type === 'notice'">
       <div :class="noticeClasses">
         <div :class="['tb-notice-content', this.render !== undefined ? `tb-notice-content-with-render` : '']" ref="content" v-html="content"></div>
@@ -20,12 +20,11 @@
         </a>
       </div>
     </template>
-    <!-- 正常弹窗类型 -->
     <template v-else>
       <div :class="classes">
         <div :class="[baseClass + '-content', `${baseClass}-${type}`]" ref="content">
           <div :class="[baseClass + '-content-text']" v-if="content">
-            <i :class="`iconfont ${iconTypes}`"></i>
+            <b-icon :name="iconTypes"></b-icon>
             <span>{{ content }}</span>
           </div>
           <div :class="[baseClass + '-content-text']">
@@ -42,49 +41,40 @@
 
 <script>
 import RenderCell from "./render";
-
 const prefixCls = "tb-message";
 export default {
   components: {
     RenderCell,
   },
   props: {
-    // 自动关闭的延时，单位秒，默认3秒  如果不关闭就给个0
+    
     duration: {
       type: Number,
       default: 3,
     },
-    // 提示类别 primary,info,success,warning,danger 5种类型    以及vnode弹窗类型
     type: {
       type: String,
     },
-    // 弹窗内容
     content: {
       type: String,
       default: "",
     },
-    // vue自定义描述的内容
     render: {
       type: Function,
     },
-    // 是否展示x号
     closable: {
       type: Boolean,
       default: false,
     },
-    // 父组件传递进来的name值
     name: {
       type: String,
       required: true,
     },
-    // 暂时不考虑以下几个api
     withIcon: Boolean,
     hasTitle: Boolean,
-    // 关闭时的回调
     onClose: {
       type: Function,
     },
-    // 过渡类名，如果想自己配置也可以  默认即可
     transitionName: {
       type: String,
     },
@@ -138,7 +128,6 @@ export default {
     close() {
       this.clearCloseTimer();
       this.onClose();
-      // 删除当前的子组件
       this.$parent.close(this.name);
     },
     handleEnter(el) {
@@ -160,7 +149,6 @@ export default {
     },
   },
   mounted() {
-    // 组件移除根据秒数移除
     this.clearCloseTimer();
     if (this.duration !== 0) {
       this.closeTimer = setTimeout(() => {
