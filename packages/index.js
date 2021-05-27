@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-05-26 13:53:28
+ * @LastEditTime: 2021-05-27 15:26:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -75,12 +75,15 @@ import tbTimelineItem from "./tbTimelineItem/index"; // 引入时间线子项组
 
 import tbMessage from "./tbMessage/index"; // 引入message弹窗组件
 
-import tbNotification from "./tbNotification/index" // 引入notification通知组件
+import tbNotification from "./tbNotification/index"; // 引入notification通知组件
+
+import tbStep from "./tbStep/index";
+import tbSteps from "./tbSteps/index"; // 引入步骤条组件
 
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
 // 以数组的结构保存组件，便于遍历
-const components = [Xiaoxiannan, tbButton, tbRow, tbCol, tbLink, tbContainer, tbAside, tbMain, tbHeader, tbFooter, tbRadio, tbRadioButton, tbRadioGroup, tbCheckbox, tbCheckboxGroup, tbCheckboxButton, tbTag, tbColor, tbColorPicker, tbCalendar, tbPopconfirm, tbDivider, tbBadge, tbAvatar, tbBacktop, tbCarousel, tbCarouselItem, tbCard, tbShowmore, tbPageHeader, tbRate, tbBreadcrumb, tbBreadcrumbItem, tbAlert, tbProgress, tbInputNumber, tbSwitch, tbTimeline, tbTimelineItem];
+const components = [Xiaoxiannan, tbButton, tbRow, tbCol, tbLink, tbContainer, tbAside, tbMain, tbHeader, tbFooter, tbRadio, tbRadioButton, tbRadioGroup, tbCheckbox, tbCheckboxGroup, tbCheckboxButton, tbTag, tbColor, tbColorPicker, tbCalendar, tbPopconfirm, tbDivider, tbBadge, tbAvatar, tbBacktop, tbCarousel, tbCarouselItem, tbCard, tbShowmore, tbPageHeader, tbRate, tbBreadcrumb, tbBreadcrumbItem, tbAlert, tbProgress, tbInputNumber, tbSwitch, tbTimeline, tbTimelineItem, tbSteps, tbStep];
 
 // 定义 install 方法
 const install = function(Vue) {
@@ -136,8 +139,9 @@ const install = function(Vue) {
    * @description: 2021-05-26 新增notify弹窗组件
    * @param {*}
    * @return {*}
-   */  
-  Vue.prototype.$notify = tbNotification
+   */
+
+  Vue.prototype.$notify = tbNotification;
 };
 
 if (typeof window !== "undefined" && window.Vue) {

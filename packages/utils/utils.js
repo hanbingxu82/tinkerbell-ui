@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-04-29 13:19:37
- * @LastEditTime: 2021-05-21 14:06:35
+ * @LastEditTime: 2021-05-27 13:36:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/utils/utils.js
@@ -42,6 +42,11 @@ export const off = (function() {
     };
   }
 })();
+
+// 一个值是否在列表中
+export function oneOf(value, validList) {
+  return validList.indexOf(value) > -1;
+}
 //加法
 function accAdd(arg1, arg2) {
   var r1, r2, m;

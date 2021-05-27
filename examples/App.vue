@@ -1,13 +1,44 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-26 15:14:52
+ * @LastEditTime: 2021-05-27 14:27:45
  * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
+ * @Description: In User Settings Edit'
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
+    <tb-steps :current="current" status="wait">
+      <tb-step title="已完成" content="这里是该步骤的描述信息"></tb-step>
+      <tb-step title="进行中" content="这里是该步骤的描述信息"></tb-step>
+      <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
+      <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
+    </tb-steps>
+    <tb-steps :current="2" size="small">
+      <tb-step title="已完成"></tb-step>
+      <tb-step title="进行中"></tb-step>
+      <tb-step title="待进行"></tb-step>
+      <tb-step title="待进行"></tb-step>
+    </tb-steps>
+    <tb-steps :current="1">
+      <tb-step title="已完成" icon="icon-home-filling"></tb-step>
+      <tb-step title="进行中" icon="icon-browse"></tb-step>
+      <tb-step title="待进行" icon="icon-attachment"></tb-step>
+    </tb-steps>
+    <tb-steps :current="current" direction="vertical">
+      <tb-step title="已完成" content="这里是该步骤的描述信息"></tb-step>
+      <tb-step title="进行中" content="这里是该步骤的描述信息"></tb-step>
+      <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
+      <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
+    </tb-steps>
+    <tb-steps :current="2" status="error">
+      <tb-step title="已完成" content="这里是该步骤的描述信息"></tb-step>
+      <tb-step title="进行中" content="这里是该步骤的描述信息"></tb-step>
+      <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
+      <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
+    </tb-steps>
+    <tb-button type="primary" @click="next">下一步</tb-button>
+
     <!-- <tb-progress :percent="10"></tb-progress>
     <tb-progress :percent="20" status="success"></tb-progress>
     <tb-progress :percent="30" status="warning" :border="false"></tb-progress>
@@ -81,6 +112,7 @@ export default {
       ifUp: true,
       yourVModel: 0,
       value: false,
+      current: 0,
     };
   },
   created() {
@@ -96,6 +128,13 @@ export default {
     this.$once("hook:beforeDestroy", () => clearInterval(timer));
   },
   methods: {
+    next() {
+      if (this.current === 3) {
+        this.current = 0;
+      } else {
+        this.current += 1;
+      }
+    },
     loading(nodesc) {
       // this.$notify.config({
       //   top: 300,

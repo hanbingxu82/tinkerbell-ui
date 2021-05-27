@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-05-26 15:20:51
+ * @LastEditTime: 2021-05-27 15:26:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -78,6 +78,8 @@ yarn add tinkerbell-ui
 #### 0.3.9 完成 this.$message 弹窗组件
 
 #### 0.4.0 完成 this.$notify 右上角通知组件
+
+#### 0.4.1 完成 tb-steps、tb-step步骤条组件
 
 ### 如有需要及时联系
 
