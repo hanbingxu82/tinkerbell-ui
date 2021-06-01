@@ -1,14 +1,20 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-05-27 14:27:45
+ * @LastEditTime: 2021-06-01 13:30:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit'
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <tb-steps :current="current" status="wait">
+    <tb-upload paste :format="['xlsx']" action="//jsonplaceholder.typicode.com/posts/" type="drag">
+      <!-- <tb-button icon="ios-cloud-upload" plain type="primary"> 点击上传</tb-button> -->
+      <!-- <input type="text" /> -->
+      <p slot="tip">单个文件不能超过2M</p>
+    </tb-upload>
+
+    <!-- <tb-steps :current="current" status="wait">
       <tb-step title="已完成" content="这里是该步骤的描述信息"></tb-step>
       <tb-step title="进行中" content="这里是该步骤的描述信息"></tb-step>
       <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
@@ -37,7 +43,7 @@
       <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
       <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
     </tb-steps>
-    <tb-button type="primary" @click="next">下一步</tb-button>
+    <tb-button type="primary" @click="next">下一步</tb-button> -->
 
     <!-- <tb-progress :percent="10"></tb-progress>
     <tb-progress :percent="20" status="success"></tb-progress>
