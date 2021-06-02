@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-06-01 14:42:12
+ * @LastEditTime: 2021-06-02 14:29:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -82,6 +82,8 @@ import tbSteps from "./tbSteps/index"; // 引入步骤条组件
 
 import tbUpload from "./tbUpload/index"; // 引入上传组件
 
+import tbTabs from './tbTabs/index' // 引入标签页组件
+
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
 // 以数组的结构保存组件，便于遍历
@@ -128,6 +130,7 @@ const components = [
   tbSteps,
   tbStep,
   tbUpload,
+  tbTabs
 ];
 
 // 定义 install 方法

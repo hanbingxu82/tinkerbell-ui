@@ -1,18 +1,42 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-01 13:30:26
+ * @LastEditTime: 2021-06-02 14:25:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit'
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <tb-upload paste :format="['xlsx']" action="//jsonplaceholder.typicode.com/posts/" type="drag">
-      <!-- <tb-button icon="ios-cloud-upload" plain type="primary"> 点击上传</tb-button> -->
-      <!-- <input type="text" /> -->
+    <tb-tabs v-model="activeTab" :data="tabs"></tb-tabs>
+    <p>{{ activeTab }}模板</p>
+    <tb-tabs v-model="activeTab" :data="tabs" type="card"></tb-tabs>
+    <tb-tabs v-model="activeTab" :data="tabs" type="card" closable @tab-close="handleTabClose"></tb-tabs>
+    <tb-button type="primary" plain size="small" @click="handleAdd">add tab</tb-button>
+
+    <br />
+    <tb-tabs v-model="activeTab" :data="tabs" type="card" closable context-menu ref="tabs" @tab-close="handleTabClose" @tab-select="handleSelect">
+      <template slot="menu">
+        <li @click="refreshSelected">刷新</li>
+        <li @click="closeSelected">关闭</li>
+        <li @click="closeOthers">关闭其他</li>
+        <li @click="closeAll">关闭所有</li>
+      </template>
+    </tb-tabs>
+    <br />
+    <div class="mb-15"><tb-button type="primary" plain size="small" @click="handleAdd">add tab</tb-button></div>
+    <tb-tabs v-model="activeTab" :data="tabs" type="tag" closable context-menu ref="tabs" @tab-close="handleTabClose" @tab-select="handleSelect">
+      <template v-slot:menu>
+        <li @click="refreshSelected">刷新</li>
+        <li @click="closeSelected">关闭</li>
+        <li @click="closeOthers">关闭其他</li>
+        <li @click="closeAll">关闭所有</li>
+      </template>
+    </tb-tabs>
+    <p>开启的tab：{{ activeTab }}</p>
+    <!-- <tb-upload paste :format="['xlsx']" action="//jsonplaceholder.typicode.com/posts/" type="drag">
       <p slot="tip">单个文件不能超过2M</p>
-    </tb-upload>
+    </tb-upload> -->
 
     <!-- <tb-steps :current="current" status="wait">
       <tb-step title="已完成" content="这里是该步骤的描述信息"></tb-step>
@@ -119,6 +143,13 @@ export default {
       yourVModel: 0,
       value: false,
       current: 0,
+      tabs: [
+        { key: "tab1", title: "用户管理", icon: "icon-caps-unlock-filling" },
+        { key: "tab2", title: "组织管理" },
+        { key: "tab3", title: "系统管理" },
+        { key: "tab4", title: "目录模块配置" },
+      ],
+      activeTab: "tab1",
     };
   },
   created() {
@@ -134,6 +165,49 @@ export default {
     this.$once("hook:beforeDestroy", () => clearInterval(timer));
   },
   methods: {
+    handleTabClose(tab) {
+      this.tabs.splice(
+        this.tabs.findIndex((t) => t.key === tab.key),
+        1
+      );
+    },
+    // 缓存右键选中的tab
+    handleSelect(tab) {
+      this.selectTab = { ...tab };
+    },
+    // 刷新当前view
+    refreshSelected() {
+      this.$message("刷新当前view:" + this.selectTab.title);
+    },
+    closeSelected() {
+      // 这里需要调用组件的关闭选择的tag
+      this.$refs.tabs.closeSelectedTab(this.selectTab);
+    },
+    // 关闭其他tags
+    closeOthers() {
+      this.tabs = [this.selectTab];
+      this.activeTab = this.selectTab.key;
+      this.$refs.tabs.moveToCurrentTab();
+    },
+    // 关闭所有
+    closeAll() {
+      this.tabs = [];
+      this.activeTab = "";
+      this.$refs.tabs.moveToCurrentTab();
+    },
+    handleAdd() {
+      // 这里需要保证key值唯一否则会影响渲染显示
+      const newTab = { key: `tab${+new Date()}`, title: "New Tab" };
+      this.tabs.push(newTab);
+      // 增加完毕后通常默认选中这个新的tab，当然，你也可以不设置选中新的tab
+      this.activeTab = newTab.key;
+    },
+    handleTabClose(tab) {
+      this.tabs.splice(
+        this.tabs.findIndex((t) => t.key === tab.key),
+        1
+      );
+    },
     next() {
       if (this.current === 3) {
         this.current = 0;
