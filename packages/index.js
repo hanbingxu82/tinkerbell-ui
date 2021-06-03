@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-06-02 14:29:37
+ * @LastEditTime: 2021-06-03 13:28:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -84,6 +84,10 @@ import tbUpload from "./tbUpload/index"; // 引入上传组件
 
 import tbTabs from './tbTabs/index' // 引入标签页组件
 
+// import tbDropdown from './tbDropdown/index' // 引入下拉菜单组件
+
+import tbPopover from './tbPopover/index' // 引入提示弹出框
+
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
 // 以数组的结构保存组件，便于遍历
@@ -130,7 +134,9 @@ const components = [
   tbSteps,
   tbStep,
   tbUpload,
-  tbTabs
+  tbTabs,
+  // tbDropdown,
+  tbPopover
 ];
 
 // 定义 install 方法

@@ -1,14 +1,63 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-02 14:25:15
+ * @LastEditTime: 2021-06-02 17:25:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit'
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <tb-tabs v-model="activeTab" :data="tabs"></tb-tabs>
+    <tb-popover trigger="hover" title="Title" content="content">
+      <tb-button>Hover</tb-button>
+    </tb-popover>
+    <tb-popover trigger="click" title="Title" content="content">
+      <tb-button>Click</tb-button>
+    </tb-popover>
+    <tb-popover trigger="focus" title="Title" content="content">
+      <tb-button>Focus</tb-button>
+    </tb-popover>
+    <div>
+      <div class="top">
+        <tb-popover title="Title" content="Top Left text" placement="top-start"> <tb-button>上左</tb-button>&nbsp;&nbsp; </tb-popover>
+        <tb-popover title="Title" content="Top Center text" placement="top"> <tb-button>上边</tb-button>&nbsp;&nbsp; </tb-popover>
+        <tb-popover title="Title" content="Top Right text" placement="top-end">
+          <tb-button>上右</tb-button>
+        </tb-popover>
+      </div>
+      <div class="center">
+        <div class="center-left">
+          <tb-popover title="Title" content="Left Top text" placement="left-start">
+            <tb-button>左上</tb-button> </tb-popover
+          ><br /><br />
+          <tb-popover title="Title" content="Left Center text" placement="left">
+            <tb-button>左边</tb-button> </tb-popover
+          ><br /><br />
+          <tb-popover title="Title" content="Left Bottom text" placement="left-end">
+            <tb-button>左下</tb-button>
+          </tb-popover>
+        </div>
+        <div class="center-right">
+          <tb-popover title="Title" content="Right Top text" placement="right-start">
+            <tb-button>右上</tb-button> </tb-popover
+          ><br /><br />
+          <tb-popover title="Title" content="Right Center text" placement="right">
+            <tb-button>右边</tb-button> </tb-popover
+          ><br /><br />
+          <tb-popover title="Title" content="Right Bottom text" placement="right-end">
+            <tb-button>右下</tb-button>
+          </tb-popover>
+        </div>
+      </div>
+      <div class="bottom">
+        <tb-popover title="Title" content="Bottom Left text" placement="bottom-start"> <tb-button>下左</tb-button>&nbsp;&nbsp; </tb-popover>
+        <tb-popover title="Title" content="Bottom Center text" placement="bottom"> <tb-button>下边</tb-button>&nbsp;&nbsp; </tb-popover>
+        <tb-popover title="Title" content="Bottom Right text" placement="bottom-end">
+          <tb-button>下右</tb-button>
+        </tb-popover>
+      </div>
+    </div>
+    <!-- <tb-tabs v-model="activeTab" :data="tabs"></tb-tabs>
     <p>{{ activeTab }}模板</p>
     <tb-tabs v-model="activeTab" :data="tabs" type="card"></tb-tabs>
     <tb-tabs v-model="activeTab" :data="tabs" type="card" closable @tab-close="handleTabClose"></tb-tabs>
@@ -33,7 +82,7 @@
         <li @click="closeAll">关闭所有</li>
       </template>
     </tb-tabs>
-    <p>开启的tab：{{ activeTab }}</p>
+    <p>开启的tab：{{ activeTab }}</p> -->
     <!-- <tb-upload paste :format="['xlsx']" action="//jsonplaceholder.typicode.com/posts/" type="drag">
       <p slot="tip">单个文件不能超过2M</p>
     </tb-upload> -->
@@ -90,11 +139,11 @@
     <tb-progress :percent="80" status="warning" :format="format"></tb-progress>
     <tb-progress :percent="100" status="error" :format="format"></tb-progress> -->
     <!-- <tb-input-number :min="0" :max="100" :step="0.111111111111111"  v-model="yourVModel" /> -->
-    <tb-switch @change="change" v-model="value" checked-text="开" unchecked-text="关" />
-    <tb-button @click="loading">开</tb-button>
+    <!-- <tb-switch @change="change" v-model="value" checked-text="开" unchecked-text="关" /> -->
+    <!-- <tb-button @click="loading">开</tb-button>
     <tb-button @click="loading1">关</tb-button>
-    <tb-button @click="loading2">错误</tb-button>
-    <tb-timeline>
+    <tb-button @click="loading2">错误</tb-button> -->
+    <!-- <tb-timeline>
       <tb-timeline-item>
         <p class="time">2019年4月12日</p>
         <p class="content">初始化</p>
@@ -130,7 +179,7 @@
       <tb-timeline-item>发布2.0版本</tb-timeline-item>
       <tb-timeline-item>发布1.5版本</tb-timeline-item>
       <tb-timeline-item>发布1.0版本</tb-timeline-item>
-    </tb-timeline>
+    </tb-timeline> -->
   </div>
 </template>
 <script>
@@ -329,4 +378,24 @@ export default {
 };
 </script>
 
-<style lang="less"></style>
+<style lang="less">
+.top {
+  text-align: center;
+}
+.center {
+  width: 300px;
+  margin: 10px auto;
+  overflow: hidden;
+  &-left {
+    float: left;
+    text-align: center;
+  }
+  &-right {
+    float: right;
+    text-align: center;
+  }
+}
+.bottom {
+  text-align: center;
+}
+</style>

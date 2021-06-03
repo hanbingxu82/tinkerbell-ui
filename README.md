@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-06-02 14:31:00
+ * @LastEditTime: 2021-06-03 13:28:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -84,6 +84,8 @@ yarn add tinkerbell-ui
 #### 0.4.2 完成 tb-upload、tb-upload-list（内置list展示组件） 上传组件
 
 #### 0.4.3 完成 tb-tabs、tb-scroll-pane 标签页组件
+
+#### 0.4.4 完成 tb-popover 提示弹出框组件
 
 ### 如有需要及时联系
 
