@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-27 13:29:51
- * @LastEditTime: 2021-05-27 15:09:11
+ * @LastEditTime: 2021-06-11 13:59:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbSteps/main.vue
@@ -337,6 +337,7 @@ export default {
 
       &.iconfont {
         font-size: 24px;
+        vertical-align: middle!important;
       }
       .icon-ios-checkmark-empty,
       .icon-ios-close-empty {
@@ -413,6 +414,7 @@ export default {
 
       > .tb-steps-icon.iconfont {
         font-size: 16px;
+        vertical-align: middle!important;
         top: 0;
       }
     }

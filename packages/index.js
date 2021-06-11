@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-06-03 13:28:44
+ * @LastEditTime: 2021-06-11 14:03:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -82,11 +82,13 @@ import tbSteps from "./tbSteps/index"; // 引入步骤条组件
 
 import tbUpload from "./tbUpload/index"; // 引入上传组件
 
-import tbTabs from './tbTabs/index' // 引入标签页组件
+import tbTabs from "./tbTabs/index"; // 引入标签页组件
 
 // import tbDropdown from './tbDropdown/index' // 引入下拉菜单组件
 
-import tbPopover from './tbPopover/index' // 引入提示弹出框
+import tbPopover from "./tbPopover/index"; // 引入提示弹出框
+
+import tbModal from "./tbModal/index"; // 引入弹出框
 
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
@@ -136,7 +138,8 @@ const components = [
   tbUpload,
   tbTabs,
   // tbDropdown,
-  tbPopover
+  tbPopover,
+  tbModal,
 ];
 
 // 定义 install 方法
@@ -196,6 +199,20 @@ const install = function(Vue) {
    */
 
   Vue.prototype.$notify = tbNotification;
+  /**
+   * @description: 2021-06-10 新增alert弹窗组件
+   * @param {*}
+   * @return {*}
+   */
+
+  Vue.prototype.$alert = tbModal.alert;
+  /**
+   * @description: 2021-06-10 新增confirm确认取消弹窗组件
+   * @param {*}
+   * @return {*}
+   */
+
+  Vue.prototype.$confirm = tbModal.confirm;
 };
 
 if (typeof window !== "undefined" && window.Vue) {

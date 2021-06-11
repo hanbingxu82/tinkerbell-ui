@@ -1,14 +1,38 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-02 17:25:07
+ * @LastEditTime: 2021-06-11 13:59:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit'
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <tb-popover trigger="hover" title="Title" content="content">
+     <tb-button type="primary" >Info</tb-button>
+    <tb-button type="primary" @click="$alert({ title: '标题', content: '我是弹窗内容', width: 500 })">Info</tb-button>
+    <tb-button type="success" @click="$alert({ type: 'success', title: '标题', content: '我是弹窗内容' })">Success</tb-button>
+    <tb-button type="warning" @click="$alert.warning({ title: '标题', content: '我是弹窗内容' })">Warning</tb-button>
+    <tb-button type="danger" @click="showAlert">Danger</tb-button>
+
+    <tb-button type="primary" @click="modal1 = true">显示弹窗</tb-button>
+    <tb-modal v-model="modal1" title="普通的模态框标题" @ok="ok" @close="ok">
+      <p>我是弹窗内容...</p>
+      <p>我是弹窗内容...</p>
+      <p>我是弹窗内容...</p>
+    </tb-modal>
+    <tb-button @click="modal1 = true">显示弹窗一</tb-button>
+    <tb-modal v-model="modal1" title="弹窗一" footer-hide width="600">
+      <p>我是弹窗内容...</p>
+      <p>我是弹窗内容...</p>
+      <p>我是弹窗内容...</p>
+      <tb-button type="primary" @click="modal2 = true">打开嵌套弹窗</tb-button>
+      <tb-modal v-model="modal2" title="嵌套弹窗">
+        <p>我是弹窗内容...</p>
+        <p>我是弹窗内容...</p>
+        <p>我是弹窗内容...</p>
+      </tb-modal>
+    </tb-modal>
+    <!-- <tb-popover trigger="hover" title="Title" content="content">
       <tb-button>Hover</tb-button>
     </tb-popover>
     <tb-popover trigger="click" title="Title" content="content">
@@ -57,7 +81,7 @@
         </tb-popover>
       </div>
     </div>
-    <!-- <tb-tabs v-model="activeTab" :data="tabs"></tb-tabs>
+    <!-- <tb-tabs v-model="activeTab" :data="tabs"></tb-tabs> -->
     <p>{{ activeTab }}模板</p>
     <tb-tabs v-model="activeTab" :data="tabs" type="card"></tb-tabs>
     <tb-tabs v-model="activeTab" :data="tabs" type="card" closable @tab-close="handleTabClose"></tb-tabs>
@@ -82,12 +106,13 @@
         <li @click="closeAll">关闭所有</li>
       </template>
     </tb-tabs>
-    <p>开启的tab：{{ activeTab }}</p> -->
+    <p>开启的tab：{{ activeTab }}</p>
+    -->
     <!-- <tb-upload paste :format="['xlsx']" action="//jsonplaceholder.typicode.com/posts/" type="drag">
       <p slot="tip">单个文件不能超过2M</p>
     </tb-upload> -->
 
-    <!-- <tb-steps :current="current" status="wait">
+    <tb-steps :current="current" status="wait">
       <tb-step title="已完成" content="这里是该步骤的描述信息"></tb-step>
       <tb-step title="进行中" content="这里是该步骤的描述信息"></tb-step>
       <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
@@ -116,7 +141,7 @@
       <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
       <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
     </tb-steps>
-    <tb-button type="primary" @click="next">下一步</tb-button> -->
+    <tb-button type="primary" @click="next">下一步</tb-button>
 
     <!-- <tb-progress :percent="10"></tb-progress>
     <tb-progress :percent="20" status="success"></tb-progress>
@@ -192,6 +217,8 @@ export default {
       yourVModel: 0,
       value: false,
       current: 0,
+      modal1: false,
+      modal2: false,
       tabs: [
         { key: "tab1", title: "用户管理", icon: "icon-caps-unlock-filling" },
         { key: "tab2", title: "组织管理" },
@@ -214,6 +241,19 @@ export default {
     this.$once("hook:beforeDestroy", () => clearInterval(timer));
   },
   methods: {
+    showAlert() {
+      this.$confirm({
+        type: "danger",
+        title: "标题",
+        content: "我是弹窗内容",
+        onOk: () => {
+          this.$message("点击了确定关闭弹窗");
+        },
+      });
+    },
+    ok() {
+      console.log(123);
+    },
     handleTabClose(tab) {
       this.tabs.splice(
         this.tabs.findIndex((t) => t.key === tab.key),
