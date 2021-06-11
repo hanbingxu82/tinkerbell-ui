@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-06 18:40:25
- * @LastEditTime: 2021-06-10 17:04:42
+ * @LastEditTime: 2021-06-11 14:13:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbModal/main.vue
@@ -635,7 +635,7 @@ export default {
   .tb-modal-header p {
     width: 100%;
     font-size: 16px;
-    color: #409eff;
+    // color: #409eff;
     font-weight: 500;
     line-height: 22px;
     overflow: hidden;
