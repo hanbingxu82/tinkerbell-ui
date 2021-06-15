@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:59:49
- * @LastEditTime: 2021-05-24 09:34:30
+ * @LastEditTime: 2021-06-15 15:06:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/table/table.vue
@@ -205,7 +205,7 @@ export default {
 }
 
 .button {
-  margin: 0 2px;
+  // margin: 0 2px;
   border-radius: 4px;
   background: #ffffff;
 }
@@ -365,8 +365,8 @@ export default {
   height: 30px;
   font-size: 12px;
   display: inline-block;
-  border: 1px solid #eeeeee;
-  line-height: 30px;
+  border: 1px solid #d9d9d9;
+  // line-height: 30px;
   text-align: center;
   padding: 0 16px;
   cursor: pointer;
@@ -375,8 +375,8 @@ export default {
   height: 35px;
   font-size: 14px;
   display: inline-block;
-  border: 1px solid #eeeeee;
-  line-height: 35px;
+  border: 1px solid #d9d9d9;
+  // line-height: 35px;
   text-align: center;
   padding: 0 20px;
   cursor: pointer;
@@ -385,8 +385,8 @@ export default {
   height: 40px;
   font-size: 16px;
   display: inline-block;
-  border: 1px solid #eeeeee;
-  line-height: 40px;
+  border: 1px solid #d9d9d9;
+  // line-height: 40px;
   text-align: center;
   padding: 0 24px;
   cursor: pointer;

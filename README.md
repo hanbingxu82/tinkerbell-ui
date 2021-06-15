@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-06-11 14:05:07
+ * @LastEditTime: 2021-06-15 15:58:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -88,6 +88,8 @@ yarn add tinkerbell-ui
 #### 0.4.4 完成 tb-popover 提示弹出框组件
 
 #### 0.4.5 完成 tb-modal、$alert、$confirm 弹出框组件
+
+#### 0.4.6 完成 tb-input 文本输入框组件
 
 ### 如有需要及时联系
 
