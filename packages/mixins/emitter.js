@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-05-27 13:32:21
- * @LastEditTime: 2021-05-27 14:54:04
+ * @LastEditTime: 2021-06-17 09:54:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/mixins/emiitter.js
@@ -23,7 +23,6 @@ export default {
     dispatch(componentName, eventName, params) {
       let parent = this.$parent || this.$root;
       let name = parent.$options.name;
-
       // 一直向上级寻找，找到绑定$on事件的组件
       while (parent && (!name || name !== componentName)) {
         parent = parent.$parent;

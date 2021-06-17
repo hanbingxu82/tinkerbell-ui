@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-06-01 15:19:21
- * @LastEditTime: 2021-06-15 10:36:48
+ * @LastEditTime: 2021-06-17 10:00:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/utils/dom.js
@@ -81,6 +81,16 @@ export function getScrollBarWidth() {
   scrollBarWidth = widthNoScroll - widthWithScroll;
 
   return scrollBarWidth;
+}
+
+const SPECIAL_CHARS_REGEXP = /([\:\-\_]+(.))/g  // eslint-disable-line
+const MOZ_HACK_REGEXP = /^moz([A-Z])/ // eslint-disable-line
+function camelCase(name) {
+  return name
+    .replace(SPECIAL_CHARS_REGEXP, function(_, separator, letter, offset) {
+      return offset ? letter.toUpperCase() : letter;
+    })
+    .replace(MOZ_HACK_REGEXP, "Moz$1");
 }
 
 // getStyle

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-06-15 14:31:33
+ * @LastEditTime: 2021-06-17 09:48:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -92,6 +92,9 @@ import tbModal from "./tbModal/index"; // 引入弹出框
 
 import tbInput from "./tbInput/index"; // 引入输入框
 
+import { tbOptionGroup, tbOption, tbSelect } from "./tbSelect/index"; // 引入下拉选择框
+
+
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
 // 以数组的结构保存组件，便于遍历
@@ -142,7 +145,10 @@ const components = [
   // tbDropdown,
   tbPopover,
   tbModal,
-  tbInput
+  tbInput,
+  tbSelect,
+  tbOption,
+  tbOptionGroup
 ];
 
 // 定义 install 方法
