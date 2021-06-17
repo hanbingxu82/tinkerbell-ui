@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-15 10:48:49
- * @LastEditTime: 2021-06-15 15:11:59
+ * @LastEditTime: 2021-06-17 15:59:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbInput/main.vue
@@ -449,7 +449,7 @@ export default {
       display: block;
     }
   }
-  .tb-input-icon-clear .icon-ios-close-circle {
+  .tb-input-icon-clear .icon-error {
     vertical-align: baseline;
     cursor: pointer;
   }

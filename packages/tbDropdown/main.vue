@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-02 14:47:06
- * @LastEditTime: 2021-06-02 15:50:24
+ * @LastEditTime: 2021-06-17 15:58:53
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbDropdown/main.vue
@@ -231,7 +231,7 @@ export default {
   list-style: none;
   cursor: pointer;
   transition: background 0.2s ease-in-out;
-  .icon-ios-arrow-forward {
+  .icon-arrow-right {
     position: relative;
     right: -6px;
   }

@@ -1,20 +1,151 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-17 13:09:33
+ * @LastEditTime: 2021-06-17 16:59:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit'
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
+    <div flex="box:mean" style="width: 500px;">
+      <!-- 时间选择器 -->
+      <!-- <div style="padding:0 10px;">
+        <tb-time-picker type="time" placeholder="Select time"></tb-time-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-time-picker type="timerange" placement="bottom-start" placeholder="Select time"></tb-time-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-time-picker type="time" value="09:41:00" format="HH点mm分ss秒" placeholder="Select time"></tb-time-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-time-picker type="timerange" :value="['09:41:00', '12:00:00']" format="HH’mm’ss" placement="bottom-start" placeholder="Select time"></tb-time-picker>
+      </div> -->
+      <!-- <div style="padding:0 10px;">
+        <tb-time-picker type="time" format="HH:mm" placeholder="Select time"></tb-time-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-time-picker type="timerange" format="HH:mm" placement="bottom-start" placeholder="Select time"></tb-time-picker>
+      </div>
+      <div style="padding:0 10px; width: 168px;">
+        <tb-time-picker type="time" :steps="[1, 15, 15]" placeholder="Select time"></tb-time-picker>
+      </div> -->
+      <!-- <div style="padding:0 10px;">
+        <tb-time-picker type="time" :disabled-hours="[1, 5, 10]" :disabled-minutes="[0, 10, 20]" placeholder="Select time"></tb-time-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-time-picker type="timerange" hide-disabled-options :disabled-hours="[1, 5, 10]" :disabled-minutes="[0, 10, 20]" placement="bottom-start" placeholder="Select time"></tb-time-picker>
+      </div> -->
+      <!-- <div style="padding:0 10px;">
+        <tb-time-picker type="time" confirm placeholder="Select time"></tb-time-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-time-picker type="timerange" confirm placement="bottom-start" placeholder="Select time"></tb-time-picker>
+      </div> -->
+      <!-- <tb-time-picker :open="open" :value="value3" confirm @change="handleChange" @clear="handleClear" @ok="handleOk">
+        <a href="javascript:void(0)" @click="handleClick">
+          <template v-if="value3 == ''">Select time</template>
+          <template v-else>{{ value3 }}</template>
+        </a>
+      </tb-time-picker> -->
+      <div style="padding:0 10px;">
+        <tb-time-picker size="mini" placeholder="mini date"></tb-time-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-time-picker size="small" placeholder="small date"></tb-time-picker>
+      </div>
+
+      <div style="padding:0 10px;">
+        <tb-time-picker size="medium" placeholder="medium date"></tb-time-picker>
+      </div>
+      <!-- 日期选择器 -->
+      <!-- <div style="padding:0 10px;">
+        <tb-date-picker type="date" placeholder="Select date"></tb-date-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-date-picker type="daterange" placement="bottom-start" placeholder="Select date"></tb-date-picker>
+      </div> -->
+      <!-- <div style="padding:0 10px;">
+        <tb-date-picker type="date" placeholder="Select date" :options="options1"></tb-date-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-date-picker type="daterange" placement="bottom-start" placeholder="Select date" :options="options2"></tb-date-picker>
+      </div> -->
+      <!-- <div style="padding:0 10px;">
+        <tb-date-picker type="daterange" split-panels placeholder="Select date"></tb-date-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-date-picker type="date" multiple placeholder="Select date"></tb-date-picker>
+      </div> -->
+      <!-- <div style="padding:0 10px;">
+        <tb-date-picker type="date" show-week-numbers placeholder="Select date"></tb-date-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-date-picker type="daterange" show-week-numbers placeholder="Select date"></tb-date-picker>
+      </div> -->
+      <!-- <div style="padding:0 10px;">
+        <tb-date-picker type="date" :start-date="new Date(2000, 8 - 1, 2)" placeholder="Select date"></tb-date-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-date-picker type="daterange" :start-date="new Date(2000, 8 - 1, 2)" placeholder="Select date"></tb-date-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-date-picker type="year" placeholder="Select year"></tb-date-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-date-picker type="month" placeholder="Select year"></tb-date-picker>
+      </div> -->
+      <!-- <div style="padding:0 10px;">
+        <tb-date-picker type="date" value="2016-01-01" format="yyyy年MM月dd日" placeholder="Select date"></tb-date-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-date-picker type="daterange" :value="['2016-01-01', '2016-02-15']" format="yyyy/MM/dd" placeholder="Select date"></tb-date-picker>
+      </div> -->
+      <!-- <div style="padding:0 10px;">
+        <tb-date-picker type="date" :options="options3" placeholder="Select date"></tb-date-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-date-picker type="date" :options="options4" placeholder="Select date"></tb-date-picker>
+      </div> -->
+      <!-- <div style="padding:0 10px;">
+        <tb-date-picker type="date" confirm placeholder="Select date"></tb-date-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-date-picker type="daterange" confirm placeholder="Select date"></tb-date-picker>
+      </div> -->
+      <!-- <tb-date-picker :open="open" :value="value3" confirm type="date" @change="handleChange" @clear="handleClear" @ok="handleOk">
+        <a href="javascript:void(0)" @click="handleClick">
+          <template v-if="value3 == ''">Select date</template>
+          <template v-else>{{ value3 }}</template>
+        </a>
+      </tb-date-picker> -->
+      <!-- <div style="padding:0 10px;">
+        <tb-date-picker size="mini" type="date" placeholder="Select date"></tb-date-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-date-picker size="small" type="date" placeholder="Select date"></tb-date-picker>
+      </div>
+      <div style="padding:0 10px;">
+        <tb-date-picker size="medium" type="date" placeholder="Select date"></tb-date-picker>
+      </div> -->
+      <!-- <tb-date-picker type="datetime" placeholder="选择日期时间" style="padding-right: 20px;"></tb-date-picker>
+      <tb-date-picker type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择日期时间(忽略秒)" style="padding-right: 20px;"></tb-date-picker>
+      <tb-date-picker type="datetimerange" placeholder="选择日期时间" style="padding-right: 20px;"></tb-date-picker>
+      <tb-date-picker type="datetimerange" format="yyyy-MM-dd HH:mm" placeholder="选择日期时间(忽略秒)"></tb-date-picker> -->
+      <!-- <tb-date-picker type="datetime" placeholder="选择日期时间" style="padding-right: 20px;"></tb-date-picker>
+      <tb-date-picker type="datetime" format="yyyy-MM-dd HH:mm" placeholder="选择日期时间(忽略秒)" style="padding-right: 20px;"></tb-date-picker> -->
+      <!-- <tb-date-picker type="datetimerange" placeholder="选择日期时间" style="padding-right: 20px;"></tb-date-picker>
+      <tb-date-picker type="datetimerange" format="yyyy-MM-dd HH:mm" placeholder="选择日期时间(忽略秒)"></tb-date-picker> -->
+    </div>
+
     <div flex="box:mean">
-      <tb-select style="width:200px" filterable>
+      <!-- <tb-select style="width:200px" filterable>
         <tb-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</tb-option>
       </tb-select>
       <tb-select style="width:300px;margin-left: 20px;" v-model="cites" filterable multiple>
         <tb-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</tb-option>
-      </tb-select>
+      </tb-select> -->
       <!-- <tb-select prefix="icon-telephone">
         <tb-option value="beijing" label="北京"></tb-option>
         <tb-option value="shanghai" label="上海"></tb-option>
@@ -196,6 +327,8 @@ export default {
     return {
       cites: [],
       value: "",
+      open: false,
+      value3: "",
       cityList: [
         {
           value: "New York",
@@ -223,6 +356,84 @@ export default {
         },
       ],
       select: "",
+      options3: {
+        disabledDate(date) {
+          return date && date.valueOf() < Date.now() - 86400000;
+        },
+      },
+      options4: {
+        disabledDate(date) {
+          const disabledDay = date.getDate();
+          return disabledDay === 15;
+        },
+      },
+      options1: {
+        shortcuts: [
+          {
+            text: "今天",
+            value() {
+              return new Date();
+            },
+            onClick: (picker) => {
+              this.$message("Click today");
+            },
+          },
+          {
+            text: "昨天",
+            value() {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24);
+              return date;
+            },
+            onClick: (picker) => {
+              this.$message("Click yesterday");
+            },
+          },
+          {
+            text: "一周",
+            value() {
+              const date = new Date();
+              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);
+              return date;
+            },
+            onClick: (picker) => {
+              this.$message("Click a week ago");
+            },
+          },
+        ],
+      },
+
+      options2: {
+        shortcuts: [
+          {
+            text: "近一周",
+            value() {
+              const end = new Date();
+              const start = new Date();
+              start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);
+              return [start, end];
+            },
+          },
+          {
+            text: "最近一个月",
+            value() {
+              const end = new Date();
+              const start = new Date();
+              start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);
+              return [start, end];
+            },
+          },
+          {
+            text: "最近三个月",
+            value() {
+              const end = new Date();
+              const start = new Date();
+              start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);
+              return [start, end];
+            },
+          },
+        ],
+      },
     };
   },
   created() {
@@ -231,6 +442,18 @@ export default {
   methods: {
     maxTagPlaceholder(num) {
       return "more " + num;
+    },
+    handleClick() {
+      this.open = !this.open;
+    },
+    handleChange(date) {
+      this.value3 = date;
+    },
+    handleClear() {
+      this.open = false;
+    },
+    handleOk() {
+      this.open = false;
     },
   },
   watch: {

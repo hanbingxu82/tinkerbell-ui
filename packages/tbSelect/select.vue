@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-16 15:59:45
- * @LastEditTime: 2021-06-17 13:09:14
+ * @LastEditTime: 2021-06-17 16:27:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbSelect/select.vue
@@ -391,7 +391,6 @@ export default {
       return selectOptions;
     },
     flatOptions() {
-      console.log(extractOptions(this.selectOptions));
       return extractOptions(this.selectOptions);
     },
     selectTabindex() {

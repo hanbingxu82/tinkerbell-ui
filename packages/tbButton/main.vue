@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:59:49
- * @LastEditTime: 2021-06-15 15:06:43
+ * @LastEditTime: 2021-06-17 16:53:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/table/table.vue
@@ -10,7 +10,7 @@
 <template>
   <button v-on="$listeners" v-if="!tbIcon && type != 'text'" :class="`tb-button button ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled} ${loading ? 'is_disabled' : ' '}`"><i v-if="loading" class="iconfont icon-loading load"></i><slot></slot></button>
   <button v-on="$listeners" v-else-if="tbIcon && type != 'text'" :class="`tb-button button ${tbIcon} ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled}`"><slot></slot></button>
-  <span v-on="$listeners" v-else-if="type == 'text'" :class="`tb-button ${tbType} ${tbDisabled}`"><slot></slot></span>
+  <a v-on="$listeners" v-else-if="type == 'text'" :class="`tb-button ${tbType} ${tbDisabled}`"><slot></slot></a>
 </template>
 
 <script>
@@ -74,6 +74,9 @@ export default {
     // },
     loading(newValue, oldValue) {
       console.log(newValue);
+    },
+    disabled(){
+      this.PDisabled();
     },
   },
   created() {
