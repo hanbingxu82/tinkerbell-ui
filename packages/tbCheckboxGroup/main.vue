@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-24 10:42:30
- * @LastEditTime: 2021-04-21 22:00:28
+ * @LastEditTime: 2021-06-18 16:32:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbCheckboxGroup/main.vue
@@ -11,8 +11,10 @@
 </template>
 
 <script>
+import Emitter from "../mixins/emitter";
 export default {
   name: "tbCheckboxGroup",
+  mixins: [Emitter],
   props: {
     value: {
       type: Array,
@@ -33,15 +35,15 @@ export default {
       default: "",
     },
     // 最小选中数量
-    min:{
-      type:Number,
-      default:0
+    min: {
+      type: Number,
+      default: 0,
     },
     // 最大如果不传默认显示为9999
-    max:{
-      type:Number,
-      default:9999,
-    }
+    max: {
+      type: Number,
+      default: 9999,
+    },
   },
   data() {
     return {
@@ -80,6 +82,7 @@ export default {
       this.$emit("input", val);
       //   // 同时触发父元素的Change事件  对外暴露
       this.$emit("change", val);
+      this.dispatch("tbFormItem", "form-change", val);
     },
     // 判断是否是禁用
     PDisabled() {

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-06-18 17:07:28
+ * @LastEditTime: 2021-06-18 17:11:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -97,7 +97,9 @@ yarn add tinkerbell-ui
 
 #### 0.4.9 完成 tb-cascader 级联选择器组件
 
-#### 0.5.0 完成 tb-menu, tb-menu-group, tb-menu-item, tb-submenu 导航菜单组件
+#### 0.5.0 完成 tb-menu、tb-menu-group、tb-menu-item、tb-submenu 导航菜单组件
+
+#### 0.5.1 完成 tb-form、tb-form-item 表单组件
 
 ### 如有需要及时联系
 

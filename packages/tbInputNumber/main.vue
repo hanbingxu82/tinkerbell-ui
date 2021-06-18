@@ -1,23 +1,25 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-21 13:13:23
- * @LastEditTime: 2021-05-21 14:25:35
+ * @LastEditTime: 2021-06-18 17:00:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbInputNumber/main.vue
 -->
 <template>
   <div class="tb-input-number">
-    <button @click="decreaseNumber" @mousedown="whileMouseDown(decreaseNumber)" @mouseup="clearTimer" :class="buttonClass">-</button>
+    <div @click="decreaseNumber" @mousedown="whileMouseDown(decreaseNumber)" @mouseup="clearTimer" :class="buttonClass">-</div>
     <input type="number" v-bind:value="numericValue" @keypress="validateInput" @input="inputValue" :class="inputClass" :min="min" :max="max" debounce="500" />
-    <button @click="increaseNumber" @mousedown="whileMouseDown(increaseNumber)" @mouseup="clearTimer" :class="buttonClass">+</button>
+    <div @click="increaseNumber" @mousedown="whileMouseDown(increaseNumber)" @mouseup="clearTimer" :class="buttonClass">+</div>
   </div>
 </template>
 
 <script>
 require("../utils/utils");
+import Emitter from "../mixins/emitter";
 export default {
   name: "tbInputNumber",
+  mixins: [Emitter],
   data: function() {
     return {
       numericValue: this.value,
@@ -37,7 +39,7 @@ export default {
     },
     // 最大传输值
     max: {
-      default: 10,
+      default: 100,
       type: Number,
     },
     // 步数，每次行走的步数  步数小数点最好不要超过15位小数  如果超过就会失去精度
@@ -157,8 +159,12 @@ export default {
     },
   },
   watch: {
+    value: function(val, oldVal) {
+      this.numericValue = val;
+    },
     numericValue: function(val, oldVal) {
       // 小于或等于最小值,就变更为最小值
+      if (val == "") return;
       if (val <= this.min) {
         this.numericValue = Number.prototype.add(this.min, 0);
       }
@@ -167,6 +173,7 @@ export default {
       }
       if (val <= this.max && val >= this.min) {
         this.$emit("input", val, oldVal);
+        this.dispatch("tbFormItem", "form-change", val);
       }
     },
   },
@@ -177,7 +184,7 @@ export default {
 .tb-input-number {
   &__input {
     -webkit-appearance: none;
-    border: 1px solid #ebebeb;
+    border: 1px solid #d9d9d9;
     float: left;
     font-size: 16px;
     height: 40px;
@@ -191,6 +198,7 @@ export default {
     }
   }
   &__button {
+    text-align: center;
     -webkit-appearance: none;
     transition: background 0.5s ease;
     background: #dcdfe6;
@@ -200,6 +208,7 @@ export default {
     float: left;
     font-size: 20px;
     height: 40px;
+    line-height: 40px;
     margin: 0;
     width: 40px;
   }

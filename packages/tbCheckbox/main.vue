@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-24 08:09:09
- * @LastEditTime: 2021-04-21 22:47:36
+ * @LastEditTime: 2021-06-18 16:01:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbCheckbox/main.vue
@@ -9,9 +9,9 @@
 <template>
   <div :class="`tb-checkbox checkbox ${tbDisabled} ${tbBorder} ${tbSize} ${tbBorder && labelChecked ? 'is-boder-active' : ''}`" v-inpClick>
     <div class="checkbox-box ">
-      <input v-if="!checkboxGroupValue && !indeterminate" v-on:click.stop :class="`${tbDisabled}`" :disabled="disabled" :checked="labelChecked" @change="$emit('change', $event.target.checked)" type="checkbox" />
+      <input v-if="!checkboxGroupValue && !indeterminate" v-on:click.stop :class="`${tbDisabled}`" :disabled="disabled" :checked="labelChecked" @change="checkboxMethodsChange" type="checkbox" />
       <input v-else-if="checkboxGroupValue && !indeterminate" :name="name || checkboxGroup.name" v-on:click.stop :class="`${tbDisabled}`" :disabled="disabled" :checked="labelChecked" :value="label" @change="tbCheckboxGroupParentMethod($event.target)" type="checkbox" />
-      <input ref="indeterminate" v-else v-on:click.stop :class="`${tbDisabled}`" :indeterminate="indeterminate" :disabled="disabled" :checked="labelChecked" @change="$emit('change', $event.target.checked)" type="checkbox" />
+      <input ref="indeterminate" v-else v-on:click.stop :class="`${tbDisabled}`" :indeterminate="indeterminate" :disabled="disabled" :checked="labelChecked" @change="checkboxMethodsChange" type="checkbox" />
       <span :class="`checkbox-text ${labelChecked && !disabled ? 'check-this' : ''}`"
         ><span v-if="label">{{ label }}</span
         ><slot v-else></slot
@@ -20,8 +20,10 @@
   </div>
 </template>
 <script>
+import Emitter from "../mixins/emitter";
 export default {
   name: "tbCheckbox",
+  mixins: [Emitter],
   model: {
     prop: "checked",
     event: "change",
@@ -98,6 +100,10 @@ export default {
   },
   mounted() {},
   methods: {
+    checkboxMethodsChange(event) {
+      $emit("change", event.target.checked);
+           this.dispatch("tbFormItem", "form-change", event.target.value);
+    },
     // 页面加载时判断最小选中值 和最大选中值   以及每次触发选中事件时也同样要触发这个事件
     isMinMax() {
       const vm = this;
@@ -194,7 +200,6 @@ export default {
     },
     // 变更调用父元素方法
     tbCheckboxGroupParentMethod(dom) {
-      console.log(dom);
       this.checkboxGroup.tbCheckboxGroupParentMethod(dom);
     },
   },

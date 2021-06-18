@@ -1,16 +1,16 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:59:49
- * @LastEditTime: 2021-06-17 16:53:39
+ * @LastEditTime: 2021-06-18 16:50:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/table/table.vue
  * 除按钮组、autofocus、autofocus两个api属性 也未实现
 -->
 <template>
-  <button v-on="$listeners" v-if="!tbIcon && type != 'text'" :class="`tb-button button ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled} ${loading ? 'is_disabled' : ' '}`"><i v-if="loading" class="iconfont icon-loading load"></i><slot></slot></button>
-  <button v-on="$listeners" v-else-if="tbIcon && type != 'text'" :class="`tb-button button ${tbIcon} ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled}`"><slot></slot></button>
-  <a v-on="$listeners" v-else-if="type == 'text'" :class="`tb-button ${tbType} ${tbDisabled}`"><slot></slot></a>
+  <div v-on.prevent="$listeners" v-if="!tbIcon && type != 'text'" :class="`tb-div button ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled} ${loading ? 'is_disabled' : ' '}`"><i v-if="loading" class="iconfont icon-loading load"></i><slot></slot></div>
+  <div v-on.prevent="$listeners" v-else-if="tbIcon && type != 'text'" :class="`tb-button button ${tbIcon} ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled}`"><slot></slot></div>
+  <a v-on.prevent="$listeners" v-else-if="type == 'text'" :class="`tb-button ${tbType} ${tbDisabled}`"><slot></slot></a>
 </template>
 
 <script>
@@ -369,7 +369,7 @@ export default {
   font-size: 12px;
   display: inline-block;
   border: 1px solid #d9d9d9;
-  // line-height: 30px;
+  line-height: 30px;
   text-align: center;
   padding: 0 16px;
   cursor: pointer;
@@ -379,7 +379,7 @@ export default {
   font-size: 14px;
   display: inline-block;
   border: 1px solid #d9d9d9;
-  // line-height: 35px;
+  line-height: 35px;
   text-align: center;
   padding: 0 20px;
   cursor: pointer;
@@ -389,7 +389,7 @@ export default {
   font-size: 16px;
   display: inline-block;
   border: 1px solid #d9d9d9;
-  // line-height: 40px;
+  line-height: 40px;
   text-align: center;
   padding: 0 24px;
   cursor: pointer;

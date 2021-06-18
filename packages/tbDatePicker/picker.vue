@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-17 14:42:15
- * @LastEditTime: 2021-06-17 16:42:57
+ * @LastEditTime: 2021-06-18 15:54:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbDatePicker/picker.vue
@@ -558,7 +558,7 @@ export default {
       this.visible = false;
       this.internalValue = this.internalValue.map(() => null);
       this.$emit("clear");
-      this.dispatch("BFormItem", "form-change", "");
+      this.dispatch("tbFormItem", "form-change", "");
       this.emitChange(this.type);
       this.reset();
 
@@ -570,7 +570,7 @@ export default {
     emitChange(type) {
       this.$nextTick(() => {
         this.$emit("change", this.publicStringValue, type);
-        this.dispatch("BFormItem", "form-change", this.publicStringValue);
+        this.dispatch("tbFormItem", "form-change", this.publicStringValue);
       });
     },
     parseDate(val) {

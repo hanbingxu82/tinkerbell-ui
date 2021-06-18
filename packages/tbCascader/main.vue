@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-18 13:10:39
- * @LastEditTime: 2021-06-18 13:37:13
+ * @LastEditTime: 2021-06-18 15:54:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbCascader/main.vue
@@ -268,7 +268,7 @@ export default {
       if (JSON.stringify(val) !== oldVal) {
         this.$emit('change', this.currentValue, JSON.parse(JSON.stringify(this.selected)))
         this.$nextTick(() => {
-          this.dispatch('BFormItem', 'form-change', {
+          this.dispatch('tbFormItem', 'form-change', {
             value: this.currentValue,
             selected: JSON.parse(JSON.stringify(this.selected))
           })

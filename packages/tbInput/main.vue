@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-15 10:48:49
- * @LastEditTime: 2021-06-17 15:59:41
+ * @LastEditTime: 2021-06-18 15:53:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbInput/main.vue
@@ -280,9 +280,9 @@ export default {
     handleBlur(event) {
       this.$emit("blur", event);
       // 触发校验
-      //   if (!findComponentUpward(this, ["DatePicker", "TimePicker", "Cascader", "Search"])) {
-      //     this.dispatch("BFormItem", "form-blur", this.currentValue);
-      //   }
+        if (!findComponentUpward(this, ["DatePicker", "TimePicker", "Cascader", "Search"])) {
+          this.dispatch("tbFormItem", "form-blur", this.currentValue);
+        }
     },
     // 兼容谷歌做出的  兼容input事件  如果直接通过input监听， 它是键盘输入按键按下了就触发事件，这样可能导致一些问题，比如在谷歌浏览器想输入中文输入不了
     // 谷歌是 compositionstart  => 监听input事件 => compositionend,   其他浏览器是 compositionstart  => compositionend => 监听input事件，
@@ -318,9 +318,9 @@ export default {
       });
       this.currentValue = value;
       // 触发校验
-      //   if (!findComponentUpward(this, ["DatePicker", "TimePicker", "Cascader", "Search"])) {
-      //     this.dispatch("BFormItem", "form-change", value);
-      //   }
+        if (!findComponentUpward(this, ["DatePicker", "TimePicker", "Cascader", "Search"])) {
+          this.dispatch("tbFormItem", "form-change", value);
+        }
     },
     // 设置autosize大小
     resizeTextarea() {
