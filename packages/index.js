@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-06-17 17:00:57
+ * @LastEditTime: 2021-06-18 13:29:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -96,6 +96,7 @@ import { tbOptionGroup, tbOption, tbSelect } from "./tbSelect/index"; // 引入�
 
 import {tbDatePicker,tbTimePicker} from "./tbDatePicker/index";  // 引入  时间  日期选择器
 
+import tbCascader from './tbCascader/index' // 引入级联选择器
 
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
@@ -152,7 +153,8 @@ const components = [
   tbOption,
   tbOptionGroup,
   tbDatePicker,
-  tbTimePicker
+  tbTimePicker,
+  tbCascader
 ];
 
 // 定义 install 方法

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-17 16:59:40
+ * @LastEditTime: 2021-06-18 13:51:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit'
  * @FilePath: /hx/examples/App.vue
@@ -9,6 +9,36 @@
 <template>
   <div id="app">
     <div flex="box:mean" style="width: 500px;">
+      <!-- <div style="width:240px;">
+        <tb-cascader :data="data" :render-format="format"></tb-cascader>
+      </div> -->
+      <!-- <div style="width:120px;">
+        <tb-cascader :data="data" size="mini"></tb-cascader>
+      </div>
+      <div style="width:120px;margin-left: 5px;">
+        <tb-cascader :data="data" size="small"></tb-cascader>
+      </div>
+      <div style="width:120px;margin-left: 5px;">
+        <tb-cascader :data="data" size="medium"></tb-cascader>
+      </div> -->
+      <!-- <tb-cascader :data="data4" :load-data="loadData"></tb-cascader> -->
+        <tb-cascader :data="data" filterable></tb-cascader>
+      <!-- <tb-cascader :data="data" v-model="value1" trigger="hover"></tb-cascader>
+      <div>{{ text }}</div>
+      <div style="width:240px;">
+        <tb-cascader :data="data" @change="handleChange">
+          <a href="javascript:void(0)">选择</a>
+        </tb-cascader>
+      </div> -->
+      <!-- <div style="width:240px;">
+        <tb-cascader :data="data" v-model="value1" disabled></tb-cascader>
+      </div>
+      <div style="width:240px;">
+        <tb-cascader :data="data2" v-model="value1"></tb-cascader>
+      </div> -->
+      <!-- <div style="width:240px;">
+        <tb-cascader :data="data" change-on-select></tb-cascader>
+      </div> -->
       <!-- 时间选择器 -->
       <!-- <div style="padding:0 10px;">
         <tb-time-picker type="time" placeholder="Select time"></tb-time-picker>
@@ -49,7 +79,7 @@
           <template v-else>{{ value3 }}</template>
         </a>
       </tb-time-picker> -->
-      <div style="padding:0 10px;">
+      <!-- <div style="padding:0 10px;">
         <tb-time-picker size="mini" placeholder="mini date"></tb-time-picker>
       </div>
       <div style="padding:0 10px;">
@@ -58,7 +88,7 @@
 
       <div style="padding:0 10px;">
         <tb-time-picker size="medium" placeholder="medium date"></tb-time-picker>
-      </div>
+      </div> -->
       <!-- 日期选择器 -->
       <!-- <div style="padding:0 10px;">
         <tb-date-picker type="date" placeholder="Select date"></tb-date-picker>
@@ -325,7 +355,65 @@ let count = 1;
 export default {
   data() {
     return {
+      text: "未选择",
+      value1: ["xuzhou", "tongshan"],
+      data: [
+        {
+          value: "nanjing",
+          label: "南京",
+          children: [
+            {
+              value: "xuanwu",
+              label: "玄武区",
+            },
+            {
+              value: "gulou",
+              label: "鼓楼区",
+            },
+            {
+              value: "jianye",
+              label: "建邺区",
+            },
+          ],
+        },
+        {
+          value: "xuzhou",
+          label: "徐州",
+          children: [
+            {
+              value: "tongshan",
+              label: "铜山区",
+            },
+            {
+              value: "gulou",
+              label: "鼓楼区",
+            },
+            {
+              value: "yunlong",
+              label: "云龙区",
+            },
+            {
+              value: "jiawang",
+              label: "贾汪区",
+            },
+          ],
+        },
+      ],
       cites: [],
+      data4: [
+        {
+          value: "nanjing",
+          label: "南京",
+          children: [],
+          loading: false,
+        },
+        {
+          value: "xuzhou",
+          label: "徐州",
+          children: [],
+          loading: false,
+        },
+      ],
       value: "",
       open: false,
       value3: "",
@@ -353,6 +441,49 @@ export default {
         {
           value: "Canberra",
           label: "Canberra",
+        },
+      ],
+      data2: [
+        {
+          value: "nanjing",
+          label: "南京",
+          disabled: true,
+          children: [
+            {
+              value: "xuanwu",
+              label: "玄武区",
+            },
+            {
+              value: "gulou",
+              label: "鼓楼区",
+            },
+            {
+              value: "jianye",
+              label: "建邺区",
+            },
+          ],
+        },
+        {
+          value: "xuzhou",
+          label: "徐州",
+          children: [
+            {
+              value: "tongshan",
+              label: "铜山区",
+            },
+            {
+              value: "gulou",
+              label: "鼓楼区",
+            },
+            {
+              value: "yunlong",
+              label: "云龙区",
+            },
+            {
+              value: "jiawang",
+              label: "贾汪区",
+            },
+          ],
         },
       ],
       select: "",
@@ -440,21 +571,74 @@ export default {
     console.log(this.select);
   },
   methods: {
-    maxTagPlaceholder(num) {
-      return "more " + num;
+    loadData(item, callback) {
+      item.loading = true;
+      setTimeout(() => {
+        if (item.value === "nanjing") {
+          item.children = [
+            {
+              value: "xuanwu",
+              label: "玄武区",
+            },
+            {
+              value: "gulou",
+              label: "鼓楼区",
+            },
+            {
+              value: "jianye",
+              label: "建邺区",
+            },
+          ];
+        } else if (item.value === "xuzhou") {
+          item.children = [
+            {
+              value: "tongshan",
+              label: "铜山区",
+            },
+            {
+              value: "gulou",
+              label: "鼓楼区",
+            },
+            {
+              value: "yunlong",
+              label: "云龙区",
+            },
+            {
+              value: "jiawang",
+              label: "贾汪区",
+            },
+          ];
+        }
+        item.loading = false;
+        callback();
+      }, 1000);
     },
-    handleClick() {
-      this.open = !this.open;
+    format(labels, selectedData) {
+      const index = labels.length - 1;
+      const data = selectedData[index] || false;
+      if (data && data.value) {
+        return labels[index] + " - " + data.value;
+      }
+      return labels[index];
     },
-    handleChange(date) {
-      this.value3 = date;
+    handleChange(value, selectedData) {
+      this.text = selectedData.map((o) => o.label).join(", ");
     },
-    handleClear() {
-      this.open = false;
-    },
-    handleOk() {
-      this.open = false;
-    },
+    // maxTagPlaceholder(num) {
+    //   return "more " + num;
+    // },
+    // handleClick() {
+    //   this.open = !this.open;
+    // },
+    // handleChange(date) {
+    //   this.value3 = date;
+    // },
+    // handleClear() {
+    //   this.open = false;
+    // },
+    // handleOk() {
+    //   this.open = false;
+    // },
   },
   watch: {
     select(value) {},
