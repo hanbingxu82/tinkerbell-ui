@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-22 13:47:52
- * @LastEditTime: 2021-03-24 10:01:07
+ * @LastEditTime: 2021-06-18 16:55:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbRadio/main.vue
@@ -10,16 +10,18 @@
 <template>
   <div :class="`tb-radio radio ${tbDisabled} ${tbBorder} ${tbSize} ${tbBorder && labelChecked ? 'is-boder-active' : ''}`" v-inpClick>
     <div class="radio-box ">
-      <input v-on:click.stop :name="name||radioGroup.name" v-if="!radioGroupValue" :class="`${tbDisabled}`" :disabled="disabled" :checked="labelChecked" :value="label" @change="$emit('change', $event.target.value)" type="radio" />
-      <input v-on:click.stop :name="name||radioGroup.name" v-else :class="`${tbDisabled}`" :disabled="disabled" :checked="labelChecked" :value="label" @change="tbRadioGroupParentMethod($event.target.value)" type="radio" />
+      <input v-on:click.stop :name="name || radioGroup.name" v-if="!radioGroupValue&&!radioGroup" :class="`${tbDisabled}`" :disabled="disabled" :checked="labelChecked" :value="label" @change="radioChange" type="radio" />
+      <input v-on:click.stop :name="name || radioGroup.name" v-else :class="`${tbDisabled}`" :disabled="disabled" :checked="labelChecked" :value="label" @change="tbRadioGroupParentMethod($event.target.value)" type="radio" />
       <span :class="`radio-text ${labelChecked ? 'check-this' : ''}`"><slot></slot></span>
     </div>
   </div>
 </template>
 
 <script>
+import Emitter from "../mixins/emitter";
 export default {
   name: "tbRadio",
+  mixins: [Emitter],
   //   特定  如复选框  单选框有特定的model对象键值，
   model: {
     prop: "checked",
@@ -61,7 +63,6 @@ export default {
     // 计算属性的 getter
     radioGroupValue: function() {
       this.isGroup();
-      // debugger
       return this.radioGroup.value;
     },
   },
@@ -81,7 +82,7 @@ export default {
       labelChecked: false,
       tbDisabled: "",
       tbBorder: "",
-      tbSize:""
+      tbSize: "",
     };
   },
   created() {
@@ -89,20 +90,25 @@ export default {
     this.isGroup();
     this.PDisabled();
     this.PBorder();
-    this.Psize()
+    this.Psize();
   },
   methods: {
+    radioChange(event) {
+      debugger
+      this.$emit("change", event.target.value);
+      this.dispatch("tbFormItem", "form-change", event.target.value);
+    },
     // 页面加载判断当前按钮大小
     Psize() {
       const vm = this;
-      if (vm.size == "mini" || vm.radioGroup.size=="mini") {
+      if (vm.size == "mini" || vm.radioGroup.size == "mini") {
         vm.tbSize = "radio_mini";
-      } else if (vm.size == "small" ||  vm.radioGroup.size=="small") {
+      } else if (vm.size == "small" || vm.radioGroup.size == "small") {
         vm.tbSize = "radio_small";
-      } else if (vm.size == "medium" ||  vm.radioGroup.size=="medium") {
+      } else if (vm.size == "medium" || vm.radioGroup.size == "medium") {
         vm.tbSize = "radio_medium";
-      }else{
-        vm.tbSize = ""
+      } else {
+        vm.tbSize = "";
       }
     },
     // 判断是否为tb-radio-group子项

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-06-18 13:54:54
+ * @LastEditTime: 2021-06-18 17:07:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -96,6 +96,8 @@ yarn add tinkerbell-ui
 #### 0.4.8 完成 tb-time-picker、tb-date-picker 时间、日期选择组件
 
 #### 0.4.9 完成 tb-cascader 级联选择器组件
+
+#### 0.5.0 完成 tb-menu, tb-menu-group, tb-menu-item, tb-submenu 导航菜单组件
 
 ### 如有需要及时联系
 

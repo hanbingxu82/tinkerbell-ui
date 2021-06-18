@@ -1,10 +1,10 @@
 /*
  * @Author: your name
- * @Date: 2021-06-15 10:32:12
- * @LastEditTime: 2021-06-15 10:34:51
+ * @Date: 2021-06-18 14:17:29
+ * @LastEditTime: 2021-06-18 14:17:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: /hx/packages/tbSubmenu/collapse-transition.js
+ * @FilePath: /hx/packages/base/collapse-transition.js
  */
 import { addClass, removeClass } from '../utils/dom'
 

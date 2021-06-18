@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-27 17:00:50
- * @LastEditTime: 2021-06-01 14:46:11
+ * @LastEditTime: 2021-06-18 15:53:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbUpload/main.vue
@@ -358,7 +358,7 @@ export default {
         _file.response = res;
         this.onSuccess(res, _file, this.fileList);
         // 触发向上查找，form-change事件  此处可以暂时屏蔽
-        // this.dispatch("tbFormItem", "form-change", _file);
+        this.dispatch("tbFormItem", "form-change", _file);
 
         setTimeout(() => {
           // 上传成功500ms之后对应的上传进度条就不要在展示了

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-16 15:59:45
- * @LastEditTime: 2021-06-17 16:27:18
+ * @LastEditTime: 2021-06-18 15:53:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbSelect/select.vue
@@ -598,8 +598,7 @@ export default {
             .map(getOptionData)
             .filter(Boolean);
         });
-
-        // this.dispatch("BFormItem", "form-change", this.publicValue);
+        this.dispatch("tbFormItem", "form-change", this.publicValue);
       }
     },
     values(now, before) {
@@ -611,7 +610,7 @@ export default {
       if (shouldEmitInput) {
         this.$emit("input", vModelValue); // to update v-model
         this.$emit("change", this.publicValue);
-        // this.dispatch("BFormItem", "form-change", this.publicValue);
+        this.dispatch("tbFormItem", "form-change", this.publicValue);
       }
     },
     query(query) {

@@ -1,10 +1,10 @@
 <!--
  * @Author: your name
- * @Date: 2021-06-15 09:13:32
- * @LastEditTime: 2021-06-15 10:20:03
+ * @Date: 2021-06-18 14:15:39
+ * @LastEditTime: 2021-06-18 15:03:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: /hx/packages/tbMenuGroup/main.vue
+ * @FilePath: /hx/packages/tbMenu/menu-group.vue
 -->
 <template>
   <li :class="[prefixCls + '-item-group']">
@@ -15,12 +15,12 @@
   </li>
 </template>
 <script>
-import mixin from "../mixins/menuMinxns";
+import mixin from './mixin'
 
-const prefixCls = 'bin-menu'
+const prefixCls = 'tb-menu'
 
 export default {
-  name: 'BMenuGroup',
+  name: 'tbMenuGroup',
   mixins: [mixin],
   props: {
     title: {
