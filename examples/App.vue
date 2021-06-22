@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-18 17:04:20
+ * @LastEditTime: 2021-06-22 15:28:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit'
  * @FilePath: /hx/examples/App.vue
@@ -17,7 +17,14 @@
       </tb-form-item>
     </tb-form>
 
-    <div style="width:600px;" flex="box:mean">
+    <tb-pagination :total="100" :current.sync="current"></tb-pagination>
+    <tb-pagination :total="100" show-sizer></tb-pagination>
+    <tb-pagination :total="100" show-elevator></tb-pagination>
+    <tb-pagination :total="100" show-total></tb-pagination>
+    <tb-pagination :total="100" size="mini" show-elevator show-sizer show-total></tb-pagination>
+     <tb-pagination :total="40" prev-text="上一页" next-text="下一页"></tb-pagination>
+        <tb-pagination :current="2" :total="50" simple></tb-pagination>
+    <!-- <div style="width:600px;" flex="box:mean">
       <tb-form :model="formValidate" ref="form" :rules="ruleValidate" :label-width="100">
         <tb-form-item label="用户名" prop="name">
           <tb-input v-model="formValidate.name"></tb-input>
@@ -75,7 +82,7 @@
           <tb-button @click="handleReset">重 置</tb-button>
         </tb-form-item>
       </tb-form>
-    </div>
+    </div> -->
 
     <!-- <div style="width:600px;"> -->
     <!-- <tb-form :model="formInline" ref="form" :rules="ruleValidate" inline>
@@ -158,6 +165,7 @@ export default {
       }
     };
     return {
+      current: 2,
       // theme1: "light",
       // theme2: "light",
       // isCollapse: true,
