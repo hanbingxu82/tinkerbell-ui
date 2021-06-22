@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-06-18 17:11:51
+ * @LastEditTime: 2021-06-22 15:38:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -100,6 +100,8 @@ yarn add tinkerbell-ui
 #### 0.5.0 完成 tb-menu、tb-menu-group、tb-menu-item、tb-submenu 导航菜单组件
 
 #### 0.5.1 完成 tb-form、tb-form-item 表单组件
+
+#### 0.5.2 完成 tb-pagination 分页组件
 
 ### 如有需要及时联系
 
