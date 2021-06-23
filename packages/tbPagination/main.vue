@@ -1,15 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-27 16:29:34
- * @LastEditTime: 2021-05-27 16:29:50
+ * @LastEditTime: 2021-06-22 15:32:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbPagination/main.vue
--->
-<template>
+--><template>
   <ul :class="simpleWrapClasses" :style="styles" v-if="simple">
     <li title="上一页" :class="prevClasses" @click="prev">
-      <a><i class="iconfont icon-ios-arrow-back"></i></a>
+      <a><i class="iconfont icon-arrow-left-bold"></i></a>
     </li>
     <li :class="simplePagerClasses" :title="currentPage + '/' + allPages"><label>
       <input
@@ -25,7 +24,7 @@
       {{ allPages }}
     </li>
     <li title="下一页" :class="nextClasses" @click="next">
-      <a><i class="iconfont icon-ios-arrow-forward"></i></a>
+      <a><i class="iconfont icon-arrow-right-bold"></i></a>
     </li>
   </ul>
   <ul :class="wrapClasses" :style="styles" v-else>
@@ -37,11 +36,11 @@
     <li title="上一页" :class="prevClasses" @click="prev">
       <a>
         <template v-if="prevText !== ''">{{ prevText }}</template>
-        <i v-else class="iconfont icon-ios-arrow-back"></i></a>
+        <i v-else class="iconfont icon-arrow-left-bold"></i></a>
     </li>
     <li title="1" :class="firstPageClasses" @click="changePage(1)"><a>1</a></li>
     <li title="向前5页" v-if="currentPage > 5" :class="[prefixCls + '-item-jump-prev']" @click="fastPrev">
-      <a><i class="iconfont icon-doubleleft"></i></a>
+      <a><i class="iconfont icon-arrow-double-left"></i></a>
     </li>
     <li :title="currentPage - 3" v-if="currentPage === 5" :class="[prefixCls + '-item']"
         @click="changePage(currentPage - 3)">
@@ -73,7 +72,7 @@
     </li>
     <li title="向后5页" v-if="allPages - currentPage >= 5" :class="[prefixCls + '-item-jump-next']"
         @click="fastNext">
-      <a><i class="iconfont icon-doubleright"></i></a>
+      <a><i class="iconfont icon-arrow-double-right"></i></a>
     </li>
     <li :title="allPages" v-if="allPages > 1" :class="lastPageClasses" @click="changePage(allPages)">
       <a>{{ allPages }}</a>
@@ -81,7 +80,7 @@
     <li title="下一页" :class="nextClasses" @click="next">
       <a>
         <template v-if="nextText !== ''">{{ nextText }}</template>
-        <i v-else class="iconfont icon-ios-arrow-forward"></i></a>
+        <i v-else class="iconfont icon-arrow-right-bold"></i></a>
     </li>
     <options
         :show-sizer="showSizer"
@@ -99,13 +98,13 @@
   </ul>
 </template>
 <script>
-import { oneOf } from '../../utils/util'
+import { oneOf } from '../utils/utils'
 import Options from './options.vue'
 
-const prefixCls = 'bin-page'
+const prefixCls = 'tb-page'
 
 export default {
-  name: 'BPage',
+  name: 'tbPagination',
   components: { Options },
   props: {
     current: {
@@ -135,7 +134,7 @@ export default {
     transfer: Boolean,
     size: {
       validator(value) {
-        return oneOf(value, ['small'])
+        return oneOf(value, ['mini'])
       }
     },
     simple: {
@@ -334,3 +333,266 @@ export default {
   }
 }
 </script>
+<style lang="less">
+.tb-page {
+  color: rgba(0, 0, 0, .65);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5715;
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  &-item {
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    min-width: 32px;
+    height: 32px;
+    line-height: 30px;
+    margin-right: 4px;
+    text-align: center;
+    list-style: none;
+    background-color: #ffffff;
+    user-select: none;
+    cursor: pointer;
+    font-family: Arial;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+    a {
+      font-family: Monospaced Number;
+      margin: 0 6px;
+      text-decoration: none;
+      color: rgba(0, 0, 0, .65);
+    }
+    &:hover {
+      border-color: #1089ff;
+      a {
+        color: #1089ff;
+      }
+    }
+    &-active {
+      border-color: #1089ff;
+      a, &:hover a {
+        color: #1089ff;
+      }
+    }
+  }
+  &-item-jump-prev, &-item-jump-next {
+    margin-right: 4px;
+    &:after {
+      content: "•••";
+      display: block;
+      letter-spacing: 1px;
+      color: rgba(0, 0, 0, .25);
+      text-align: center;
+    }
+    i {
+      display: none;
+    }
+    &:hover {
+      &:after {
+        display: none;
+      }
+      i {
+        display: inline;
+        font-size: rgba(0, 0, 0, .25);
+      }
+    }
+  }
+
+  &-prev {
+    margin-right: 4px;
+  }
+  &-prev, &-next, &-item-jump-prev, &-item-jump-next {
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+    min-width: 32px;
+    height: 32px;
+    line-height: 30px;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    color: #666;
+    font-family: Arial;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &-item-jump-prev, &-item-jump-next {
+    border-color: transparent;
+  }
+  &-item-jump-prev:hover a, &-item-jump-next:hover a {
+    color: #1089ff;
+  }
+
+  &-prev, &-next {
+    background-color: #ffffff;
+    padding: 0 5px;
+    a {
+      color: rgba(0, 0, 0, .45);
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      height: 100%;
+      .iconfont {
+        font-size: 14px;
+      }
+    }
+    &:hover {
+      border-color: #1089ff;
+      a {
+        color: #1089ff;
+      }
+    }
+  }
+
+  &-disabled {
+    cursor: not-allowed;
+    a {
+      color: rgba(0, 0, 0, .25);
+    }
+    &:hover {
+      border-color: #dcdee2;
+      a {
+        color: rgba(0, 0, 0, .25);
+        cursor: not-allowed;
+      }
+    }
+  }
+  &-options {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+    &-sizer {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    &-elevator {
+      display: inline-block;
+      vertical-align: middle;
+      height: 32px;
+      line-height: 30px;
+      input {
+        display: inline-block;
+        margin: 0 8px;
+        width: 50px;
+        height: 32px;
+        line-height: 1.5;
+        padding: 0 11px;
+        font-size: 14px;
+        border: 1px solid #d9d9d9;
+        border-radius: 2px;
+        color: rgba(0, 0, 0, .65);
+        background-color: #ffffff;
+        background-image: none;
+        position: relative;
+        cursor: text;
+        transition: border 0.2s ease-in-out, background 0.2s ease-in-out, box-shadow 0.2s ease;
+        // placeholder()
+        &:focus, &:hover {
+          border-color: #1089ff;
+        }
+        &:focus {
+          outline: 0;
+          // box-shadow: 0 0 0 2px $color-input-shadow;
+        }
+      }
+    }
+  }
+  &-total {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  &-simple &-prev, &-simple &-next {
+    margin: 0;
+    border: 0;
+    height: 24px;
+    line-height: normal;
+    font-size: 18px;
+  }
+
+  &-simple &-simple-pager {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+    input {
+      width: 30px;
+      height: 24px;
+      margin: 0 8px;
+      padding: 5px 8px;
+      text-align: center;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      outline: none;
+      border: 1px solid #d9d9d9;
+      border-radius: 2px;
+      transition: border 0.2s ease-in-out, background 0.2s ease-in-out, box-shadow 0.2s ease;
+      &:hover {
+        border-color: #1089ff;
+      }
+    }
+    span {
+      padding: 0 8px 0 2px;
+    }
+  }
+}
+
+//  mini模式
+.tb-page {
+  &.mini &-total {
+    height: 24px;
+    line-height: 24px;
+  }
+  &.mini &-item {
+    border-color: transparent;
+    margin: 0;
+    min-width: 24px;
+    height: 24px;
+    line-height: 23px;
+    border-radius: 2px;
+    &-active {
+      border-color: #1089ff;
+    }
+  }
+  &.mini &-prev, &.mini &-next {
+    margin: 0;
+    min-width: 24px;
+    height: 24px;
+    line-height: 22px;
+    border: 0;
+    a {
+      i {
+        vertical-align: middle;
+      }
+    }
+  }
+  &.mini &-item-jump-prev, &.mini &-item-jump-next {
+    height: 24px;
+    line-height: 24px;
+    border: none;
+    margin-right: 0;
+  }
+  &.mini &-options {
+    margin-left: 8px;
+    &-elevator {
+      height: 24px;
+      line-height: 24px;
+      input {
+        height: 24px;
+        width: 44px;
+      }
+    }
+  }
+}
+</style>
