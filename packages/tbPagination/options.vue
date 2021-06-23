@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-27 16:32:55
- * @LastEditTime: 2021-05-27 16:33:05
+ * @LastEditTime: 2021-06-22 15:08:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbPagination/options.vue
@@ -9,12 +9,12 @@
 <template>
   <div v-if="showSizer || showElevator" :class="optsClasses">
     <div v-if="showSizer" :class="sizerClasses">
-      <b-select v-model="currentPageSize" :size="size" :placement="placement" :transfer="transfer"
+      <tb-select v-model="currentPageSize" :size="size" :placement="placement" :transfer="transfer"
                 @change="changeSize">
-        <b-option v-for="item in pageSizeOpts" :key="item" :value="item" style="text-align:center;">
+        <tb-option v-for="item in pageSizeOpts" :key="item" :value="item" style="text-align:center;">
           {{ item }} 条/页
-        </b-option>
-      </b-select>
+        </tb-option>
+      </tb-select>
     </div>
     <div v-if="showElevator" :class="ElevatorClasses">
       跳至
@@ -32,7 +32,7 @@
   </div>
 </template>
 <script>
-const prefixCls = 'bin-page'
+const prefixCls = 'tb-page'
 
 function isValueNumber(value) {
   return (/^[1-9][0-9]*$/).test(value + '')
@@ -64,7 +64,7 @@ export default {
   },
   computed: {
     size() {
-      return this.isSmall ? 'mini' : 'default'
+      return this.isSmall ? 'mini' : 'small'
     },
     optsClasses() {
       return [
