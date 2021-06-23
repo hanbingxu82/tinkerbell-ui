@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-22 15:28:21
+ * @LastEditTime: 2021-06-22 20:18:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit'
  * @FilePath: /hx/examples/App.vue
@@ -16,14 +16,14 @@
         <tb-input v-model="formValidate2.mail"></tb-input>
       </tb-form-item>
     </tb-form>
-
-    <tb-pagination :total="100" :current.sync="current"></tb-pagination>
+    <tb-table-eazy :sort="false" selectable @select="select" sortExternal @sort="sort" :rows="rows" :cols="cols" />
+    <!-- <tb-pagination :total="100" :current.sync="current"></tb-pagination>
     <tb-pagination :total="100" show-sizer></tb-pagination>
     <tb-pagination :total="100" show-elevator></tb-pagination>
     <tb-pagination :total="100" show-total></tb-pagination>
     <tb-pagination :total="100" size="mini" show-elevator show-sizer show-total></tb-pagination>
      <tb-pagination :total="40" prev-text="上一页" next-text="下一页"></tb-pagination>
-        <tb-pagination :current="2" :total="50" simple></tb-pagination>
+        <tb-pagination :current="2" :total="50" simple></tb-pagination> -->
     <!-- <div style="width:600px;" flex="box:mean">
       <tb-form :model="formValidate" ref="form" :rules="ruleValidate" :label-width="100">
         <tb-form-item label="用户名" prop="name">
@@ -154,6 +154,100 @@
   </div>
 </template>
 <script>
+function getUsers() {
+  return [
+    {
+      id: "daa3daeb-91c6-42f8-aaf4-4e80c297c000",
+      name: "Darsie Tellett",
+      email: "dtellett1@behance.net",
+      gender: "Male",
+      birth_date: "1990-07-12",
+      address: {
+        country: "United States",
+        zip: "84130",
+        province: "Utah",
+        city: "Salt Lake City",
+        street: "Schurz",
+        number: "08529",
+      },
+    },
+    {
+      id: "37742e75-6839-461a-8727-d00b4333176a",
+      name: "Hilarius Jeaffreson",
+      email: "hjeaffreson2@ted.com",
+      gender: "Male",
+      birth_date: "1993-06-13",
+      address: {
+        country: "United States",
+        zip: "34290",
+        province: "Florida",
+        city: "North Port",
+        street: "Milwaukee",
+        number: "0",
+      },
+    },
+    {
+      id: "a6ebf9ee-3cc5-4384-b73c-594a79207774",
+      name: "Lyman Haxley",
+      email: "lhaxley3@newyorker.com",
+      gender: null,
+      birth_date: "1972-12-29",
+      address: {
+        country: "United States",
+        zip: "77260",
+        province: "Texas",
+        city: "Houston",
+        street: "Scoville",
+        number: "9514",
+      },
+    },
+    {
+      id: "77b39998-188a-4967-a960-12372308345c",
+      name: "Lock Kearney",
+      email: "lkearney4@ucsd.edu",
+      gender: "Male",
+      birth_date: "1983-01-17",
+      address: {
+        country: "United States",
+        zip: "43215",
+        province: "Ohio",
+        city: "Columbus",
+        street: "5th",
+        number: "36",
+      },
+    },
+    {
+      id: "df88b137-fc34-4bd4-b32a-595f79867906",
+      name: "Ame Blachford",
+      email: "ablachford5@miitbeian.gov.cn",
+      gender: "Female",
+      birth_date: "1974-03-04",
+      address: {
+        country: "United States",
+        zip: "32803",
+        province: "Florida",
+        city: "Orlando",
+        street: "Hovde",
+        number: "6251",
+      },
+    },
+    {
+      id: "d18a89e9-a707-4bed-9b75-73a1e712714b",
+      name: "Bobbye Seldon",
+      email: "bseldon6@artisteer.com",
+      gender: "Male",
+      birth_date: "1993-07-23",
+      address: {
+        country: "United States",
+        zip: "83757",
+        province: "Idaho",
+        city: "Boise",
+        street: "Delaware",
+        number: "9754",
+      },
+    },
+  ];
+}
 let count = 1;
 export default {
   data() {
@@ -165,6 +259,36 @@ export default {
       }
     };
     return {
+      cols: [
+        {
+          label: "Name",
+          align: "center",
+          field: "name",
+          sort: false,
+        },
+        {
+          label: "Birth Date", // 表格头名称
+          align: "center", // 文本对齐方式 'center' | 'right' | 'left'
+          hidden:false,// 是否隐藏列
+          field: "birth_date", // 字段对应数组规则
+          sort: (a, b) => new Date(a).getTime() - new Date(b).getTime(), // 排序规则
+          headerClass:'reddddddd', // 表格头class
+          contentClass:'reddddddd' // 表格列内容class
+        },
+        {
+          label: "Gender",
+          align: "center",
+          field: "gender",
+          sort: false,
+        },
+        {
+          label: "City",
+          align: "center",
+          field: "address.city",
+          sort: false,
+        },
+      ],
+      rows: getUsers(),
       current: 2,
       // theme1: "light",
       // theme2: "light",
@@ -268,6 +392,12 @@ export default {
   },
   created() {},
   methods: {
+    select(arr){
+      console.log(arr)
+    },
+    sort(column, sortment){
+      console.log(column,sortment)
+    },
     handleSubmit() {
       this.$refs.form.validate((valid) => {
         if (valid) {
@@ -294,5 +424,8 @@ export default {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.reddddddd span{
+  color:red!important;
 }
 </style>
