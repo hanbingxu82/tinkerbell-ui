@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-15 09:13:26
- * @LastEditTime: 2021-06-18 15:37:30
+ * @LastEditTime: 2021-06-23 15:55:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbMenu/main.vue
@@ -218,18 +218,18 @@ export default {
     height: 60px;
     line-height: 60px;
     font-size: 0;
-    &.tb-menu-light {
-      &:after {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 1px;
-        background: #dcdee2;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-      }
-    }
+    // &.tb-menu-light {
+    //   &:after {
+    //     content: "";
+    //     display: block;
+    //     width: 100%;
+    //     height: 1px;
+    //     background: #dcdee2;
+    //     position: absolute;
+    //     bottom: 0;
+    //     left: 0;
+    //   }
+    // }
   }
   &-vertical {
     &.tb-menu-light {
