@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-24 10:42:24
- * @LastEditTime: 2021-04-21 23:11:39
+ * @LastEditTime: 2021-06-27 18:54:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbCheckboxButton/main.vue
@@ -94,7 +94,7 @@ export default {
     this.isGroup();
     this.PDisabled();
     this.PBorder();
-    // this.Psize()
+    this.Psize()
     this.isMinMax();
   },
   mounted() {},
@@ -129,7 +129,7 @@ export default {
     // 页面加载判断当前按钮大小
     Psize() {
       const vm = this;
-      if (vm.size == "mini" || vm.radioGroup.size == "mini") {
+      if (vm.size == "mini" || vm.checkboxGroup.size == "mini") {
         vm.tbSize = "checkbox_mini";
       } else if (vm.size == "small" || vm.checkboxGroup.size == "small") {
         vm.tbSize = "checkbox_small";
@@ -218,19 +218,19 @@ export default {
   box-sizing: border-box;
   margin: auto;
 }
-.checkbox_mini.is_border {
+.checkbox_mini {
   padding: 6px 15px;
 }
 .checkbox_mini.is-boder-active {
   padding: 6px 15px;
 }
-.checkbox_small.is_border {
+.checkbox_small {
   padding: 8px 15px;
 }
 .checkbox_small.is-boder-active {
   padding: 8px 15px;
 }
-.checkbox_medium.is_border {
+.checkbox_medium {
   padding: 10px 20px;
 }
 .checkbox_medium.is-boder-active {
@@ -276,6 +276,6 @@ input[type="checkbox" i] {
 .checkbox-text {
   display: inline-block;
   
-  margin:5px 20px 5px 20px;
+  /* margin:5px 20px 5px 20px; */
 }
 </style>

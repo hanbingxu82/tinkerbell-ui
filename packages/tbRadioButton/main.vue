@@ -166,7 +166,6 @@ export default {
 .is_border {
   border: 1px solid #dcdfe6;
   padding: 12px 20px;
-  box-sizing: border-box;
   margin: auto;
   box-sizing: border-box;
 }

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 13:12:07
- * @LastEditTime: 2021-06-27 15:38:17
+ * @LastEditTime: 2021-06-27 17:47:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/Components.vue
@@ -29,7 +29,7 @@
             </tb-menu-group>
             <tb-menu-group title="表单">
               <tb-menu-item to="/Components/Radio" name="Radio">Radio 单选框</tb-menu-item>
-              <tb-menu-item to="/Components/Container" name="Container">Checkbox 多选框</tb-menu-item>
+              <tb-menu-item to="/Components/Checkbox" name="Checkbox">Checkbox 多选框</tb-menu-item>
               <tb-menu-item to="/Components/Input" name="Input">Input 输入框</tb-menu-item>
               <tb-menu-item to="/Components/InputNumber" name="InputNumber">InputNumber 计数器</tb-menu-item>
               <tb-menu-item to="/Components/Select" name="Select">Select 选择器</tb-menu-item>

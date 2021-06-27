@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-24 08:09:09
- * @LastEditTime: 2021-06-18 16:01:44
+ * @LastEditTime: 2021-06-27 18:40:59
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbCheckbox/main.vue
@@ -95,14 +95,14 @@ export default {
     this.isGroup();
     this.PDisabled();
     this.PBorder();
-    // this.Psize()
+    this.Psize();
     this.isMinMax();
   },
   mounted() {},
   methods: {
     checkboxMethodsChange(event) {
-      $emit("change", event.target.checked);
-           this.dispatch("tbFormItem", "form-change", event.target.value);
+      this.$emit("change", event.target.checked);
+      this.dispatch("tbFormItem", "form-change", event.target.value);
     },
     // 页面加载时判断最小选中值 和最大选中值   以及每次触发选中事件时也同样要触发这个事件
     isMinMax() {
@@ -134,7 +134,7 @@ export default {
     // 页面加载判断当前按钮大小
     Psize() {
       const vm = this;
-      if (vm.size == "mini" || vm.radioGroup.size == "mini") {
+      if (vm.size == "mini" || vm.checkboxGroup.size == "mini") {
         vm.tbSize = "checkbox_mini";
       } else if (vm.size == "small" || vm.checkboxGroup.size == "small") {
         vm.tbSize = "checkbox_small";
