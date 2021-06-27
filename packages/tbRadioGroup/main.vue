@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-22 18:19:59
- * @LastEditTime: 2021-06-18 16:34:35
+ * @LastEditTime: 2021-06-27 16:37:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbRadioGroup/main.vue
@@ -58,7 +58,6 @@ export default {
       this.$emit("input", value);
       // 同时触发父元素的Change事件
       this.$emit("change", value);
-      console.log(value)
       this.dispatch("tbFormItem", "form-change", value);
     },
     // 判断是否是禁用

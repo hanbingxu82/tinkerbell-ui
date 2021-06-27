@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-22 13:47:52
- * @LastEditTime: 2021-06-18 16:55:16
+ * @LastEditTime: 2021-06-27 16:51:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbRadio/main.vue
@@ -94,7 +94,6 @@ export default {
   },
   methods: {
     radioChange(event) {
-      debugger
       this.$emit("change", event.target.value);
       this.dispatch("tbFormItem", "form-change", event.target.value);
     },
@@ -114,6 +113,7 @@ export default {
     // 判断是否为tb-radio-group子项
     isGroup() {
       if (this.radioGroup.value) {
+
         // 如果是调用radio组判断的选中方法
         this.isGroupChecked();
       } else {
@@ -124,7 +124,8 @@ export default {
     isGroupChecked() {
       const vm = this;
       // 判断传入的两值是否相等  如果相等 labelChecked变为true
-      if (this.radioGroup.value === this.label) {
+      if (this.radioGroup.value == this.label) {
+
         vm.labelChecked = true;
       } else {
         vm.labelChecked = false;
@@ -134,7 +135,7 @@ export default {
     isChecked() {
       const vm = this;
       // 判断传入的两值是否相等  如果相等 labelChecked变为true
-      if (this.checked === this.label) {
+      if (this.checked == this.label) {
         vm.labelChecked = true;
       } else {
         vm.labelChecked = false;

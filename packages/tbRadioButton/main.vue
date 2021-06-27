@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-23 13:54:26
- * @LastEditTime: 2021-03-23 14:07:56
+ * @LastEditTime: 2021-06-27 16:29:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbRadioButton/main.vue
@@ -50,7 +50,7 @@ export default {
     },
     border: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   inject: {

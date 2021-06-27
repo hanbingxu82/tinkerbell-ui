@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-25 15:00:21
+ * @LastEditTime: 2021-06-27 15:55:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/router/index.js
@@ -68,6 +68,17 @@ const routes = [
         path: "Link",
         name: "Link",
         component: () => import("../views/ComponentsLibrary/Foundation/Link.vue"), // 组件-->基础-->文字链接
+      },
+      // Forms  表单部分
+      {
+        path: "Radio",
+        name: "Radio",
+        component: () => import("../views/ComponentsLibrary/Forms/Radio.vue"), // 组件-->表单-->单选
+      },
+      {
+        path: "Checkbox",
+        name: "Checkbox",
+        component: () => import("../views/ComponentsLibrary/Forms/Checkbox.vue"), // 组件-->表单-->多选
       },
     ],
   },
