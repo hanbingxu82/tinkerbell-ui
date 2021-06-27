@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-06-27 10:58:16
+ * @LastEditTime: 2021-06-27 11:59:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -106,6 +106,8 @@ yarn add tinkerbell-ui
 #### 0.5.3 完成 tb-table-eazy 表格组件
 
 #### 0.5.4 完成 tinkerbell-ui 官网雏形
+
+#### 0.5.5 调整 tinkerbell-ui 主题颜色样式等
 
 ### 如有需要及时联系
 
