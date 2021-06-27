@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-25 14:40:02
- * @LastEditTime: 2021-06-25 14:40:02
+ * @LastEditTime: 2021-06-27 14:56:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Foundation/Link.vue
@@ -9,131 +9,227 @@
 
 <template>
   <div>
-<h2 id="jie-shao" style="box-sizing: border-box; margin: 0px; padding: 10px 0px; font-size: 28px; font-weight: 400; color: rgb(31, 47, 61); border-bottom: 1px solid rgb(197, 217, 232); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="#jie-shao" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;介绍
-</h2>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    tinkerbell-ui 是一款基于 Vue.js 2.0 的前端 UI组件库，是个人在工作中为了更好的学习和使用vue相关技术栈而实现的。
-</p>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    本项目的源码和文档主要参考借鉴了&nbsp;<code style="box-sizing: border-box; margin: 0px; padding: 0px 4px; background-color: rgb(249, 250, 252); border: 1px solid rgb(234, 238, 251); border-radius: 4px; line-height: 2em;">element-ui</code>和&nbsp;<code style="box-sizing: border-box; margin: 0px; padding: 0px 4px; background-color: rgb(249, 250, 252); border: 1px solid rgb(234, 238, 251); border-radius: 4px; line-height: 2em;">iView</code>以及&nbsp;<code style="box-sizing: border-box; margin: 0px; padding: 0px 4px; background-color: rgb(249, 250, 252); border: 1px solid rgb(234, 238, 251); border-radius: 4px; line-height: 2em;">bin-ui</code>。分离了常用业务组件并封装，部分组件参考这三个开源库进行了简化实现。现已实现扩展了约 40 个组件可供日常开发。
-</p>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    添加了开源协议，编写本UI库的目的也是为了学习提升，熟悉vue相关技术栈及相关UI控件的实现和开发。
-</p>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    组件库的更新请参考[更新日志]
-</p>
-<h3 id="gai-shu" style="box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="#gai-shu" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;概述
-</h3>
-<ul style="list-style-type: none;" class=" list-paddingleft-2">
-    <li>
-        <p>
-            基于 Vue 开发的 UI 组件
-        </p>
-    </li>
-    <li>
-        <p>
-            提供了一些常用的字体图标
-        </p>
-    </li>
-    <li>
-        <p>
-            灵活可控的组件，良好的API文档
-        </p>
-    </li>
-    <li>
-        <p>
-            集成了常用的css样式和transition动画
-        </p>
-    </li>
-    <li>
-        <p>
-            封装了常用的指令和工具库
-        </p>
-    </li>
-</ul>
-<h3 id="zui-xin-ban-ben" style="box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="#zui-xin-ban-ben" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;最新版本
-</h3>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="https://www.npmjs.com/package/tinkerbell-ui" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">
-   <img alt="npm" src="https://img.shields.io/npm/v/tinkerbell-ui" style="box-sizing: border-box; border: 0px;"/>
-    </a>
-</p>
-<h3 id="xiang-guan-lian-jie" style="box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="#xiang-guan-lian-jie" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;相关链接
-</h3>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="https://element.eleme.cn/" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">element-ui</a>
-</p>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="https://www.iviewui.com/" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">iView</a>
-</p>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="https://wangbin3162.gitee.io/bin-ui/" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">bin-ui</a>
-</p>
-<p>
-    <br/>
-</p>
-    <!-- <pre v-highlight>
+    <h2
+      id="link-an-niu"
+      style='box-sizing: border-box; margin: 0px; padding: 10px 0px; font-size: 28px; font-weight: 400; color: rgb(31, 47, 61); border-bottom: 1px solid rgb(197, 217, 232); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      <a href="#link-an-niu" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;Link 文字链接
+    </h2>
+    <p
+      style='box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      文字超链接。
+    </p>
+    <h3
+      id="ji-chu-yong-fa"
+      style='box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      <a href="#ji-chu-yong-fa" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;基础用法
+    </h3>
+    <p
+      style='box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      基础的文字链接用法。
+    </p>
+    <p>
+      <br />
+    </p>
+    <Demo>
+      <div slot="source">
+        <tb-link href="/" target="_blank">默认链接</tb-link>
+        <tb-link type="primary">主要链接</tb-link>
+        <tb-link type="success">成功链接</tb-link>
+        <tb-link type="warning">警告链接</tb-link>
+        <tb-link type="danger">危险链接</tb-link>
+        <tb-link type="info">信息链接</tb-link>
+      </div>
+      <pre slot="highlight" v-highlight>
         <code class="javascript"  v-text="html1">
         </code>
-    </pre> -->
+      </pre>
+    </Demo>
+    <h3
+      id="jin-yong-zhuang-tai"
+      style='box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      <a href="#jin-yong-zhuang-tai" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;禁用状态
+    </h3>
+    <p
+      style='box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      文字链接不可用状态。
+    </p>
+    <p>
+      <br />
+    </p>
+
+    <Demo>
+      <div slot="source">
+        <div>
+          <tb-link disabled>默认链接</tb-link>
+          <tb-link type="primary" disabled>主要链接</tb-link>
+          <tb-link type="success" disabled>成功链接</tb-link>
+          <tb-link type="warning" disabled>警告链接</tb-link>
+          <tb-link type="danger" disabled>危险链接</tb-link>
+          <tb-link type="info" disabled>信息链接</tb-link>
+        </div>
+      </div>
+      <pre slot="highlight" v-highlight>
+        <code class="javascript"  v-text="html2">
+        </code>
+      </pre>
+    </Demo>
+    <h3
+      id="xia-hua-xian"
+      style='box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      <a href="#xia-hua-xian" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;下划线
+    </h3>
+    <p
+      style='box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      文字链接下划线。
+    </p>
+    <p>
+      <br />
+    </p>
+
+    <Demo>
+      <div slot="source">
+        <div>
+          <tb-link :underline="false">无下划线</tb-link>
+          <tb-link>有下划线</tb-link>
+        </div>
+      </div>
+      <pre slot="highlight" v-highlight>
+        <code class="javascript"  v-text="html3">
+        </code>
+      </pre>
+    </Demo>
+    <h3
+      id="tu-biao"
+      style='box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      <a href="#tu-biao" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;图标
+    </h3>
+    <p
+      style='box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      带图标的文字链接可增强辨识度。
+    </p>
+    <p>
+      <br />
+    </p>
+
+    <Demo>
+      <div slot="source">
+        <div>
+          <tb-link icon="iconfont icon-edit">编辑</tb-link>
+          <tb-link>查看<i class="iconfont icon-browse"></i> </tb-link>
+        </div>
+      </div>
+      <pre slot="highlight" v-highlight>
+        <code class="javascript"  v-text="html3">
+        </code>
+      </pre>
+    </Demo>
+    <h3
+      id="rowLink"
+      style='box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      <a href="#rowLink" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;Link props
+    </h3>
+    <p>
+      <br />
+    </p>
+    <tb-table-eazy :rows="rowLink" :cols="col"></tb-table-eazy>
     <RightSmallNav :rightTitle="rightTitle" @goMeowPoint="goMeowPoint" />
   </div>
 </template>
 
 <script>
-const rawHtml = `<template>
-  <el-row class="demo-avatar demo-basic">
-    <el-col :span="12">
-      <div class="sub-title">circle</div>
-      <div class="demo-basic--circle">
-        <div class="block"><el-avatar :size="50" :src="circleUrl"></el-avatar></div>
-        <div class="block" v-for="size in sizeList" :key="size">
-          <el-avatar :size="size" :src="circleUrl"></el-avatar>
-        </div>
-      </div>
-    </el-col>  
-    <el-col :span="12">
-      <div class="sub-title">square</div>
-      <div class="demo-basic--circle">
-        <div class="block"><el-avatar shape="square" :size="50" :src="squareUrl"></el-avatar></div>
-        <div class="block" v-for="size in sizeList" :key="size">
-          <el-avatar shape="square" :size="size" :src="squareUrl"></el-avatar>
-        </div>
-      </div>
-    </el-col> 
-  </el-row>
-</template>
-<script>
-  export default {
-    data () {
-      return {
-        circleUrl: "https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png",
-        squareUrl: "https://cube.elemecdn.com/9/c2/f0ee8a3c7c9638a54940382568c9dpng.png",
-        sizeList: ["large", "medium", "small"]
-      }
-    }
-  }
-<\/script>
-                `;
 import useScroll from "../../../utils/mixins";
 import RightSmallNav from "../../../components/RightSmallNav.vue";
 export default {
-  name: "Introductiontotheframework",
+  name: "Link",
   components: { RightSmallNav },
   data() {
     return {
-      html1: rawHtml,
+      rowLink: [
+        {
+          Parameters: "type",
+          Explain: "类型",
+          Types: "string",
+          Optional: "primary / success / warning / danger / info",
+          Default: "default",
+        },
+
+        {
+          Parameters: "underline",
+          Explain: "是否下划线",
+          Types: "boolean",
+          Optional: "-",
+          Default: "true",
+        },
+        {
+          Parameters: "disabled",
+          Explain: "是否禁用状态",
+          Types: "boolean",
+          Optional: "-",
+          Default: "false",
+        },
+        {
+          Parameters: "href",
+          Explain: "原生 href 属性",
+          Types: "string",
+          Optional: "-",
+          Default: "-",
+        },
+        {
+          Parameters: "icon",
+          Explain: "	图标类名",
+          Types: "string",
+          Optional: "-",
+          Default: "-",
+        },
+      ],
+      html1: `    <div>
+      <tb-link href="/" target="_blank">默认链接</tb-link>
+      <tb-link type="primary">主要链接</tb-link>
+      <tb-link type="success">成功链接</tb-link>
+      <tb-link type="warning">警告链接</tb-link>
+      <tb-link type="danger">危险链接</tb-link>
+      <tb-link type="info">信息链接</tb-link>
+    </div>
+              `,
+      html2: `    <div>
+      <tb-link disabled>默认链接</tb-link>
+      <tb-link type="primary" disabled>主要链接</tb-link>
+      <tb-link type="success" disabled>成功链接</tb-link>
+      <tb-link type="warning" disabled>警告链接</tb-link>
+      <tb-link type="danger" disabled>危险链接</tb-link>
+      <tb-link type="info" disabled>信息链接</tb-link>
+    </div>
+              `,
+      html3: `    <div>
+      <tb-link :underline="false">无下划线</tb-link>
+      <tb-link>有下划线</tb-link>
+    </div>
+              `,
+      html4: `    <div>
+      <tb-link icon="iconfont icon-edit">编辑</tb-link>
+      <tb-link>查看<i class="iconfont icon-browse"></i> </tb-link>
+    </div>
+              `,
+
       //   定义当前传递过来的数据是所有类型的数据
       rightTitle: [
-        { title: "介绍", id: "jie-shao" },
-        { title: "概述", id: "gai-shu" },
-        { title: "最新版本", id: "zui-xin-ban-ben" },
-        { title: "相关链接", id: "xiang-guan-lian-jie" },
+        { title: "Link 按钮", id: "link-an-niu" },
+        { title: "基础用法", id: "ji-chu-yong-fa" },
+        { title: "禁用状态", id: "jin-yong-zhuang-tai" },
+        { title: "下划线", id: "xia-hua-xian" },
+        { title: "图标", id: "tu-biao" },
+        { title: "Link props", id: "rowLink" },
       ],
     };
   },
@@ -156,4 +252,8 @@ export default {
   },
 };
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.tb-link {
+  margin: 5px;
+}
+</style>

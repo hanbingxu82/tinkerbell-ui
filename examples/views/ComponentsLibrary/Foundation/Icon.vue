@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-25 13:57:20
- * @LastEditTime: 2021-06-27 10:56:30
+ * @LastEditTime: 2021-06-27 15:04:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Foundation/Icon.vue
@@ -24,6 +24,33 @@
       <p>
         <br />
       </p>
+
+      <h3
+        id="shi-yong-fang-fa"
+        style='box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
+      >
+        <a href="#shi-yong-fang-fa" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;使用方法
+      </h3>
+      <p
+        style='box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);'
+      >
+        直接通过设置类名为 iconfont icon-layers 来使用即可。例如：
+      </p>
+      <p>
+        <br />
+      </p>
+      <Demo>
+        <div slot="source">
+          <i class="lookicon iconfont icon-layers"></i>
+          <i class="lookicon iconfont icon-lock"></i>
+          <i class="lookicon iconfont icon-map"></i>
+          <tb-button type="primary" icon="icon-search">搜索</tb-button>
+        </div>
+        <pre slot="highlight" v-highlight>
+        <code class="javascript"  v-text="html1">
+        </code>
+      </pre>
+      </Demo>
       <h3
         id="tu-biao-ji-he"
         style='box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
@@ -1136,11 +1163,16 @@ export default {
   components: { RightSmallNav },
   data() {
     return {
+      html1: `    <i class="iconfont icon-layers"></i>
+    <i class="iconfont icon-lock"></i>
+    <i class="iconfont icon-map"></i>
+    <tb-button type="primary" icon="icon-search">搜索</tb-button>
+              `,
       //   定义当前传递过来的数据是所有类型的数据
       rightTitle: [
         { title: "Icon 图标", id: "icon-tu-biao" },
+        { title: "使用方法", id: "shi-yong-fang-fa" },
         { title: "图标集合", id: "tu-biao-ji-he" },
-  
       ],
     };
   },
@@ -1164,6 +1196,10 @@ export default {
 };
 </script>
 <style lang="less" scoped>
+.lookicon {
+  font-size: 30px;
+  margin: 5px 20px;
+}
 .main .logo {
   margin-top: 0;
   height: auto;
@@ -1233,7 +1269,7 @@ export default {
 
 /* 页面布局 */
 .main {
-//   padding: 30px;
+  //   padding: 30px;
   width: 100%;
   height: 100%;
   margin: 0 auto;

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-22 08:27:45
- * @LastEditTime: 2021-03-22 10:08:19
+ * @LastEditTime: 2021-06-27 14:47:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbLink/main.vue
@@ -113,6 +113,9 @@ export default {
 };
 </script>
 <style scoped>
+.iconfont{
+  vertical-align: baseline;
+}
 /* icon按钮 */
 .a_icon {
   width: 35px !important;

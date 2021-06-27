@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:59:49
- * @LastEditTime: 2021-06-27 11:55:46
+ * @LastEditTime: 2021-06-27 13:43:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/table/table.vue
@@ -163,6 +163,9 @@ export default {
 </script>
 
 <style lang="less" scoped>
+.iconfont{
+  vertical-align: baseline;
+}
 // 不考虑size大小问题
 .button_icon {
   width: 35px !important;
