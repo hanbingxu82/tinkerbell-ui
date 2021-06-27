@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-27 15:54:29
- * @LastEditTime: 2021-06-27 19:05:02
+ * @LastEditTime: 2021-06-27 19:09:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Forms/Checkbox.vue
@@ -12,7 +12,7 @@
       id="checkbox-dan-xuan-kuang"
       style='box-sizing: border-box; margin: 0px; padding: 10px 0px; font-size: 28px; font-weight: 400; color: rgb(31, 47, 61); border-bottom: 1px solid rgb(197, 217, 232); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
     >
-      <a href="#checkbox-dan-xuan-kuang" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;Checkbox 复选框
+      <a href="#checkbox-dan-xuan-kuang" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;Checkbox 多选框
     </h2>
     <p
       style='box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);'
@@ -91,9 +91,9 @@
       <div slot="source">
         <div>
           <tb-checkbox-group v-model="checkList">
-            <tb-checkbox label="复选框 A">复选框 A</tb-checkbox>
-            <tb-checkbox label="复选框 B">复选框 B</tb-checkbox>
-            <tb-checkbox label="复选框 C">复选框 C</tb-checkbox>
+            <tb-checkbox label="多选框 A">多选框 A</tb-checkbox>
+            <tb-checkbox label="多选框 B">多选框 B</tb-checkbox>
+            <tb-checkbox label="多选框 C">多选框 C</tb-checkbox>
             <tb-checkbox label="禁用" disabled>禁用</tb-checkbox>
             <tb-checkbox label="选中且禁用" disabled>选中且禁用</tb-checkbox>
           </tb-checkbox-group>
@@ -305,7 +305,7 @@ export default {
     return {
       //   定义当前传递过来的数据是所有类型的数据
       rightTitle: [
-        { title: "Checkbox 单选框", id: "checkbox-dan-xuan-kuang" },
+        { title: "Checkbox 多选框", id: "checkbox-dan-xuan-kuang" },
         { title: "基础用法", id: "ji-chu-yong-fa" },
         { title: "禁用状态", id: "jin-yong-zhuang-tai" },
         { title: "多选框组", id: "duo-xuan-kuang-zu" },
@@ -461,7 +461,7 @@ export default {
       checked2: true,
       checked3: true,
       checked4: true,
-      checkList: ["选中且禁用", "复选框 A"],
+      checkList: ["选中且禁用", "多选框 A"],
       checkboxGroup1: ["上海"],
       checkboxGroup2: ["上海"],
       checkboxGroup3: ["上海"],
@@ -504,9 +504,9 @@ export default {
               `,
       html3: `    <template>
       <tb-checkbox-group v-model="checkList">
-        <tb-checkbox label="复选框 A">复选框 A</tb-checkbox>
-        <tb-checkbox label="复选框 B">复选框 B</tb-checkbox>
-        <tb-checkbox label="复选框 C">复选框 C</tb-checkbox>
+        <tb-checkbox label="多选框 A">多选框 A</tb-checkbox>
+        <tb-checkbox label="多选框 B">多选框 B</tb-checkbox>
+        <tb-checkbox label="多选框 C">多选框 C</tb-checkbox>
         <tb-checkbox label="禁用" disabled>禁用" disabled</tb-checkbox>
         <tb-checkbox label="选中且禁用" disabled>选中且禁用" disabled</tb-checkbox>
       </tb-checkbox-group>
@@ -516,7 +516,7 @@ export default {
       export default {
         data () {
           return {
-            checkList: ['选中且禁用','复选框 A']
+            checkList: ['选中且禁用','多选框 A']
           };
         }
       };
