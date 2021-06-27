@@ -92,7 +92,7 @@ export default {
   border: none;
   padding: 8px;
   background-color: black;
-  color: #409eff;
+  color: #1089ff;
   outline: none;
 }
 .tb-scroll-button:hover {

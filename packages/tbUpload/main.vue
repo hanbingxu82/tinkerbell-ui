@@ -453,7 +453,7 @@ export default {
       &:hover {
         background: #f3f3f3;
         & > span {
-          color: #409eff;
+          color: #1089ff;
           i {
             color: #515a6e;
           }

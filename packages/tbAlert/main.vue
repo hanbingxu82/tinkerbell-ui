@@ -141,19 +141,19 @@ export default {
   cursor: pointer;
 }
 .tb-alert--success {
-  color: #67c23a;
+  color: #52c41a;
   background-color: #f0f9eb;
 }
 .tb-alert--info {
-  color: #909399;
-  background-color: #f4f4f5;
+  color: #35495e;
+  background-color: #eaecee;
 }
 .tb-alert--warning {
-  color: #e6a23c;
+  color: #fea638;
   background-color: #fdf6ec;
 }
 .tb-alert--danger {
-  color: #f56c6c;
+  color: #ff4d4f;
   background-color: #fef0f0;
 }
 .tb-alert__icon {

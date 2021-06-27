@@ -139,7 +139,7 @@ export default {
   cursor: pointer;
   i {
     font-size: 14px;
-    color: #909399;
+    color: #35495e;
     transition: color 0.2s ease;
     position: relative;
     top: -2px;
@@ -153,16 +153,16 @@ export default {
   }
 }
 .tb-message-notice-primary i {
-  color: #409eff;
+  color: #1089ff;
 }
 .tb-message-notice-success i {
-  color: #67c23a;
+  color: #52c41a;
 }
 .tb-message-notice-warning i {
-  color: #e6a23c;
+  color: #fea638;
 }
 .tb-message-notice-danger i {
-  color: #f56c6c;
+  color: #ff4d4f;
 }
 // move-up
 .move-up-enter-active,

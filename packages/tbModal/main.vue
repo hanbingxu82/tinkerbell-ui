@@ -635,7 +635,7 @@ export default {
   .tb-modal-header p {
     width: 100%;
     font-size: 16px;
-    // color: #409eff;
+    // color: #1089ff;
     font-weight: 500;
     line-height: 22px;
     overflow: hidden;
@@ -784,26 +784,26 @@ export default {
   }
 }
 .tb-modal-confirm-head-icon-confirm {
-  color: #409eff;
+  color: #1089ff;
 }
 .tb-modal-confirm-head-icon-info {
-  color: #909399;
+  color: #35495e;
 }
 .tb-modal-confirm-head-icon-success {
-  color: #67c23a;
+  color: #52c41a;
 }
 .tb-modal-confirm-head-icon-warning {
-  color: #e6a23c;
+  color: #fea638;
 }
 .tb-modal-confirm-head-icon-danger {
-  color: #f56c6c;
+  color: #ff4d4f;
 }
 .tb-modal-confirm-head-title {
   display: inline-block;
   vertical-align: middle;
   margin-left: 12px;
   font-size: 16px;
-  // color: #409eff;
+  // color: #1089ff;
 }
 
 .tb-modal-confirm-body {

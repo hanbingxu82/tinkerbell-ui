@@ -68,7 +68,7 @@ export default {
     // 选中后的背景色
     checkedBg: {
       type: String,
-      default: "#409eff",
+      default: "#1089ff",
     },
     // 未选中的背景色
     uncheckedBg: {

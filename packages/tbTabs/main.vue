@@ -309,9 +309,9 @@ export default {
         }
       }
       &:hover {
-        color: #409eff;
+        color: #1089ff;
         > i:not(.icon-close) {
-          color: #409eff;
+          color: #1089ff;
         }
         .icon-close {
           width: 16px;
@@ -319,12 +319,12 @@ export default {
         }
       }
       &.active {
-        color: #409eff;
+        color: #1089ff;
         &:hover {
           padding: 0 18px;
         }
         > i:not(.icon-close) {
-          color: #409eff;
+          color: #1089ff;
         }
         .icon-close {
           width: 16px;
@@ -340,7 +340,7 @@ export default {
       bottom: 0;
       left: 0;
       height: 2px;
-      background-color: #409eff;
+      background-color: #1089ff;
       z-index: 10;
       transition: transform 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
       list-style: none;
@@ -368,8 +368,8 @@ export default {
       line-height: 1.2em;
       color: rgba(0, 0, 0, 0.65);
       &:hover {
-        background: #409eff;
-        color: #409eff;
+        background: #1089ff;
+        color: #1089ff;
       }
     }
   }
@@ -450,10 +450,10 @@ export default {
           padding: 0 12px;
         }
         &::before {
-          background: #409eff;
+          background: #1089ff;
         }
         .custom-icon {
-          color: #409eff;
+          color: #1089ff;
         }
       }
       &.no-close:hover {

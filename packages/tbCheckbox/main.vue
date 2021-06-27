@@ -217,7 +217,7 @@ export default {
   border-radius: 4px;
 }
 .is-boder-active {
-  border: 1px solid #409eff;
+  border: 1px solid #1089ff;
   padding: 12px 20px;
   box-sizing: border-box;
   margin: auto;
@@ -241,7 +241,7 @@ export default {
   padding: 10px 20px;
 }
 .check-this {
-  color: #409eff;
+  color: #1089ff;
 }
 input[type="checkbox" i] {
   margin: 0;
@@ -249,7 +249,7 @@ input[type="checkbox" i] {
   height: 100%; */
   left: 0;
   top: 50%;
-  color: #409eff;
+  color: #1089ff;
   transform: translate(0%, -50%);
   position: absolute;
 }

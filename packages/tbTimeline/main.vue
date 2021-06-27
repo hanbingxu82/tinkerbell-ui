@@ -59,24 +59,24 @@ export default {
       border-radius: 50%;
       border: 1px solid transparent;
       &-primary {
-        border-color: #409eff;
-        color: #409eff;
+        border-color: #1089ff;
+        color: #1089ff;
       }
       &-success {
-        border-color: #67c23a;
-        color: #67c23a;
+        border-color: #52c41a;
+        color: #52c41a;
       }
       &-info {
-        border-color: #909399;
-        color: #909399;
+        border-color: #35495e;
+        color: #35495e;
       }
       &-warning {
-        border-color: #e6a23c;
-        color: #e6a23c;
+        border-color: #fea638;
+        color: #fea638;
       }
       &-danger {
-        border-color: #f56c6c;
-        color: #f56c6c;
+        border-color: #ff4d4f;
+        color: #ff4d4f;
       }
     }
 

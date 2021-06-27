@@ -213,7 +213,7 @@ export default {
   border-radius: 4px;
 }
 .is-boder-active {
-  border: 1px solid #409eff;
+  border: 1px solid #1089ff;
   padding: 12px 20px;
   box-sizing: border-box;
   margin: auto;
@@ -243,7 +243,7 @@ input[type="checkbox" i] {
   height: 100%; */
   left: 0;
   top: 50%;
-  color: #409eff;
+  color: #1089ff;
   transform: translate(0%, -50%);
   position: absolute;
    -webkit-appearance: none;
@@ -264,8 +264,8 @@ input[type="checkbox" i] {
   cursor: pointer;
 }
 .check-this {
-  background-color: #409eff;
-  border: 1px solid #409eff;
+  background-color: #1089ff;
+  border: 1px solid #1089ff;
   color: #ffffff;
 }
 .is_disabled {

@@ -123,7 +123,7 @@ export default {
     outline: none;
     i {
       font-size: 14px;
-      color: #909399;
+      color: #35495e;
       position: relative;
       top: -2px;
     }
@@ -194,19 +194,19 @@ export default {
     }
 
     &-success {
-      color: #67c23a;
+      color: #52c41a;
     }
     &-primary {
-      color: #409eff;
+      color: #1089ff;
     }
     &-info {
-      color: #909399;
+      color: #35495e;
     }
     &-warning {
-      color: #e6a23c;
+      color: #fea638;
     }
     &-danger {
-      color: #f56c6c;
+      color: #ff4d4f;
     }
   }
   &-with-desc &-icon {

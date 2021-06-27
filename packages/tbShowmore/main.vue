@@ -67,11 +67,11 @@ export default {
   color: #000;
 }
 .tb__show {
-  color: #409eff;
+  color: #1089ff;
   cursor: pointer;
 }
 .tb__hidden {
-  color: #409eff;
+  color: #1089ff;
   cursor: pointer;
 }
 </style>

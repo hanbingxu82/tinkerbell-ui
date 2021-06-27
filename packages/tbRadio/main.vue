@@ -178,7 +178,7 @@ export default {
   border-radius: 4px;
 }
 .is-boder-active {
-  border: 1px solid #409eff;
+  border: 1px solid #1089ff;
   padding: 12px 20px;
   box-sizing: border-box;
   margin: auto;
@@ -202,7 +202,7 @@ export default {
   padding: 10px 20px;
 }
 .check-this {
-  color: #409eff;
+  color: #1089ff;
 }
 input[type="radio" i] {
   margin: 0;
@@ -210,7 +210,7 @@ input[type="radio" i] {
   height: 100%; */
   left: 0;
   top: 50%;
-  color: #409eff;
+  color: #1089ff;
   transform: translate(0%, -50%);
   position: absolute;
 }
@@ -240,7 +240,7 @@ input[type="radio"]:checked:after {
   top: 50%;
   transform: translate(0%, -50%);
   content: "";
-  border: 6px solid #409eff;
+  border: 6px solid #1089ff;
   border-radius: 100%;
   width: 14px;
   height: 14px;

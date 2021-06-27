@@ -55,10 +55,10 @@ export default {
     z-index: 9999;
     transition: all 200ms ease;
     transform: translate3d(-100%, 0, 0);
-    background: #409eff;
+    background: #1089ff;
   }
   &--error {
-    background: #f56c6c;
+    background: #ff4d4f;
   }
   &--peg {
     display: block;
@@ -66,7 +66,7 @@ export default {
     right: 0;
     width: 100px;
     height: 100%;
-    box-shadow: 0 0 10px #e6a23c, 0 0 5px #e6a23c;
+    box-shadow: 0 0 10px #fea638, 0 0 5px #fea638;
     opacity: 1;
     transform: rotate(3deg) translate(0px, -4px);
   }
@@ -81,13 +81,13 @@ export default {
       height: 18px;
       box-sizing: border-box;
       border: solid 2px transparent;
-      border-top-color: #409eff;
-      border-left-color: #409eff;
+      border-top-color: #1089ff;
+      border-left-color: #1089ff;
       border-radius: 50%;
     }
     .spinner-icon--error {
-      border-top-color: #f56c6c;
-      border-left-color: #f56c6c;
+      border-top-color: #ff4d4f;
+      border-left-color: #ff4d4f;
     }
   }
 }

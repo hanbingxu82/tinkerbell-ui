@@ -80,7 +80,7 @@ export default {
   right: 5px;
 }
 .tb-badge__content {
-  background-color: #f56c6c;
+  background-color: #ff4d4f;
   border-radius: 10px;
   color: #fff;
   display: inline-block;
@@ -93,19 +93,19 @@ export default {
   border: 1px solid #fff;
 }
 .tb-badge__content.tb-badge__content--warning {
-  background-color: #e6a23c;
+  background-color: #fea638;
 }
 .tb-badge__content.tb-badge__content--primary {
-  background-color: #409eff;
+  background-color: #1089ff;
 }
 .tb-badge__content.tb-badge__content--danger {
-  background-color: #f56c6c;
+  background-color: #ff4d4f;
 }
 .tb-badge__content.tb-badge__content--info {
-  background-color: #909399;
+  background-color: #35495e;
 }
 .tb-badge__content.tb-badge__content--success {
-  background-color: #67c23a;
+  background-color: #52c41a;
 }
 .tb-zoom-in-center-enter-active,
 .tb-zoom-in-center-leave-active {

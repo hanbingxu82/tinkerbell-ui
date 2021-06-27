@@ -149,7 +149,7 @@ export default {
 }
 .tb-link:focus,
 .tb-link:hover {
-  color: #409eff;
+  color: #1089ff;
   text-decoration: underline;
 }
 /* .tb-link:visited,
@@ -158,39 +158,39 @@ export default {
 } */
 /* type样式 */
 .tb-link.a_primary {
-  color: #409eff;
+  color: #1089ff;
 }
 .tb-link.a_primary:focus,
 .tb-link.a_primary:hover {
-  color: #66b1ff;
+  color:#3fa0ff;
 }
 .tb-link.a_success {
-  color: #67c23a;
+  color: #52c41a;
 }
 .tb-link.a_success:focus,
 .tb-link.a_success:hover {
-  color: #85ce61;
+  color: #74cf47;
 }
 
 .tb-link.a_info {
-  color: #909399;
+  color: #35495e;
 }
 .tb-link.a_info:focus,
 .tb-link.a_info:hover {
-  color: #a6a9ad;
+  color: #5d6d7e;
 }
 .tb-link.a_warning {
-  color: #e6a23c;
+  color: #fea638;
 }
 .tb-link.a_warning:focus,
 .tb-link.a_warning:hover {
-  color: #ebb563;
+  color: #feb75f;
 }
 .tb-link.a_danger {
-  color: #f56c6c;
+  color: #ff4d4f;
 }
 .tb-link.a_danger:focus,
 .tb-link.a_danger:hover {
-  color: #f78989;
+  color: #ff7072;
 }
 </style>

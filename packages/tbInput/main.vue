@@ -564,11 +564,11 @@ export default {
   }
   &:focus,
   &:hover {
-    border-color: #409eff;
+    border-color: #1089ff;
   }
   &:focus {
     outline: 0;
-    // box-shadow: 0 0 0 1px #409eff;
+    // box-shadow: 0 0 0 1px #1089ff;
   }
   .iconfont {
     vertical-align: middle;
@@ -639,9 +639,9 @@ export default {
 .tb-input-search {
   cursor: pointer;
   padding: 0 16px !important;
-  background: #409eff !important;
+  background: #1089ff !important;
   color: #fff !important;
-  border-color: #409eff !important;
+  border-color: #1089ff !important;
   transition: all 0.2s ease-in-out;
   position: relative;
   z-index: 2;

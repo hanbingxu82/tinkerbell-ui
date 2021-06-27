@@ -215,10 +215,10 @@ export default {
 };
 </script>
 <style lang="less">
-@default-color: #409eff;
-@success-color: #67c23a;
-@warning-color: #e6a23c;
-@error-color: #f56c6c;
+@default-color: #1089ff;
+@success-color: #52c41a;
+@warning-color: #fea638;
+@error-color: #ff4d4f;
 
 .tb-progress {
   box-sizing: border-box;

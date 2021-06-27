@@ -416,7 +416,7 @@ export default {
     // min-height: 32px;
     margin: 0;
     padding: 5px 16px 4px;
-    color: #409eff;
+    color: #1089ff;
     font-weight: 500;
     border-bottom: 1px solid  #f0f0f0;
 
@@ -488,7 +488,7 @@ export default {
         position: relative;
         top: 2px;
         font-size: 18px;
-        color: #e6a23c;
+        color: #fea638;
         margin-right: 8px;
       }
     }

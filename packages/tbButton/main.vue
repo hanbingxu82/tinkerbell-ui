@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:59:49
- * @LastEditTime: 2021-06-18 16:50:28
+ * @LastEditTime: 2021-06-27 11:55:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/table/table.vue
  * 除按钮组、autofocus、autofocus两个api属性 也未实现
 -->
 <template>
-  <div v-on.prevent="$listeners" v-if="!tbIcon && type != 'text'" :class="`tb-div button ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled} ${loading ? 'is_disabled' : ' '}`"><i v-if="loading" class="iconfont icon-loading load"></i><slot></slot></div>
+  <div v-on.prevent="$listeners" v-if="!tbIcon && type != 'text'" :class="`tb-button button ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled} ${loading ? 'is_disabled' : ' '}`"><i v-if="loading" class="iconfont icon-loading load"></i><slot></slot></div>
   <div v-on.prevent="$listeners" v-else-if="tbIcon && type != 'text'" :class="`tb-button button ${tbIcon} ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled}`"><slot></slot></div>
   <a v-on.prevent="$listeners" v-else-if="type == 'text'" :class="`tb-button ${tbType} ${tbDisabled}`"><slot></slot></a>
 </template>
@@ -178,7 +178,7 @@ export default {
 }
 // 文字按钮
 .button_text {
-  color: #409eff;
+  color: #1089ff;
   cursor: pointer;
 }
 // loading加载动画
@@ -214,21 +214,21 @@ export default {
 }
 .button:focus,
 .button:hover {
-  color: #409eff;
+  color: #1089ff;
   border-color: #c6e2ff;
   background-color: #ecf5ff;
 }
 .button.is-plain:focus,
 .button.is-plain:hover {
   background: #fff;
-  border-color: #409eff;
-  color: #409eff;
+  border-color: #1089ff;
+  color: #1089ff;
 }
 .button.is-plain:focus,
 .button.is-plain:hover {
   background: #fff;
-  border-color: #409eff;
-  color: #409eff;
+  border-color: #1089ff;
+  color: #1089ff;
 }
 .is-round {
   border-radius: 50px;
@@ -252,115 +252,115 @@ export default {
 
 // 朴素按钮
 .button_primary.is-plain {
-  color: #409eff;
+  color: #1089ff;
   background: #ecf5ff;
   border-color: #b3d8ff;
 }
 .button_primary.is-plain:focus,
 .button_primary.is-plain:hover {
-  background: #409eff;
-  border-color: #409eff;
+  background: #1089ff;
+  border-color: #1089ff;
   color: #fff;
 }
 .button_success.is-plain {
-  color: #67c23a;
+  color: #52c41a;
   background: #f0f9eb;
   border-color: #c2e7b0;
 }
 .button_success.is-plain:focus,
 .button_success.is-plain:hover {
-  background: #67c23a;
-  border-color: #67c23a;
+  background: #52c41a;
+  border-color: #52c41a;
   color: #fff;
 }
 .button_info.is-plain {
-  color: #909399;
-  background: #f4f4f5;
+  color: #35495e;
+  background: #eaecee;
   border-color: #d3d4d6;
 }
 .button_info.is-plain:focus,
 .button_info.is-plain:hover {
-  background: #909399;
-  border-color: #909399;
+  background: #35495e;
+  border-color: #35495e;
   color: #fff;
 }
 .button_warning.is-plain {
-  color: #e6a23c;
+  color: #fea638;
   background: #fdf6ec;
   border-color: #f5dab1;
 }
 .button_warning.is-plain:focus,
 .button_warning.is-plain:hover {
-  background: #e6a23c;
-  border-color: #e6a23c;
+  background: #fea638;
+  border-color: #fea638;
   color: #fff;
 }
 .button_danger.is-plain {
-  color: #f56c6c;
+  color: #ff4d4f;
   background: #fef0f0;
   border-color: #fbc4c4;
 }
 .button_danger.is-plain:focus,
 .button_danger.is-plain:hover {
-  background: #f56c6c;
-  border-color: #f56c6c;
+  background: #ff4d4f;
+  border-color: #ff4d4f;
   color: #fff;
 }
 // type样式
 .button_primary {
   color: #fff;
-  background-color: #409eff;
-  border-color: #409eff;
+  background-color: #1089ff;
+  border-color: #1089ff;
 }
 .button_primary:focus,
 .button_primary:hover {
-  background: #66b1ff;
-  border-color: #66b1ff;
+  background: #3fa0ff;
+  border-color:#3fa0ff;
   color: #fff;
 }
 .button_success {
   color: #fff;
-  background-color: #67c23a;
-  border-color: #67c23a;
+  background-color: #52c41a;
+  border-color: #52c41a;
 }
 .button_success:focus,
 .button_success:hover {
-  background: #85ce61;
-  border-color: #85ce61;
+  background: #74cf47;
+  border-color: #74cf47;
   color: #fff;
 }
 
 .button_info {
   color: #fff;
-  background-color: #909399;
-  border-color: #909399;
+  background-color: #35495e;
+  border-color: #35495e;
 }
 .button_info:focus,
 .button_info:hover {
-  background: #a6a9ad;
-  border-color: #a6a9ad;
+  background: #5d6d7e;
+  border-color: #5d6d7e;
   color: #fff;
 }
 .button_warning {
   color: #fff;
-  background-color: #e6a23c;
-  border-color: #e6a23c;
+  background-color: #fea638;
+  border-color: #fea638;
 }
 .button_warning:focus,
 .button_warning:hover {
-  background: #ebb563;
-  border-color: #ebb563;
+  background: #feb75f;
+  border-color: #feb75f;
   color: #fff;
 }
 .button_danger {
   color: #fff;
-  background-color: #f56c6c;
-  border-color: #f56c6c;
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
 }
 .button_danger:focus,
 .button_danger:hover {
-  background: #f78989;
-  border-color: #f78989;
+  background: #ff7072;
+  border-color: #ff7072;
   color: #fff;
 }
 // size样式
