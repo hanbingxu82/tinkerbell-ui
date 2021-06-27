@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-06-27 11:59:16
+ * @LastEditTime: 2021-06-27 15:46:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -108,6 +108,8 @@ yarn add tinkerbell-ui
 #### 0.5.4 完成 tinkerbell-ui 官网雏形
 
 #### 0.5.5 调整 tinkerbell-ui 主题颜色样式等
+
+#### 0.5.6 完成官网基础部分  并调整基础类型组件样式style等
 
 ### 如有需要及时联系
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 13:12:07
- * @LastEditTime: 2021-06-27 14:14:06
+ * @LastEditTime: 2021-06-27 15:38:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/Components.vue
@@ -27,8 +27,22 @@
               <tb-menu-item to="/Components/Button" name="Button">Button 按钮</tb-menu-item>
               <tb-menu-item to="/Components/Link" name="Link">Link 文字链接</tb-menu-item>
             </tb-menu-group>
+            <tb-menu-group title="表单">
+              <tb-menu-item to="/Components/Radio" name="Radio">Radio 单选框</tb-menu-item>
+              <tb-menu-item to="/Components/Container" name="Container">Checkbox 多选框</tb-menu-item>
+              <tb-menu-item to="/Components/Input" name="Input">Input 输入框</tb-menu-item>
+              <tb-menu-item to="/Components/InputNumber" name="InputNumber">InputNumber 计数器</tb-menu-item>
+              <tb-menu-item to="/Components/Select" name="Select">Select 选择器</tb-menu-item>
+              <tb-menu-item to="/Components/Cascader" name="Cascader">Cascader 级联选择器</tb-menu-item>
+              <tb-menu-item to="/Components/Switch" name="Switch">Switch 开关</tb-menu-item>
+              <tb-menu-item to="/Components/DatePicker" name="DatePicker">DatePicker 日期选择器</tb-menu-item>
+              <tb-menu-item to="/Components/TimePicker" name="TimePicker">TimePicker 时间选择器</tb-menu-item>
+              <tb-menu-item to="/Components/Upload" name="Upload">Upload 时间选择器</tb-menu-item>
+              <tb-menu-item to="/Components/Rate" name="Rate">Rate 时间选择器</tb-menu-item>
+              <tb-menu-item to="/Components/ColorPicker" name="ColorPicker">ColorPicker 颜色选择器</tb-menu-item>
+              <tb-menu-item to="/Components/Form" name="Form">Form 表单</tb-menu-item>
+            </tb-menu-group>
           </tb-submenu>
-          
         </tb-menu>
       </tb-aside>
       <tb-main id="containers">
