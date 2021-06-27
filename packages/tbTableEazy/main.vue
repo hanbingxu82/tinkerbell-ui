@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-22 16:16:36
- * @LastEditTime: 2021-06-22 20:28:21
+ * @LastEditTime: 2021-06-25 16:52:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbTableEazy/main.vue
@@ -15,8 +15,8 @@
 
       <th v-for="(col, index) in cols" :key="index" :class="getClasses(index, 'header')" :style="getStyle(col)" :width="col.width || null" @click="$setSorter(index)">
         <span :class="classy + '-text'">{{ getText(col, "label") || empty }}</span>
-        <slot name="sort-icon" :sortment="sortment" :sorted="$isSorting(index)" :arrow="$getArrow(index)">
-          <span :class="classy + '-icon'">{{ $getArrow(index) }}</span>
+        <slot  name="sort-icon" :sortment="sortment" :sorted="$isSorting(index)" :arrow="$getArrow(index)">
+          <span v-show="isSort" :class="classy + '-icon'">{{ $getArrow(index) }}</span>
         </slot>
       </th>
     </tr>
@@ -62,6 +62,8 @@ export default {
       required: true,
       validator: isContent,
     },
+    // 是否展示排序
+    isSort: { type: Boolean, default: false },
     /**
      * 空单元格的字符。
      */
@@ -184,6 +186,7 @@ export default {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 .tb-table-eazy {
+  width: 100%;
   overflow: hidden;
   border: 1px solid #d9d9d9;
   border-radius: 5px;

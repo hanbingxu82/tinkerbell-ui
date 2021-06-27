@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-27 17:00:50
- * @LastEditTime: 2021-06-18 15:53:22
+ * @LastEditTime: 2021-06-23 21:09:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbUpload/main.vue
@@ -204,6 +204,7 @@ export default {
       // 如果不是禁用的话  可以获取到当前拖入的文件们 DataTransfer.files 获取的就是拖入进来的文件列表们  对应的也触发上传事件
       this.uploadFiles(e.dataTransfer.files);
     },
+    
     // 上传文件事件
     uploadFiles(files) {
       // 参数为文件列表  Array.prototype.slice.call  浅拷贝

@@ -1,24 +1,24 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-23 16:47:36
+ * @LastEditTime: 2021-06-24 13:33:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit'
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
-    <Nav/>
-    <router-view/>
+    <Nav />
+    <router-view />
   </div>
 </template>
 <script>
-import Nav from './components/Nav.vue'
+import Nav from "./components/Nav.vue";
 export default {
   data() {
     return {};
   },
-  components:{Nav},
+  components: { Nav },
   created() {},
   methods: {},
 };
@@ -28,7 +28,7 @@ export default {
 // body{
 //   overflow: hidden;
 // }
-// #app{
-//   height: 100%;
-// }
+#app{
+  height: 100%;
+}
 </style>

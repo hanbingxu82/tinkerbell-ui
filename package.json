@@ -32,6 +32,7 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "async-validator": "^1.11.5",
+    "highlight.js": "^10.6.0",
     "js-calendar": "^1.2.3",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
