@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-25 14:40:17
- * @LastEditTime: 2021-06-27 10:56:07
+ * @LastEditTime: 2021-06-27 11:25:22
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Foundation/Container.vue
@@ -10,10 +10,10 @@
 <template>
   <div>
     <h2
-      id="divider-fen-ge-xian"
+      id="container-bu-jv-rong-qi"
       style='box-sizing: border-box; margin: 0px; padding: 10px 0px; font-size: 28px; font-weight: 400; color: rgb(31, 47, 61); border-bottom: 1px solid rgb(197, 217, 232); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
     >
-      <a href="https://wangbin3162.gitee.io/bin-ui/#divider-fen-ge-xian" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;Container 布局容器
+      <a href="#ontainer-bu-jv-rong-qi" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;Container 布局容器
     </h2>
     <p
       style='box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);'
@@ -23,10 +23,10 @@
     tb-container、tb-header、tb-aside、tb-main、tb-footer
 
     <h3
-      id="shui-ping-fen-ge-xian"
+      id="chang-jian-ye-mian-bu-jv"
       style='box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
     >
-      <a href="https://wangbin3162.gitee.io/bin-ui/#shui-ping-fen-ge-xian" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;常见页面布局
+      <a href="#chang-jian-ye-mian-bu-jv" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;常见页面布局
     </h3>
     <p>
       <br />
@@ -175,68 +175,9 @@ export default {
           Explain: "子元素的排列方向",
           Types: "string",
           Optional: "horizontal / vertical",
-          Default: "子元素中有 el-header 或 el-footer 时为 vertical，否则为 horizontal",
+          Default: "子元素中有 tb-header 或 tb-footer 时为 vertical，否则为 horizontal",
         },
       ],
-      row1: [
-        {
-          Parameters: "span",
-          Explain: "栅格占据的列数",
-          Types: "number",
-          Optional: "-",
-          Default: "24",
-        },
-        {
-          Parameters: "offset",
-          Explain: "栅格左侧的间隔格数",
-          Types: "number",
-          Optional: "-",
-          Default: "0",
-        },
-        {
-          Parameters: "push",
-          Explain: "栅格向右移动格数",
-          Types: "number",
-          Optional: "-",
-          Default: "0",
-        },
-        {
-          Parameters: "xs",
-          Explain: "<768px 响应式栅格数或者栅格属性对象",
-          Types: "number/object (例如： {span: 4, offset: 4})",
-          Optional: "-",
-          Default: "-",
-        },
-        {
-          Parameters: "sm",
-          Explain: "≥768px 响应式栅格数或者栅格属性对象",
-          Types: "number/object (例如： {span: 4, offset: 4})",
-          Optional: "-",
-          Default: "-",
-        },
-        {
-          Parameters: "md",
-          Explain: "≥992px 响应式栅格数或者栅格属性对象",
-          Types: "number/object (例如： {span: 4, offset: 4})",
-          Optional: "-",
-          Default: "-",
-        },
-        {
-          Parameters: "lg",
-          Explain: "≥1200px 响应式栅格数或者栅格属性对象",
-          Types: "number/object (例如： {span: 4, offset: 4})",
-          Optional: "-",
-          Default: "-",
-        },
-        {
-          Parameters: "xl",
-          Explain: "≥1920px 响应式栅格数或者栅格属性对象",
-          Types: "number/object (例如： {span: 4, offset: 4})",
-          Optional: "-",
-          Default: "-",
-        },
-      ],
-
       html1: `  <tb-container>
     <tb-header>Header</tb-header>
     <tb-main>Main</tb-main>
@@ -326,10 +267,12 @@ export default {
   </style>`,
       //   定义当前传递过来的数据是所有类型的数据
       rightTitle: [
-        { title: "介绍", id: "jie-shao" },
-        { title: "概述", id: "gai-shu" },
-        { title: "最新版本", id: "zui-xin-ban-ben" },
-        { title: "相关链接", id: "xiang-guan-lian-jie" },
+        { title: "Container 布局容器", id: "container-bu-jv-rong-qi" },
+        { title: "常见页面布局", id: "chang-jian-ye-mian-bu-jv" },
+        { title: "Container props", id: "rowContainer" },
+        { title: "Header props", id: "rowHeader" },
+        { title: "Aside props", id: "rowAside" },
+        { title: "Footer props", id: "rowFooter" },
       ],
     };
   },

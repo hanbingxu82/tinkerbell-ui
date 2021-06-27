@@ -1,82 +1,80 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-25 14:40:07
- * @LastEditTime: 2021-06-25 14:40:07
- * @LastEditors: your name
+ * @LastEditTime: 2021-06-27 11:49:12
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Foundation/Button.vue
 -->
 
 <template>
   <div>
-<h2 id="jie-shao" style="box-sizing: border-box; margin: 0px; padding: 10px 0px; font-size: 28px; font-weight: 400; color: rgb(31, 47, 61); border-bottom: 1px solid rgb(197, 217, 232); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="#jie-shao" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;介绍
-</h2>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    tinkerbell-ui 是一款基于 Vue.js 2.0 的前端 UI组件库，是个人在工作中为了更好的学习和使用vue相关技术栈而实现的。
-</p>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    本项目的源码和文档主要参考借鉴了&nbsp;<code style="box-sizing: border-box; margin: 0px; padding: 0px 4px; background-color: rgb(249, 250, 252); border: 1px solid rgb(234, 238, 251); border-radius: 4px; line-height: 2em;">element-ui</code>和&nbsp;<code style="box-sizing: border-box; margin: 0px; padding: 0px 4px; background-color: rgb(249, 250, 252); border: 1px solid rgb(234, 238, 251); border-radius: 4px; line-height: 2em;">iView</code>以及&nbsp;<code style="box-sizing: border-box; margin: 0px; padding: 0px 4px; background-color: rgb(249, 250, 252); border: 1px solid rgb(234, 238, 251); border-radius: 4px; line-height: 2em;">bin-ui</code>。分离了常用业务组件并封装，部分组件参考这三个开源库进行了简化实现。现已实现扩展了约 40 个组件可供日常开发。
-</p>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    添加了开源协议，编写本UI库的目的也是为了学习提升，熟悉vue相关技术栈及相关UI控件的实现和开发。
-</p>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    组件库的更新请参考[更新日志]
-</p>
-<h3 id="gai-shu" style="box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="#gai-shu" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;概述
-</h3>
-<ul style="list-style-type: none;" class=" list-paddingleft-2">
-    <li>
-        <p>
-            基于 Vue 开发的 UI 组件
-        </p>
-    </li>
-    <li>
-        <p>
-            提供了一些常用的字体图标
-        </p>
-    </li>
-    <li>
-        <p>
-            灵活可控的组件，良好的API文档
-        </p>
-    </li>
-    <li>
-        <p>
-            集成了常用的css样式和transition动画
-        </p>
-    </li>
-    <li>
-        <p>
-            封装了常用的指令和工具库
-        </p>
-    </li>
-</ul>
-<h3 id="zui-xin-ban-ben" style="box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="#zui-xin-ban-ben" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;最新版本
-</h3>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="https://www.npmjs.com/package/tinkerbell-ui" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">
-   <img alt="npm" src="https://img.shields.io/npm/v/tinkerbell-ui" style="box-sizing: border-box; border: 0px;"/>
-    </a>
-</p>
-<h3 id="xiang-guan-lian-jie" style="box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="#xiang-guan-lian-jie" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;相关链接
-</h3>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="https://element.eleme.cn/" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">element-ui</a>
-</p>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="https://www.iviewui.com/" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">iView</a>
-</p>
-<p style="box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);">
-    <a href="https://wangbin3162.gitee.io/bin-ui/" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">bin-ui</a>
-</p>
-<p>
-    <br/>
-</p>
+    <h2
+      id="button-an-niu"
+      style='box-sizing: border-box; margin: 0px; padding: 10px 0px; font-size: 28px; font-weight: 400; color: rgb(31, 47, 61); border-bottom: 1px solid rgb(197, 217, 232); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      <a href="https://wangbin3162.gitee.io/bin-ui/#button-an-niu" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;Button 按钮
+    </h2>
+    <p
+      style='box-sizing: border-box; margin-top: 1em; margin-bottom: 1em; padding: 0px; color: rgba(0, 0, 0, 0.85); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; font-size: 14px; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      常用的操作按钮。
+    </p>
+    <h3
+      id="ji-chu-yong-fa"
+      style='box-sizing: border-box; margin: 36px 0px 20px; padding: 0px; font-size: 22px; font-weight: 400; color: rgb(31, 47, 61); font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; white-space: normal; background-color: rgb(255, 255, 255);'
+    >
+      <a href="https://wangbin3162.gitee.io/bin-ui/#ji-chu-yong-fa" class="header-anchor" style="box-sizing: border-box; color: rgb(16, 137, 255); text-decoration-line: none;">¶</a>&nbsp;基础用法
+    </h3>
+    <p>
+      <br />
+    </p>
+
+    <Demo>
+      使用type、plain、round和circle属性来定义 Button 的样式。
+      <div slot="source">
+        <tb-row>
+          <tb-button>默认按钮</tb-button>
+          <tb-button type="primary">主要按钮</tb-button>
+          <tb-button type="success">成功按钮</tb-button>
+          <tb-button type="info">信息按钮</tb-button>
+          <tb-button type="warning">警告按钮</tb-button>
+          <tb-button type="danger">危险按钮</tb-button>
+        </tb-row>
+
+        <tb-row>
+          <tb-button plain>朴素按钮</tb-button>
+          <tb-button type="primary" plain>主要按钮</tb-button>
+          <tb-button type="success" plain>成功按钮</tb-button>
+          <tb-button type="info" plain>信息按钮</tb-button>
+          <tb-button type="warning" plain>警告按钮</tb-button>
+          <tb-button type="danger" plain>危险按钮</tb-button>
+        </tb-row>
+
+        <tb-row>
+          <tb-button round>圆角按钮</tb-button>
+          <tb-button type="primary" round>主要按钮</tb-button>
+          <tb-button type="success" round>成功按钮</tb-button>
+          <tb-button type="info" round>信息按钮</tb-button>
+          <tb-button type="warning" round>警告按钮</tb-button>
+          <tb-button type="danger" round>危险按钮</tb-button>
+        </tb-row>
+
+        <tb-row>
+          <tb-button icon="icon-add-bold" circle></tb-button>
+          <tb-button type="primary" icon="icon-add-bold" circle></tb-button>
+          <tb-button type="success" icon="icon-add-bold" circle></tb-button>
+          <tb-button type="info" icon="icon-add-bold" circle></tb-button>
+          <tb-button type="warning" icon="icon-add-bold" circle></tb-button>
+          <tb-button type="danger" icon="icon-add-bold" circle></tb-button>
+        </tb-row>
+      </div>
+      <pre slot="highlight" v-highlight>
+        <code class="javascript"  v-text="html4">
+        </code>
+      </pre>
+    </Demo>
+
     <!-- <pre v-highlight>
         <code class="javascript"  v-text="html1">
         </code>
@@ -87,26 +85,26 @@
 
 <script>
 const rawHtml = `<template>
-  <el-row class="demo-avatar demo-basic">
-    <el-col :span="12">
+  <tb-row class="demo-avatar demo-basic">
+    <tb-col :span="12">
       <div class="sub-title">circle</div>
       <div class="demo-basic--circle">
-        <div class="block"><el-avatar :size="50" :src="circleUrl"></el-avatar></div>
+        <div class="block"><tb-avatar :size="50" :src="circleUrl"></tb-avatar></div>
         <div class="block" v-for="size in sizeList" :key="size">
-          <el-avatar :size="size" :src="circleUrl"></el-avatar>
+          <tb-avatar :size="size" :src="circleUrl"></tb-avatar>
         </div>
       </div>
-    </el-col>  
-    <el-col :span="12">
+    </tb-col>  
+    <tb-col :span="12">
       <div class="sub-title">square</div>
       <div class="demo-basic--circle">
-        <div class="block"><el-avatar shape="square" :size="50" :src="squareUrl"></el-avatar></div>
+        <div class="block"><tb-avatar shape="square" :size="50" :src="squareUrl"></tb-avatar></div>
         <div class="block" v-for="size in sizeList" :key="size">
-          <el-avatar shape="square" :size="size" :src="squareUrl"></el-avatar>
+          <tb-avatar shape="square" :size="size" :src="squareUrl"></tb-avatar>
         </div>
       </div>
-    </el-col> 
-  </el-row>
+    </tb-col> 
+  </tb-row>
 </template>
 <script>
   export default {
@@ -156,4 +154,8 @@ export default {
   },
 };
 </script>
-<style lang="less" scoped></style>
+<style lang="less" scoped>
+.tb-button{
+  margin: 5px;
+}
+</style>

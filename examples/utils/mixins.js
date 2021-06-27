@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-26 14:15:31
- * @LastEditTime: 2021-06-27 10:45:33
+ * @LastEditTime: 2021-06-27 11:27:25
  * @LastEditors: Please set LastEditors
  * @Description: 自定义hook函数主要是用于绑定window事件的，与对应的文本变蓝选中等等
  * @FilePath: /adc-da-frame/src/utils/mixins.ts
@@ -75,7 +75,9 @@ export default {
   },
   // 页面清除之前
   beforeDestroy() {
-    const containers = window.document.querySelector("#containers");
-    containers.onscroll = null;
+    if (window.document.querySelector("#containers")) {
+      const containers = window.document.querySelector("#containers");
+      containers.onscroll = null;
+    }
   },
 };
