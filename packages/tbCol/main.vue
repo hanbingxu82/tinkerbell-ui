@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-19 17:32:10
- * @LastEditTime: 2021-03-22 15:17:27
+ * @LastEditTime: 2021-06-28 08:52:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbCol/main.vue
@@ -14,22 +14,22 @@ export default {
   name: "tbCol",
   props: {
     span: {
-      type: Number,
+      type: Number|String,
       default: 0,
     },
     // 栅格左侧的间隔格数
     offset: {
-      type: Number,
+      type: Number|String,
       default: 0,
     },
     // 栅格向右移动格数
     push: {
-      type: Number,
+      type: Number|String,
       default: 0,
     },
     // 栅格向左移动格数
     pull: {
-      type: Number,
+      type: Number|String,
       default: 0,
     },
     xs: {

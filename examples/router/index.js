@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-27 15:55:03
+ * @LastEditTime: 2021-06-27 19:26:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/router/index.js
@@ -79,6 +79,21 @@ const routes = [
         path: "Checkbox",
         name: "Checkbox",
         component: () => import("../views/ComponentsLibrary/Forms/Checkbox.vue"), // 组件-->表单-->多选
+      },
+      {
+        path: "Input",
+        name: "Input",
+        component: () => import("../views/ComponentsLibrary/Forms/Input.vue"), // 组件-->表单-->文本框
+      },
+      {
+        path: "InputNumber",
+        name: "InputNumber",
+        component: () => import("../views/ComponentsLibrary/Forms/InputNumber.vue"), // 组件-->表单-->计数器
+      },
+      {
+        path: "Select",
+        name: "Select",
+        component: () => import("../views/ComponentsLibrary/Forms/Select.vue"), // 组件-->表单-->选择器
       },
     ],
   },

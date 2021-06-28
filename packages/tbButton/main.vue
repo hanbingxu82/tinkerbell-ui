@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:59:49
- * @LastEditTime: 2021-06-27 13:43:01
+ * @LastEditTime: 2021-06-28 08:28:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/table/table.vue
@@ -214,6 +214,7 @@ export default {
   // margin: 0 2px;
   border-radius: 4px;
   background: #ffffff;
+  box-sizing: border-box;
 }
 .button:focus,
 .button:hover {

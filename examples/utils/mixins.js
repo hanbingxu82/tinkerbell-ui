@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-26 14:15:31
- * @LastEditTime: 2021-06-27 17:12:46
+ * @LastEditTime: 2021-06-28 09:13:05
  * @LastEditors: Please set LastEditors
  * @Description: 自定义hook函数主要是用于绑定window事件的，与对应的文本变蓝选中等等
  * @FilePath: /adc-da-frame/src/utils/mixins.ts
@@ -39,7 +39,7 @@ export default {
       ],
       colEvent: [
         {
-          label: "参数", // 表格头名称
+          label: "方法/事件名称", // 表格头名称
           align: "center", // 文本对齐方式 'center' | 'right' | 'left'
           field: "Parameters", // 字段对应数组规则
         },
@@ -49,10 +49,23 @@ export default {
           field: "Explain", // 字段对应数组规则
         },
         {
-          label: "说明", // 表格头名称
+          label: "返回值", // 表格头名称
           align: "center", // 文本对齐方式 'center' | 'right' | 'left'
           field: "Callback", // 字段对应数组规则
         },
+      ],
+      colSlot: [
+        {
+          label: "名称", // 表格头名称
+          align: "center", // 文本对齐方式 'center' | 'right' | 'left'
+          field: "Parameters", // 字段对应数组规则
+        },
+        {
+          label: "说明", // 表格头名称
+          align: "center", // 文本对齐方式 'center' | 'right' | 'left'
+          field: "Explain", // 字段对应数组规则
+        },
+
       ],
     };
   },
