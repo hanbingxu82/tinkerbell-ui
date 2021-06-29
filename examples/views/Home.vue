@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-15 14:39:50
+ * @LastEditTime: 2021-06-28 16:46:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
@@ -713,7 +713,6 @@ export default {
     loading1() {
       let num = this.$message({ type: "success", duration: 0, content: "look" });
       setTimeout(function() {
-        debugger;
         // num();
       }, 3000);
       // this.$loading.error()

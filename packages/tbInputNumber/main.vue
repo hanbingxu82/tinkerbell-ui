@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-21 13:13:23
- * @LastEditTime: 2021-06-18 17:00:33
+ * @LastEditTime: 2021-06-28 15:23:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbInputNumber/main.vue
@@ -182,6 +182,7 @@ export default {
 
 <style lang="less">
 .tb-input-number {
+  overflow: hidden;
   &__input {
     -webkit-appearance: none;
     border: 1px solid #d9d9d9;

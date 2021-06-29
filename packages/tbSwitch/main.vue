@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-21 14:44:05
- * @LastEditTime: 2021-05-21 16:43:11
+ * @LastEditTime: 2021-06-29 13:00:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbSwitch/main.vue
@@ -13,7 +13,6 @@
       <span v-show="checkedText && value" :style="textStyle" class="text">
         {{ checkedText }}
       </span>
-
       <span v-show="uncheckedText && !value" :style="textStyle" class="text">
         {{ uncheckedText }}
       </span>
@@ -115,7 +114,7 @@ export default {
         width: `${this.width}px`,
         height: `${this.height}px`,
         // 判断是不是禁用如果是禁用的话即使是选中状态也要设置成 不选中的背景
-        background: this.value && !this.disabled ? this.checkedBg : this.uncheckedBg,
+        background: this.value && !this.disabled ? this.checkedBg : (this.disabled?'#93939393':this.uncheckedBg),
       };
       return styles;
     },

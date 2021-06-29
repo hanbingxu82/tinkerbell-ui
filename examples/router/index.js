@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-27 19:26:25
+ * @LastEditTime: 2021-06-29 15:35:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/router/index.js
@@ -95,6 +95,33 @@ const routes = [
         name: "Select",
         component: () => import("../views/ComponentsLibrary/Forms/Select.vue"), // 组件-->表单-->选择器
       },
+      {
+        path: "Cascader",
+        name: "Cascader",
+        component: () => import("../views/ComponentsLibrary/Forms/Cascader.vue"), // 组件-->表单-->级联选择器
+      },
+      {
+        path: "Switch",
+        name: "Switch",
+        component: () => import("../views/ComponentsLibrary/Forms/Switch.vue"), // 组件-->表单-->开关
+      },
+      {
+        path: "DatePicker",
+        name: "DatePicker",
+        component: () => import("../views/ComponentsLibrary/Forms/DatePicker.vue"), // 组件-->表单-->日期选择器
+      },
+      {
+        path: "TimePicker",
+        name: "TimePicker",
+        component: () => import("../views/ComponentsLibrary/Forms/TimePicker.vue"), // 组件-->表单-->时间选择器
+      },
+      {
+        path: "Upload",
+        name: "Upload",
+        component: () => import("../views/ComponentsLibrary/Forms/Upload.vue"), // 组件-->表单-->上传
+      },
+
+      
     ],
   },
 ];

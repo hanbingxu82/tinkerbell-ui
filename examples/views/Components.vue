@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 13:12:07
- * @LastEditTime: 2021-06-27 17:47:44
+ * @LastEditTime: 2021-06-29 15:36:02
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/Components.vue
@@ -37,8 +37,8 @@
               <tb-menu-item to="/Components/Switch" name="Switch">Switch 开关</tb-menu-item>
               <tb-menu-item to="/Components/DatePicker" name="DatePicker">DatePicker 日期选择器</tb-menu-item>
               <tb-menu-item to="/Components/TimePicker" name="TimePicker">TimePicker 时间选择器</tb-menu-item>
-              <tb-menu-item to="/Components/Upload" name="Upload">Upload 时间选择器</tb-menu-item>
-              <tb-menu-item to="/Components/Rate" name="Rate">Rate 时间选择器</tb-menu-item>
+              <tb-menu-item to="/Components/Upload" name="Upload">Upload 上传</tb-menu-item>
+              <tb-menu-item to="/Components/Rate" name="Rate">Rate 评分</tb-menu-item>
               <tb-menu-item to="/Components/ColorPicker" name="ColorPicker">ColorPicker 颜色选择器</tb-menu-item>
               <tb-menu-item to="/Components/Form" name="Form">Form 表单</tb-menu-item>
             </tb-menu-group>
