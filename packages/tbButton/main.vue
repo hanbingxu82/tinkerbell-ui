@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:59:49
- * @LastEditTime: 2021-06-28 08:28:27
+ * @LastEditTime: 2021-06-29 17:09:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/table/table.vue
@@ -373,7 +373,7 @@ export default {
   font-size: 12px;
   display: inline-block;
   border: 1px solid #d9d9d9;
-  line-height: 30px;
+  line-height: 28px;
   text-align: center;
   padding: 0 16px;
   cursor: pointer;
@@ -383,7 +383,7 @@ export default {
   font-size: 14px;
   display: inline-block;
   border: 1px solid #d9d9d9;
-  line-height: 35px;
+  line-height: 33px;
   text-align: center;
   padding: 0 20px;
   cursor: pointer;
@@ -393,7 +393,7 @@ export default {
   font-size: 16px;
   display: inline-block;
   border: 1px solid #d9d9d9;
-  line-height: 40px;
+  line-height: 38px;
   text-align: center;
   padding: 0 24px;
   cursor: pointer;

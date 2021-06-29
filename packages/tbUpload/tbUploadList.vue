@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-27 17:00:24
- * @LastEditTime: 2021-06-01 14:18:43
+ * @LastEditTime: 2021-06-29 17:14:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbUpload/uploadList.vue
@@ -10,7 +10,7 @@
   <ul :class="[prefixCls + '-list']">
     <li v-for="(file, index) in files" :key="index" :class="fileCls(file)" @click="handleClick(file)">
       <span @click="handlePreview(file)"> <i :class="`iconfont ${format(file)}`"></i> {{ file.name }} </span>
-      <i name="icon-close" class="iconfont icon-close" v-show="file.status === 'finished'" @click="handleRemove(file)"></i>
+      <i name="icon-close" class="iconfont icon-close tb-upload-list-remove" v-show="file.status === 'finished'" @click="handleRemove(file)"></i>
       <transition name="fade">
         <!-- 初始加载时进度条是0  当加载成功之后对应的加载也就变成了100 -->
         <tb-progress v-if="file.showProgress" :line-height="2" :status="file.status === 'finished' && file.showProgress ? 'success' : null" :percent="parsePercentage(file.percentage)"></tb-progress>

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-25 14:40:02
- * @LastEditTime: 2021-06-27 14:56:15
+ * @LastEditTime: 2021-06-29 17:22:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Foundation/Link.vue
@@ -187,7 +187,7 @@ export default {
         },
         {
           Parameters: "icon",
-          Explain: "	图标类名",
+          Explain: "图标类名",
           Types: "string",
           Optional: "-",
           Default: "-",
