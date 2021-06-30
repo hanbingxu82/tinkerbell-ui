@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-29 15:35:39
+ * @LastEditTime: 2021-06-30 13:50:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/router/index.js
@@ -120,8 +120,56 @@ const routes = [
         name: "Upload",
         component: () => import("../views/ComponentsLibrary/Forms/Upload.vue"), // 组件-->表单-->上传
       },
-
-      
+      {
+        path: "Rate",
+        name: "Rate",
+        component: () => import("../views/ComponentsLibrary/Forms/Rate.vue"), // 组件-->表单-->评分
+      },
+      {
+        path: "ColorPicker",
+        name: "ColorPicker",
+        component: () => import("../views/ComponentsLibrary/Forms/ColorPicker.vue"), // 组件-->表单-->颜色选择器
+      },
+      {
+        path: "Form",
+        name: "Form",
+        component: () => import("../views/ComponentsLibrary/Forms/Form.vue"), // 组件-->表单-->表单
+      },
+      {
+        path: "TableEazy",
+        name: "TableEazy",
+        component: () => import("../views/ComponentsLibrary/Datas/TableEazy.vue"), // 组件-->数据-->表格
+      },
+      {
+        path: "Tag",
+        name: "Tag",
+        component: () => import("../views/ComponentsLibrary/Datas/Tag.vue"), // 组件-->数据-->标签
+      },
+      {
+        path: "Progress",
+        name: "Progress",
+        component: () => import("../views/ComponentsLibrary/Datas/Progress.vue"), // 组件-->数据-->进度条
+      },
+      {
+        path: "Pagination",
+        name: "Pagination",
+        component: () => import("../views/ComponentsLibrary/Datas/Pagination.vue"), // 组件-->数据-->分页
+      },
+      {
+        path: "Badge",
+        name: "Badge",
+        component: () => import("../views/ComponentsLibrary/Datas/Badge.vue"), // 组件-->数据-->标记
+      },
+      {
+        path: "Avatar",
+        name: "Avatar",
+        component: () => import("../views/ComponentsLibrary/Datas/Avatar.vue"), // 组件-->数据-->头像
+      },
+      {
+        path: "Showmore",
+        name: "Showmore",
+        component: () => import("../views/ComponentsLibrary/Datas/Showmore.vue"), // 组件-->数据-->文本省略
+      },
     ],
   },
 ];

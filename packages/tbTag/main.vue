@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-04-29 11:29:18
- * @LastEditTime: 2021-05-24 17:23:15
+ * @LastEditTime: 2021-06-30 15:17:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbTag/main.vue
@@ -24,13 +24,17 @@ export default {
     return (
       <div {...data} style={this.color ? `background-color:${this.color}` : ""} class={`tb-tag tag  ${this.tbType} ${this.tbSize} ${this.tbEffect}`}>
         {this.$slots.default[0]}{" "}
-        <i
-          vOn:click_stop={() => {
-            this.$emit("close");
-          }}
-          class="iconfont icon-close-bold bold"
-          style="margin-left:2px;"
-        ></i>
+        {this.isCloseble ? (
+          <i
+            vOn:click_stop={() => {
+              this.$emit("close");
+            }}
+            class="iconfont icon-close-bold bold"
+            style="margin-left:2px;"
+          ></i>
+        ) : (
+          ""
+        )}
       </div>
     );
   },
@@ -126,6 +130,9 @@ export default {
 };
 </script>
 <style scoped>
+.iconfont {
+    vertical-align: baseline;
+}
 .bold {
   cursor: pointer;
 }
@@ -147,7 +154,7 @@ export default {
   font-size: 12px;
   display: inline-block;
   border: 1px solid #eeeeee;
-  line-height: 30px;
+  line-height: 28px;
   text-align: center;
   padding: 0 16px;
   /* cursor: pointer; */
@@ -157,7 +164,7 @@ export default {
   font-size: 14px;
   display: inline-block;
   border: 1px solid #eeeeee;
-  line-height: 35px;
+  line-height: 33px;
   text-align: center;
   padding: 0 20px;
   /* cursor: pointer; */
@@ -167,7 +174,7 @@ export default {
   font-size: 16px;
   display: inline-block;
   border: 1px solid #eeeeee;
-  line-height: 40px;
+  line-height: 38px;
   text-align: center;
   padding: 0 24px;
   /* cursor: pointer; */

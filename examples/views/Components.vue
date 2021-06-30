@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 13:12:07
- * @LastEditTime: 2021-06-29 15:36:02
+ * @LastEditTime: 2021-06-30 14:57:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/Components.vue
@@ -41,6 +41,15 @@
               <tb-menu-item to="/Components/Rate" name="Rate">Rate 评分</tb-menu-item>
               <tb-menu-item to="/Components/ColorPicker" name="ColorPicker">ColorPicker 颜色选择器</tb-menu-item>
               <tb-menu-item to="/Components/Form" name="Form">Form 表单</tb-menu-item>
+            </tb-menu-group>
+            <tb-menu-group title="数据">
+              <tb-menu-item to="/Components/TableEazy" name="TableEazy">TableEazy 表格</tb-menu-item>
+              <tb-menu-item to="/Components/Tag" name="Tag">Tag 标签</tb-menu-item>
+              <tb-menu-item to="/Components/Progress" name="Progress">Progress 进度条</tb-menu-item>
+              <tb-menu-item to="/Components/Pagination" name="Pagination">Pagination 分页</tb-menu-item>
+              <tb-menu-item to="/Components/Badge" name="Badge">Badge 标记</tb-menu-item>
+              <tb-menu-item to="/Components/Avatar" name="Avatar">Avatar 头像</tb-menu-item>
+              <tb-menu-item to="/Components/Showmore" name="Showmore">Showmore 文本省略</tb-menu-item>
             </tb-menu-group>
           </tb-submenu>
         </tb-menu>

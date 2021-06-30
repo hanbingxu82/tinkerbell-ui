@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-04-29 16:45:00
- * @LastEditTime: 2021-04-29 16:59:00
+ * @LastEditTime: 2021-06-30 10:22:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbColorPicker/main.vue
