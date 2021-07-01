@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-06 18:40:25
- * @LastEditTime: 2021-06-11 14:13:06
+ * @LastEditTime: 2021-07-01 16:44:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbModal/main.vue
@@ -786,6 +786,9 @@ export default {
 .tb-modal-confirm-head-icon-confirm {
   color: #1089ff;
 }
+.tb-modal-confirm-head-icon-primary {
+  color: #1089ff;
+}
 .tb-modal-confirm-head-icon-info {
   color: #35495e;
 }
@@ -819,5 +822,8 @@ export default {
 .tb-modal-confirm-footer {
   margin-top: 10px;
   text-align: right;
+  .tb-button{
+    margin: 0 5px;
+  }
 }
 </style>

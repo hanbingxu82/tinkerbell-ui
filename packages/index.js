@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-07-01 14:44:04
+ * @LastEditTime: 2021-07-01 16:35:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -244,6 +244,12 @@ const install = function(Vue) {
    */
 
   Vue.prototype.$confirm = tbModal.confirm;
+  /**
+   * @description: 2021-07-01 新增modal弹窗
+   * @param {*}
+   * @return {*}
+   */
+  Vue.prototype.$modal = tbModal
 };
 
 if (typeof window !== "undefined" && window.Vue) {
