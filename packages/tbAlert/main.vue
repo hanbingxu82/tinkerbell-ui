@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-20 10:23:44
- * @LastEditTime: 2021-06-10 16:47:10
+ * @LastEditTime: 2021-07-01 14:16:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbAlert/main.vue
@@ -83,6 +83,8 @@ export default {
       // 如果传递进来的图标有值的话那就使用传递进来的icon
       if (this.icon) {
         return this.icon;
+      } else if (this.type == "primary") {
+        return `icon-comment-filling`;
       } else if (this.type == "success") {
         return `icon-success-filling`;
       } else if (this.type == "info") {
@@ -113,6 +115,9 @@ export default {
 };
 </script>
 <style lang="less">
+.iconfont{
+  vertical-align: baseline;
+}
 .tb-alert {
   padding: 8px 16px;
   border-radius: 4px;
@@ -139,6 +144,10 @@ export default {
   right: 15px;
   position: absolute;
   cursor: pointer;
+}
+.tb-alert--primary {
+  color: #1089ff;
+  background-color: #ecf5ff;
 }
 .tb-alert--success {
   color: #52c41a;

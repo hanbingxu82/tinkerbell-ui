@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-30 13:50:32
+ * @LastEditTime: 2021-07-01 14:45:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/router/index.js
@@ -10,7 +10,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Page from "../views/Page.vue";
 import Components from "../views/Components.vue";
-
+import tinkerbellUI from "../../packages/index";
 Vue.use(VueRouter);
 
 const routes = [
@@ -170,6 +170,31 @@ const routes = [
         name: "Showmore",
         component: () => import("../views/ComponentsLibrary/Datas/Showmore.vue"), // 组件-->数据-->文本省略
       },
+      {
+        path: "Alert",
+        name: "Alert",
+        component: () => import("../views/ComponentsLibrary/Notices/Alert.vue"), // 组件-->通知-->警告
+      },
+      {
+        path: "LoadingBar",
+        name: "LoadingBar",
+        component: () => import("../views/ComponentsLibrary/Notices/LoadingBar.vue"), // 组件-->通知-->加载条
+      },
+      {
+        path: "Message",
+        name: "Message",
+        component: () => import("../views/ComponentsLibrary/Notices/Message.vue"), // 组件-->通知-->消息提示
+      },
+      {
+        path: "MessageBox",
+        name: "MessageBox",
+        component: () => import("../views/ComponentsLibrary/Notices/MessageBox.vue"), // 组件-->通知-->弹框
+      },
+      {
+        path: "Notification",
+        name: "Notification",
+        component: () => import("../views/ComponentsLibrary/Notices/Notification.vue"), // 组件-->通知-->文本省略
+      },
     ],
   },
 ];
@@ -180,6 +205,14 @@ VueRouter.prototype.push = function push(to) {
 
 const router = new VueRouter({
   routes,
+});
+
+router.beforeEach((to, from, next) => {
+  tinkerbellUI.tbLoadingBar.start();
+  next();
+});
+router.afterEach(() => {
+  tinkerbellUI.tbLoadingBar.end();
 });
 
 export default router;

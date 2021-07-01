@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:59:49
- * @LastEditTime: 2021-06-29 17:09:27
+ * @LastEditTime: 2021-07-01 14:49:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/table/table.vue
@@ -214,6 +214,7 @@ export default {
   // margin: 0 2px;
   border-radius: 4px;
   background: #ffffff;
+  border: 1px solid #d9d9d9;
   box-sizing: border-box;
 }
 .button:focus,
@@ -372,7 +373,7 @@ export default {
   height: 30px;
   font-size: 12px;
   display: inline-block;
-  border: 1px solid #d9d9d9;
+  // border: 1px solid #d9d9d9;
   line-height: 28px;
   text-align: center;
   padding: 0 16px;
@@ -382,7 +383,7 @@ export default {
   height: 35px;
   font-size: 14px;
   display: inline-block;
-  border: 1px solid #d9d9d9;
+  // border: 1px solid #d9d9d9;
   line-height: 33px;
   text-align: center;
   padding: 0 20px;
@@ -392,7 +393,7 @@ export default {
   height: 40px;
   font-size: 16px;
   display: inline-block;
-  border: 1px solid #d9d9d9;
+  // border: 1px solid #d9d9d9;
   line-height: 38px;
   text-align: center;
   padding: 0 24px;

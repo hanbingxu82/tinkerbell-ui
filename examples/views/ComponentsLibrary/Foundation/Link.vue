@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-25 14:40:02
- * @LastEditTime: 2021-06-29 17:22:17
+ * @LastEditTime: 2021-07-01 14:10:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Foundation/Link.vue
@@ -129,7 +129,7 @@
         </div>
       </div>
       <pre slot="highlight" v-highlight>
-        <code class="javascript"  v-text="html3">
+        <code class="javascript"  v-text="html4">
         </code>
       </pre>
     </Demo>

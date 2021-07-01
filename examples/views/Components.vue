@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 13:12:07
- * @LastEditTime: 2021-06-30 14:57:27
+ * @LastEditTime: 2021-07-01 13:30:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/Components.vue
@@ -50,6 +50,20 @@
               <tb-menu-item to="/Components/Badge" name="Badge">Badge 标记</tb-menu-item>
               <tb-menu-item to="/Components/Avatar" name="Avatar">Avatar 头像</tb-menu-item>
               <tb-menu-item to="/Components/Showmore" name="Showmore">Showmore 文本省略</tb-menu-item>
+            </tb-menu-group>
+            <tb-menu-group title="通知">
+              <tb-menu-item to="/Components/Alert" name="Alert">Alert 警告</tb-menu-item>
+              <tb-menu-item to="/Components/LoadingBar" name="LoadingBar">LoadingBar 加载条</tb-menu-item>
+              <tb-menu-item to="/Components/Message" name="Message">Message 消息提示</tb-menu-item>
+              <tb-menu-item to="/Components/MessageBox" name="MessageBox">MessageBox 弹框</tb-menu-item>
+              <tb-menu-item to="/Components/Notification" name="Notification">Notification 通知</tb-menu-item>
+            </tb-menu-group>
+            <tb-menu-group title="导航">
+              <tb-menu-item to="/Components/NavMenu" name="NavMenu">NavMenu 导航菜单</tb-menu-item>
+              <tb-menu-item to="/Components/Tabs" name="Tabs">Tabs 标签页</tb-menu-item>
+              <tb-menu-item to="/Components/Breadcrumb" name="Breadcrumb">Breadcrumb 面包屑</tb-menu-item>
+              <tb-menu-item to="/Components/PageHeader" name="PageHeader">PageHeader 页头</tb-menu-item>
+              <tb-menu-item to="/Components/Steps" name="Steps">Steps 步骤条</tb-menu-item>
             </tb-menu-group>
           </tb-submenu>
         </tb-menu>
