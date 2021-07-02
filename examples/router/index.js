@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-07-01 14:45:50
+ * @LastEditTime: 2021-07-01 22:12:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/router/index.js
@@ -194,6 +194,31 @@ const routes = [
         path: "Notification",
         name: "Notification",
         component: () => import("../views/ComponentsLibrary/Notices/Notification.vue"), // 组件-->通知-->文本省略
+      },
+      {
+        path: "Navmenu",
+        name: "Navmenu",
+        component: () => import("../views/ComponentsLibrary/Navigations/Navmenu.vue"), // 组件-->导航-->导航菜单
+      },
+      {
+        path: "Tabs",
+        name: "Tabs",
+        component: () => import("../views/ComponentsLibrary/Navigations/Tabs.vue"), // 组件-->导航-->标签页
+      },
+      {
+        path: "Breadcrumb",
+        name: "Breadcrumb",
+        component: () => import("../views/ComponentsLibrary/Navigations/Breadcrumb.vue"), // 组件-->导航-->面包屑
+      },
+      {
+        path: "PageHeader",
+        name: "PageHeader",
+        component: () => import("../views/ComponentsLibrary/Navigations/PageHeader.vue"), // 组件-->导航-->页头
+      },
+      {
+        path: "Steps",
+        name: "Steps",
+        component: () => import("../views/ComponentsLibrary/Navigations/Steps.vue"), // 组件-->导航-->步骤条
       },
     ],
   },
