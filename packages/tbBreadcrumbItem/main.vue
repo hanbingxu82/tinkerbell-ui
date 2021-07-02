@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-20 09:29:42
- * @LastEditTime: 2021-05-20 09:53:40
+ * @LastEditTime: 2021-07-02 11:47:58
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbBreadcrumbItem/main.vue
@@ -68,5 +68,8 @@ export default {
   margin: 0 9px;
   font-weight: 700;
   color: #c0c4cc;
+}
+.tb-breadcrumb__item:last-child .tb-breadcrumb__separator{
+display: none;
 }
 </style>

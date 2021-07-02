@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-20 09:29:05
- * @LastEditTime: 2021-05-20 09:46:53
+ * @LastEditTime: 2021-07-02 11:43:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbBreadcrumb/main.vue
@@ -33,10 +33,13 @@ export default {
   },
 };
 </script>
-<style>
+<style lang="less">
 .tb-breadcrumb {
   font-size: 14px;
   line-height: 1;
+  .iconfont{
+    vertical-align: baseline;
+  }
 }
 .tb-breadcrumb__item {
   float: left;

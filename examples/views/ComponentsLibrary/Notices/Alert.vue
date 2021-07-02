@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-01 13:37:49
- * @LastEditTime: 2021-07-01 14:22:28
+ * @LastEditTime: 2021-07-02 11:37:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Notices.vue/Alert.vue
@@ -273,6 +273,11 @@ export default {
           <tb-alert type="info" close-text="知道了">自定义关闭的 alert</tb-alert>
           <tb-alert type="warning" @close="hello">设置了回调的 alert</tb-alert>
     </div>
+    methods: {
+      hello(){
+        this.$message('hello')
+      }
+    }
               `,
       html5: `    <div>
           <tb-alert type="success" description="这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰……">带辅助性文字介绍</tb-alert>
@@ -309,6 +314,9 @@ export default {
       const containern = window.document.querySelector("#" + id);
       containern.scrollIntoView(true);
     },
+    hello(){
+      this.$message('hello')
+    }
   },
 };
 </script>
