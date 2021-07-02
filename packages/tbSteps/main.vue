@@ -322,7 +322,7 @@ export default {
     display: block;
     width: 26px;
     height: 26px;
-    line-height: 24px;
+    line-height: 26px;
     margin-right: 8px;
     text-align: center;
     border: 1px solid #ccc;
