@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-01 15:09:08
- * @LastEditTime: 2021-06-02 14:27:55
+ * @LastEditTime: 2021-07-02 11:12:01
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbTabs/main.vue
@@ -231,7 +231,11 @@ export default {
 };
 </script>
 <style lang="less">
+
 .tb-tabs-wrapper {
+  .iconfont{
+    vertical-align: baseline;
+  }
   position: relative;
   .nav-wrap {
     position: relative;
@@ -453,6 +457,7 @@ export default {
           background: #1089ff;
         }
         .custom-icon {
+          
           color: #1089ff;
         }
       }

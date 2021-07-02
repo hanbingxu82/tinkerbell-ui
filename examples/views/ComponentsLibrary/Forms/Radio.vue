@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-27 15:45:46
- * @LastEditTime: 2021-06-27 19:05:10
+ * @LastEditTime: 2021-07-02 10:47:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Forms/Radio.vue
@@ -400,7 +400,7 @@ export default {
             };
             }
         }
-    <\script>
+    <\/script>
               `,
       html2: `    <template>
         <tb-radio disabled v-model="radio" label="禁用">备选项</tb-radio>
