@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-07-01 22:12:09
+ * @LastEditTime: 2021-07-02 17:29:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/router/index.js
@@ -219,6 +219,47 @@ const routes = [
         path: "Steps",
         name: "Steps",
         component: () => import("../views/ComponentsLibrary/Navigations/Steps.vue"), // 组件-->导航-->步骤条
+      },
+
+      {
+        path: "Modal",
+        name: "Modal",
+        component: () => import("../views/ComponentsLibrary/Others/Modal.vue"), // 组件-->其他-->模态框
+      },
+      {
+        path: "Popover",
+        name: "Popover",
+        component: () => import("../views/ComponentsLibrary/Others/Popover.vue"), // 组件-->其他-->气泡弹窗
+      },
+      {
+        path: "Popconfirm",
+        name: "Popconfirm",
+        component: () => import("../views/ComponentsLibrary/Others/Popconfirm.vue"), // 组件-->其他-->气泡确认框
+      },
+      {
+        path: "Card",
+        name: "Card",
+        component: () => import("../views/ComponentsLibrary/Others/Card.vue"), // 组件-->其他-->卡片
+      },
+      {
+        path: "Carousel",
+        name: "Carousel",
+        component: () => import("../views/ComponentsLibrary/Others/Carousel.vue"), // 组件-->其他-->日历
+      },
+      {
+        path: "Backtop",
+        name: "Backtop",
+        component: () => import("../views/ComponentsLibrary/Others/Backtop.vue"), // 组件-->其他-->回到顶部
+      },
+      {
+        path: "InfiniteScroll",
+        name: "InfiniteScroll",
+        component: () => import("../views/ComponentsLibrary/Others/InfiniteScroll.vue"), // 组件-->其他-->无限滚动
+      },
+      {
+        path: "Drawer",
+        name: "Drawer",
+        component: () => import("../views/ComponentsLibrary/Others/Drawer.vue"), // 组件-->其他-->抽屉
       },
     ],
   },

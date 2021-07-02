@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 13:12:07
- * @LastEditTime: 2021-07-01 13:30:54
+ * @LastEditTime: 2021-07-02 17:29:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/Components.vue
@@ -64,6 +64,17 @@
               <tb-menu-item to="/Components/Breadcrumb" name="Breadcrumb">Breadcrumb 面包屑</tb-menu-item>
               <tb-menu-item to="/Components/PageHeader" name="PageHeader">PageHeader 页头</tb-menu-item>
               <tb-menu-item to="/Components/Steps" name="Steps">Steps 步骤条</tb-menu-item>
+            </tb-menu-group>
+            <tb-menu-group title="其他">
+              <tb-menu-item to="/Components/Modal" name="Modal">Modal 模态框</tb-menu-item>
+              <tb-menu-item to="/Components/Popover" name="Popover">Popover 气泡弹窗</tb-menu-item>
+              <tb-menu-item to="/Components/Popconfirm" name="Popconfirm">Popconfirm 气泡确认框</tb-menu-item>
+              <tb-menu-item to="/Components/Card" name="Card">Card 卡片</tb-menu-item>
+              <tb-menu-item to="/Components/Carousel" name="Carousel">Carousel 走马灯</tb-menu-item>
+              <tb-menu-item to="/Components/Calendar" name="Calendar">Calendar 日历</tb-menu-item>
+              <tb-menu-item to="/Components/Backtop" name="Backtop">Backtop 回到顶部</tb-menu-item>
+              <tb-menu-item to="/Components/InfiniteScroll" name="InfiniteScroll">InfiniteScroll 无限滚动</tb-menu-item>
+              <tb-menu-item to="/Components/Drawer" name="Drawer">Drawer 抽屉</tb-menu-item>
             </tb-menu-group>
           </tb-submenu>
         </tb-menu>
