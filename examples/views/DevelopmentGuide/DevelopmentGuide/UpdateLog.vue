@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 15:47:33
- * @LastEditTime: 2021-06-25 13:46:21
+ * @LastEditTime: 2021-07-04 09:58:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/DevelopmentGuide/DevelopmentGuide/UpdateLog.vue
@@ -350,7 +350,7 @@ export default {
    * @param {rightTitle}  rightTitle:右侧right浮起框数据
    * @return {*}
    */
-  mixins: [useScroll],
+  // mixins: [useScroll],
   methods: {
     /**
      * @description: 点击右侧区域跳转至对应的html区域

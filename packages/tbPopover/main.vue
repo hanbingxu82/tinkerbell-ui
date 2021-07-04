@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-02 16:01:34
- * @LastEditTime: 2021-06-03 13:27:31
+ * @LastEditTime: 2021-07-03 14:51:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbPopover/main.vue
@@ -18,14 +18,14 @@
           <div :class="[prefixCls + '-inner']" v-if="confirm">
             <div :class="[prefixCls + '-body']">
               <div :class="[prefixCls + '-body-message']">
-                <i :class="`iconfont icon-${iconName}`" :style="iconStyles"></i>
+                <i :class="`iconfont ${iconName}`" :style="iconStyles"></i>
                 <slot name="title"
                   ><span class="message-title">{{ title }}</span></slot
                 >
               </div>
               <div :class="[prefixCls + '-body-buttons']">
-                <b-button size="mini" @click="cancel">{{ cancelText }}</b-button>
-                <b-button type="primary" size="mini" @click="ok">{{ okText }}</b-button>
+                <tb-button size="mini" @click="cancel">{{ cancelText }}</tb-button>
+                <tb-button type="primary" size="mini" @click="ok">{{ okText }}</tb-button>
               </div>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default {
     },
     iconName: {
       type: String,
-      default: "ios-help-circle",
+      default: "icon-help-filling",
     },
     iconStyles: {
       type: Object,
@@ -486,7 +486,7 @@ export default {
       font-size: 14px;
       .iconfont {
         position: relative;
-        top: 2px;
+        top: -2px;
         font-size: 18px;
         color: #fea638;
         margin-right: 8px;
@@ -494,6 +494,9 @@ export default {
     }
     &-buttons {
       text-align: right;
+      .tb-button{
+        margin-left: 10px;
+      }
     }
   }
 }

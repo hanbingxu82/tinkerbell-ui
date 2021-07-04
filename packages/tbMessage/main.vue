@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-25 11:25:19
- * @LastEditTime: 2021-05-25 15:33:51
+ * @LastEditTime: 2021-07-03 13:17:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbMessage/main.vue
@@ -41,7 +41,7 @@ export default {
     return {
       // 所有push的数据
       notices: [],
-      zIndex: 2000,
+      zIndex: 2050,
       tIndex: this.handleGetIndex(),
     };
   },
@@ -58,7 +58,7 @@ export default {
     add(notice) {
       // 此处用于确保唯一值
       const name = notice.name || getUuid();
-      this.zIndex = notice.zIndex || 2000;
+      this.zIndex = notice.zIndex || 2050;
       let _notice = Object.assign(
         {
           styles: {
@@ -98,7 +98,7 @@ export default {
 .tb-message {
   font-size: 14;
   position: fixed;
-  z-index: 1010;
+  z-index: 2050;
   width: 100%;
   top: 30px;
   left: 0;

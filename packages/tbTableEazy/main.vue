@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-22 16:16:36
- * @LastEditTime: 2021-06-30 13:54:49
+ * @LastEditTime: 2021-07-04 10:35:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbTableEazy/main.vue
@@ -136,55 +136,54 @@ export default {
 </script>
 
 <style lang="less">
-//   @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
-/* vietnamese */
 @font-face {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../assets/woff2/woff_table01.woff2") format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+ font-family: "Nunito Sans";
+ font-style: normal;
+ font-weight: 400;
+ src: url("../assets/woff2/woff_table01.woff2") format("woff2");
+ unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
 @font-face {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../assets/woff2/woff_table02.woff2") format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+ font-family: "Nunito Sans";
+ font-style: normal;
+ font-weight: 400;
+ src: url("../assets/woff2/woff_table02.woff2") format("woff2");
+ unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../assets/woff2/woff_table03.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+ font-family: "Nunito Sans";
+ font-style: normal;
+ font-weight: 400;
+ src: url("../assets/woff2/woff_table03.woff2") format("woff2");
+ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 /* vietnamese */
 @font-face {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../assets/woff2/woff_table04.woff2") format("woff2");
-  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+ font-family: "Nunito Sans";
+ font-style: normal;
+ font-weight: 700;
+ src: url("../assets/woff2/woff_table04.woff2") format("woff2");
+ unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
 /* latin-ext */
 @font-face {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../assets/woff2/woff_table05.woff2") format("woff2");
-  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+ font-family: "Nunito Sans";
+ font-style: normal;
+ font-weight: 700;
+ src: url("../assets/woff2/woff_table05.woff2") format("woff2");
+ unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
 /* latin */
 @font-face {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../assets/woff2/woff_table06.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+ font-family: "Nunito Sans";
+ font-style: normal;
+ font-weight: 700;
+ src: url("../assets/woff2/woff_table06.woff2") format("woff2");
+ unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+
 .tb-table-eazy {
   width: 100%;
   overflow: hidden;

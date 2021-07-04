@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 10:56:05
- * @LastEditTime: 2021-05-11 13:15:40
+ * @LastEditTime: 2021-07-03 15:47:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbPopconfirm/main.vue
@@ -144,13 +144,13 @@ export default {
       // 获取可视区窗口宽、高度
       const viewWidth = document.documentElement.clientWidth;
       const viewHeight = document.documentElement.clientHeight;
-      // 判断当前点击位置是与宽高是否大于150px
-      if (viewWidth - e.clientX < 150) {
+      // 判断当前点击位置是与宽高是否大于200px
+      if (viewWidth - e.clientX < 200) {
         this.isRight = true;
       } else {
         this.isRight = false;
       }
-      if (viewHeight - e.clientY < 150) {
+      if (viewHeight - e.clientY < 200) {
         this.isTop = true;
         // 高度默认为120px
         this.boxHeight = "-120px";
@@ -179,7 +179,7 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style lang="less" scoped>
 .box {
   position: relative;
 }
@@ -207,7 +207,7 @@ export default {
   margin-top: 12px;
   position: absolute;
   background: #fff;
-  min-width: 150px;
+  min-width: 200px;
   border-radius: 4px;
   border: 1px solid #ebeef5;
   padding: 12px;
@@ -224,7 +224,7 @@ export default {
   position: absolute;
   right: 0;
   background: #fff;
-  min-width: 150px;
+  min-width: 200px;
   border-radius: 4px;
   border: 1px solid #ebeef5;
   padding: 12px;
@@ -247,6 +247,9 @@ export default {
 .tb-popconfirm__action {
   text-align: right;
   margin: 0;
+  .tb-button{
+    margin-left: 10px;
+  }
 }
 /* 三角上 */
 .tb-popover .popper__arrow,

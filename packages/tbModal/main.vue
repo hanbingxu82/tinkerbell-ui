@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-06 18:40:25
- * @LastEditTime: 2021-07-01 16:44:18
+ * @LastEditTime: 2021-07-03 13:15:44
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbModal/main.vue
@@ -336,7 +336,8 @@ export default {
      * @description: 是否展示slot头  自定义slot头嘛
      * @param {*}
      * @return {*}
-     */    
+     */
+
     let showHead = true;
     // 如果没有定义slot header  或者没有传递title  就不要展示对应的header区域了
     if (this.$slots.header === undefined && !this.title) {
@@ -376,7 +377,7 @@ export default {
     handleWrapClick(event) {
       // 判断是不是有class属性  并且有-wrap  就会触发handleMask事件  判断当前点击的地方是否与遮罩层重合
       const className = event.target.getAttribute("class");
-      console.log(className && className.indexOf(`${prefixCls}-wrap`))
+      console.log(className && className.indexOf(`${prefixCls}-wrap`));
       if (className && className.indexOf(`${prefixCls}-wrap`) > -1) this.handleMask();
     },
     // 点击取消触发的事件
@@ -477,7 +478,7 @@ export default {
         this.updateCallback(!val);
       });
     },
-    // 对应的视图变更 
+    // 对应的视图变更
     visible(val) {
       if (val === false) {
         // 如果是关闭
@@ -537,7 +538,7 @@ export default {
 };
 </script>
 <style lang="less">
-.iconfont{
+.iconfont {
   vertical-align: middle;
 }
 .tb-modal-mask {
@@ -652,8 +653,12 @@ export default {
 }
 .tb-modal-footer {
   border-top: 1px solid #f0f0f0;
+
   padding: 10px 16px;
   text-align: right;
+  .tb-button {
+    margin: 0 10px;
+  }
 }
 
 .modal-fade-enter-active {
@@ -822,7 +827,7 @@ export default {
 .tb-modal-confirm-footer {
   margin-top: 10px;
   text-align: right;
-  .tb-button{
+  .tb-button {
     margin: 0 5px;
   }
 }
