@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-06-28 16:46:55
+ * @LastEditTime: 2021-07-04 12:50:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
@@ -788,7 +788,7 @@ export default {
     },
     // 点击某一天触发的事件
     handleClickDay(day) {
-      // console.log(day);
+      console.log(day);
     },
     // 上一个月  time 是当前年月日  日期默认为1号
     handlePrevMonth(time) {

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-07-02 17:29:46
+ * @LastEditTime: 2021-07-04 12:34:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/router/index.js
@@ -244,7 +244,12 @@ const routes = [
       {
         path: "Carousel",
         name: "Carousel",
-        component: () => import("../views/ComponentsLibrary/Others/Carousel.vue"), // 组件-->其他-->日历
+        component: () => import("../views/ComponentsLibrary/Others/Carousel.vue"), // 组件-->其他-->走马灯
+      },
+      {
+        path: "Calendar",
+        name: "Calendar",
+        component: () => import("../views/ComponentsLibrary/Others/Calendar.vue"), // 组件-->其他-->日历
       },
       {
         path: "Backtop",

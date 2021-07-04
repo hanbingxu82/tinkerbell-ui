@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-06 13:16:23
- * @LastEditTime: 2021-05-06 13:38:20
+ * @LastEditTime: 2021-07-04 13:18:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbCalendar/main.vue
@@ -33,7 +33,25 @@ import * as utils from "./utils.js";
 export default {
   name: "tbCalendar",
   props: {
-    options: Object,
+    options: {
+      type: Object,
+      default: () => {
+        return {
+          type: "combination", // 是否为特定的组合方式  header头默认设置样式
+          // 如果不是特定的组合方式   那么下方的todayBtn、checkBtn样式就会起作用 两者最好不要一起使用
+          headStyle: {
+            todayBtn: "left",
+            combination: "center",
+            checkBtn: "left",
+          },
+          // 文本对齐位置
+          viewStyle: {
+            // 视图day天数  文本对齐位置
+            day: "right",
+          },
+        };
+      },
+    },
   },
   components: {
     calendarHeader,
