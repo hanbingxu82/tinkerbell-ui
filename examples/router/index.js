@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-07-04 12:34:30
+ * @LastEditTime: 2021-07-05 08:51:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/router/index.js
@@ -268,6 +268,7 @@ const routes = [
       },
     ],
   },
+  { path: "*", component: () => import(/* webpackChunkName: "error" */ "../views/Error/Error404.vue") },
 ];
 const VueRouterPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(to) {

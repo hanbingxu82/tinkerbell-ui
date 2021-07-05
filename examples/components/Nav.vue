@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-23 15:28:49
- * @LastEditTime: 2021-06-25 10:14:03
+ * @LastEditTime: 2021-07-04 16:20:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/components/Nav.vue
@@ -19,7 +19,7 @@
       <tb-submenu v-show="isShowNav" name="Components">
         <template slot="title" > <span class="downNav">导航</span> </template>
         <tb-menu-item style="color:rgba(0,0,0,0.65)!important;" name="/" to="/">首页</tb-menu-item>
-        <tb-menu-item style="color:rgba(0,0,0,0.65)!important;" name="/Components/Introduction" to="/Components">组件</tb-menu-item>
+        <tb-menu-item style="color:rgba(0,0,0,0.65)!important;" name="/Components/Introduction" to="/Components/Introduction">组件</tb-menu-item>
       </tb-submenu>
     </tb-menu>
   </div>
