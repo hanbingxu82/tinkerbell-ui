@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-06-27 15:46:57
+ * @LastEditTime: 2021-07-05 09:24:20
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -9,16 +9,30 @@
 
 # tinkerbell-ui 一款简单而优雅的 ui 框架
 
-## npm 安装
 
 ```
-npm i tinkerbell-ui
+适用于Web的Vue.js 2.0 UI工具包。
+```
+## 链接
+- 官网和文档
+  - [International users](http://tinkerbell.top)
+- Gitter
+  - [Chinese users](https://github.com/hanbingxu82/tinkerbell-ui)
+
+## 安装
+```shell
+npm install tinkerbell-ui -S
+
+yarn add tinkerbell-ui -S
 ```
 
-### yarn 安装
+## 快速开始
+``` javascript
+import Vue from 'vue'
+import Tinkerbell from 'tinkerbell-ui'
 
-```
-yarn add tinkerbell-ui
+Vue.use(Tinkerbell)
+
 ```
 
 #### 0.1.2 完成 tb-button 按钮、icon 图标组件
@@ -110,6 +124,8 @@ yarn add tinkerbell-ui
 #### 0.5.5 调整 tinkerbell-ui 主题颜色样式等
 
 #### 0.5.6 完成官网基础部分  并调整基础类型组件样式style等
+
+#### 0.5.7 完成官网  并调整在编写官网时遇到的组件问题 如button边框、icon图标不对齐，调整整体色彩样式等
 
 ### 如有需要及时联系
 
