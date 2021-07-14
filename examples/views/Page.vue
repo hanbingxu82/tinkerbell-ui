@@ -50,19 +50,20 @@
       </div>
       <div class="bottom_screen">
         <div style="width:90%;height: 40%;margin-left: 5%;float: left">
-          <span class="mail_text">邮箱：hbx831@126.com</span>
+          <span class="mail_text">© Tinkerbell</span>
           <span class="add_text"> </span>
           <span class="ver_1">
-              <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/hanbingxu82/tinkerbell-ui?style=social"/>
-              </span>
+            <a href="https://github.com/hanbingxu82/tinkerbell-ui" target="_blank" rel="noopener noreferrer">
+              <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/hanbingxu82/tinkerbell-ui?style=social" />
+            </a>
+          </span>
         </div>
         <div class="b_s_d_2" style="width:90%;height: 50%;margin-left: 5%;float: left;">
-          <span class="tel_text">
-              备案号：津ICP备200008xx号</span>
-
-          <a class="ver_2" href="">
+          <a target="_blank" href="https://beian.miit.gov.cn" style="color:white;"><span class="tel_text">备案号：冀ICP备2021015986号-1</span></a>
+          <a class="ver_2"  href="https://github.com/hanbingxu82/tinkerbell-ui" target="_blank" rel="noopener noreferrer">
             <!-- <img alt="npm" src="https://img.shields.io/npm/v/tinkerbell-ui?style=social" /> -->
-            <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/hanbingxu82/tinkerbell-ui?style=social"/>
+
+            <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/hanbingxu82/tinkerbell-ui?style=social" />
           </a>
           <a class="uv">
             <!-- <img alt="npm" src="https://img.shields.io/npm/v/tinkerbell-ui?style=social"/> -->
@@ -183,7 +184,6 @@ export default {
 //   overflow-y: auto;
 // }
 .home {
-
   padding: 0 5%;
   padding-top: 60px;
   box-sizing: border-box;
@@ -194,9 +194,9 @@ export default {
   position: relative;
   overflow-x: hidden;
 }
-.titleFont{
-    font-size: 40px;
-    font-weight: 700;
+.titleFont {
+  font-size: 40px;
+  font-weight: 700;
 }
 .img_adc_da {
   display: block;
@@ -319,7 +319,7 @@ export default {
   cursor: pointer;
 }
 .tel_text {
-  width: 15%;
+  width: 30%;
 
   margin-top: 1%;
   float: left;
