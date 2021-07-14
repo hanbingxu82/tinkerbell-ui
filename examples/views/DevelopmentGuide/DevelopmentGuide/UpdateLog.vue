@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 15:47:33
- * @LastEditTime: 2021-07-14 14:07:15
+ * @LastEditTime: 2021-07-14 14:10:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/DevelopmentGuide/DevelopmentGuide/UpdateLog.vue
@@ -37,7 +37,7 @@
         <i class="iconfont icon-setting-filling" slot="dot"></i>
         <p class="version">0.5.7</p>
         <p class="time">2021-07-05</p>
-        <p class="content">完成官网ui样式构建</p>
+        <p class="content">完成官网ui样式构建、字体大小</p>
         <p class="content">调整在编写官网时遇到的组件问题</p>
         <p class="content">button边框、icon图标不对齐，调整整体色彩样式等</p>
       </tb-timeline-item>
