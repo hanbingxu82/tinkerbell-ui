@@ -355,7 +355,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.tb-button {
+/deep/ .tb-button {
   margin: 5px;
 }
 </style>

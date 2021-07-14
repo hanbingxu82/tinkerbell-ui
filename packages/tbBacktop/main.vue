@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-13 13:56:42
- * @LastEditTime: 2021-07-04 15:07:47
+ * @LastEditTime: 2021-07-14 14:04:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbBackTop/main.vue
@@ -133,15 +133,15 @@ export default {
   margin-top: 30px;
   border-radius: 20px;
   border: none;
-  padding: 8px;
-  background-color: black;
+  /* padding: 8px; */
+  /* background-color: black; */
   color: #409eff;
   outline: none;
 }
-.tb-scroll-button:hover {
+/* .tb-scroll-button:hover {
   box-shadow: 0 12px 13px -6px black;
   transition: 0.5s;
-}
+} */
 .tb-div-wrapper {
   text-align: center;
   display: flex;

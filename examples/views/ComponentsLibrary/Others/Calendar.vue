@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-02 17:27:01
- * @LastEditTime: 2021-07-04 13:25:40
+ * @LastEditTime: 2021-07-14 13:51:18
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Others/Calendar.vue
@@ -200,7 +200,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.tb-button {
+.tb-button-box {
   margin-right: 20px;
 }
 .top,

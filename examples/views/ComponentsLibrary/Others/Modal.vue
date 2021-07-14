@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-02 17:26:15
- * @LastEditTime: 2021-07-03 13:43:38
+ * @LastEditTime: 2021-07-14 13:53:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Others/Modal.vue
@@ -884,7 +884,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.tb-button {
+.tb-button-box {
   margin-right: 20px;
 }
 [flex] {

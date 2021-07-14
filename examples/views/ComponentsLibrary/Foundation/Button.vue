@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-25 14:40:07
- * @LastEditTime: 2021-06-27 14:24:47
+ * @LastEditTime: 2021-07-14 13:26:36
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Foundation/Button.vue
@@ -423,7 +423,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.tb-button {
+/deep/ .tb-button {
   margin: 5px;
 }
 </style>

@@ -1,16 +1,18 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:59:49
- * @LastEditTime: 2021-07-01 14:49:11
+ * @LastEditTime: 2021-07-14 14:03:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/table/table.vue
  * 除按钮组、autofocus、autofocus两个api属性 也未实现
 -->
 <template>
-  <div v-on.prevent="$listeners" v-if="!tbIcon && type != 'text'" :class="`tb-button button ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled} ${loading ? 'is_disabled' : ' '}`"><i v-if="loading" class="iconfont icon-loading load"></i><slot></slot></div>
-  <div v-on.prevent="$listeners" v-else-if="tbIcon && type != 'text'" :class="`tb-button button ${tbIcon} ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled}`"><slot></slot></div>
-  <a v-on.prevent="$listeners" v-else-if="type == 'text'" :class="`tb-button ${tbType} ${tbDisabled}`"><slot></slot></a>
+  <a class="tb-button-box" :style="'display:inline-block;' + (disabled?'cursor: not-allowed;':'')">
+    <div v-on.prevent="$listeners" v-bind="$attrs" v-if="!tbIcon && type != 'text'" :class="`tb-button button ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled} ${loading ? 'is_disabled' : ' '}`"><i v-if="loading" class="iconfont icon-loading load"></i><slot></slot></div>
+    <div v-on.prevent="$listeners" v-bind="$attrs" v-else-if="tbIcon && type != 'text'" :class="`tb-button button ${tbIcon} ${tbSize} ${tbType} ${tbPlain} ${tbRound} ${tbDisabled}`"><slot></slot></div>
+    <a v-on.prevent="$listeners" v-bind="$attrs" v-else-if="type == 'text'" :class="`tb-button ${tbType} ${tbDisabled}`"><slot></slot></a>
+  </a>
 </template>
 
 <script>
@@ -75,7 +77,7 @@ export default {
     loading(newValue, oldValue) {
       console.log(newValue);
     },
-    disabled(){
+    disabled() {
       this.PDisabled();
     },
   },
@@ -154,7 +156,7 @@ export default {
       if (this.disabled) {
         vm.tbDisabled = " is_disabled ";
       } else {
-        vm.tbDisabled = " ";
+        vm.tbDisabled = "";
       }
     },
     PiconReturnMethods() {},
@@ -163,7 +165,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.iconfont{
+.iconfont {
   vertical-align: baseline;
 }
 // 不考虑size大小问题
@@ -320,7 +322,7 @@ export default {
 .button_primary:focus,
 .button_primary:hover {
   background: #3fa0ff;
-  border-color:#3fa0ff;
+  border-color: #3fa0ff;
   color: #fff;
 }
 .button_success {

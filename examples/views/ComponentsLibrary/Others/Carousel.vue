@@ -316,7 +316,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.tb-button {
+.tb-button-box {
   margin-right: 20px;
 }
 .demo {

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-01 13:38:16
- * @LastEditTime: 2021-07-01 16:09:01
+ * @LastEditTime: 2021-07-14 13:48:13
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Notices.vue/Message.vue
@@ -282,7 +282,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.tb-button {
+/deep/ .tb-button {
   margin: 5px;
 }
 </style>

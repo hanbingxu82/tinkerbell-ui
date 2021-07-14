@@ -191,7 +191,7 @@
 
     <Demo>
       <div slot="source">
-        <div style="padding-left:50px;">
+        <div >
           <tb-popover confirm title="警告:您确认删除此项数据吗?" @ok="ok" @cancel="cancel"> <tb-button type="danger" plain>删 除</tb-button> </tb-popover>&nbsp;&nbsp;
           <tb-popover confirm title="Are you sure delete this item?" ok-text="Yes" cancel-text="No" @ok="ok" @cancel="cancel"> <tb-button type="danger" plain>自定义文字</tb-button> </tb-popover>&nbsp;&nbsp;
           <tb-popover confirm icon-name="icon-task-filling" :icon-styles="{ color: '#f5222d' }" title="Are you sure delete this item?" @ok="ok" @cancel="cancel">
@@ -569,7 +569,7 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.tb-button {
+.tb-button-box {
   margin-right: 20px;
 }
 .top,

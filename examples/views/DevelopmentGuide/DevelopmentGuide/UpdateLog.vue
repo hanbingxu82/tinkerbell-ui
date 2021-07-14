@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 15:47:33
- * @LastEditTime: 2021-07-14 11:51:06
+ * @LastEditTime: 2021-07-14 14:07:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/DevelopmentGuide/DevelopmentGuide/UpdateLog.vue
@@ -31,6 +31,7 @@
         <p class="version">0.5.8</p>
         <p class="time">2021-07-14</p>
         <p class="content">修复官网每次切换menu时滚动条不置顶问题</p>
+        <p class="content">调整tb-button按钮组件、禁用时鼠标移入不显示禁用符号</p>
       </tb-timeline-item>
       <tb-timeline-item color="success">
         <i class="iconfont icon-setting-filling" slot="dot"></i>
