@@ -215,6 +215,8 @@ export default {
   background: white;
   width: 90%;
   height: 10%;
+    border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 .white_in_blue {
   margin: auto;
