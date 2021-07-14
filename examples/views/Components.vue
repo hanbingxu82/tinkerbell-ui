@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 13:12:07
- * @LastEditTime: 2021-07-04 16:17:19
+ * @LastEditTime: 2021-07-14 11:06:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/Components.vue
@@ -10,7 +10,7 @@
   <div :class="[prefixCls]">
     <tb-container>
       <tb-aside style="width:240px">
-        <tb-menu active-name="DevelopmentGuide" expand-all>
+        <tb-menu active-name="DevelopmentGuide" expand-all @select="menuSelect">
           <tb-submenu name="DevelopmentGuide">
             <template slot="title">开发指南</template>
             <tb-menu-item to="/Components/Introduction" name="Introduction">介绍</tb-menu-item>
@@ -79,7 +79,7 @@
           </tb-submenu>
         </tb-menu>
       </tb-aside>
-      <tb-main id="containers">
+      <tb-main id="containers" ref="containers">
         <router-view />
       </tb-main>
     </tb-container>
@@ -95,6 +95,16 @@ export default {
     };
   },
   mounted() {},
+  methods: {
+    /**
+     * @description: 选择menu事件  每次选择时让对应的main区域滚动条置顶
+     * @param {*} 
+     * @return {*}
+     */    
+    menuSelect() {
+      this.$refs["containers"].$el.scrollTop = 0
+    },
+  },
 };
 </script>
 <style lang="less">

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 15:47:33
- * @LastEditTime: 2021-07-04 09:58:35
+ * @LastEditTime: 2021-07-14 11:51:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/DevelopmentGuide/DevelopmentGuide/UpdateLog.vue
@@ -26,6 +26,38 @@
       <br />
     </p>
     <tb-timeline>
+      <tb-timeline-item color="success">
+        <i class="iconfont icon-setting-filling" slot="dot"></i>
+        <p class="version">0.5.8</p>
+        <p class="time">2021-07-14</p>
+        <p class="content">修复官网每次切换menu时滚动条不置顶问题</p>
+      </tb-timeline-item>
+      <tb-timeline-item color="success">
+        <i class="iconfont icon-setting-filling" slot="dot"></i>
+        <p class="version">0.5.7</p>
+        <p class="time">2021-07-05</p>
+        <p class="content">完成官网ui样式构建</p>
+        <p class="content">调整在编写官网时遇到的组件问题</p>
+        <p class="content">button边框、icon图标不对齐，调整整体色彩样式等</p>
+      </tb-timeline-item>
+      <tb-timeline-item color="success">
+        <i class="iconfont icon-setting-filling" slot="dot"></i>
+        <p class="version">0.5.6</p>
+        <p class="time">2021-06-29</p>
+        <p class="content">完成官网基础部分 并调整基础类型组件样式style等</p>
+      </tb-timeline-item>
+      <tb-timeline-item color="success">
+        <i class="iconfont icon-setting-filling" slot="dot"></i>
+        <p class="version">0.5.5</p>
+        <p class="time">2021-06-29</p>
+        <p class="content">调整 tinkerbell-ui 主题颜色样式等</p>
+      </tb-timeline-item>
+      <tb-timeline-item>
+        <i class="iconfont  icon-task-filling" slot="dot"></i>
+        <p class="version">0.5.4</p>
+        <p class="time">2021-06-27</p>
+        <p class="content">完成 tinkerbell-ui 官网雏形</p>
+      </tb-timeline-item>
       <tb-timeline-item>
         <i class="iconfont icon-task-filling" slot="dot"></i>
         <p class="version">0.5.3</p>
