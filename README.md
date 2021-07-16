@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-07-14 14:06:36
+ * @LastEditTime: 2021-07-16 09:54:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -128,6 +128,8 @@ Vue.use(Tinkerbell)
 #### 0.5.7 完成官网  并调整在编写官网时遇到的组件问题 如button边框、icon图标不对齐，调整整体色彩样式等
 
 #### 0.5.8 调整官网Log记录 修复官网每次切换menu时滚动条不置顶问题 调整button按钮  禁用时鼠标移入不显示禁用符号
+
+#### 0.5.9 调整官网 menu 样式底边框线变为白色 并为3px，menu组件对应下边框改为 IE 盒子模型
 
 ### 如有需要及时联系
 

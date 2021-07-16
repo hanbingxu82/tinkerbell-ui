@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-15 09:13:26
- * @LastEditTime: 2021-06-23 15:55:22
+ * @LastEditTime: 2021-07-16 09:51:02
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbMenu/main.vue
@@ -304,14 +304,15 @@ export default {
 
   &-light&-horizontal &-item,
   &-light&-horizontal > &-submenu {
+    box-sizing: border-box;
     height: inherit;
     line-height: inherit;
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
     color: rgba(0, 0, 0, 0.65);
     &-active,
     &:hover {
       color: #1089ff;
-      border-bottom: 2px solid #1089ff;
+      border-bottom: 3px solid #1089ff;
     }
   }
   &-light&-horizontal &-item {
@@ -745,5 +746,4 @@ export default {
 .horizontal-collapse-transition {
   transition: 0.3s width ease-in-out, 0.3s padding-left ease-in-out, 0.3s padding-right ease-in-out;
 }
-
 </style>

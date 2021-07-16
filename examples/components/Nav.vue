@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-23 15:28:49
- * @LastEditTime: 2021-07-04 16:20:26
+ * @LastEditTime: 2021-07-16 09:51:27
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/components/Nav.vue
@@ -17,7 +17,7 @@
       <!-- <tb-menu-item v-show="!isShowNav" name="/Start">起步介绍</tb-menu-item> -->
       <tb-menu-item v-show="!isShowNav" name="/Components" to="/Components/Introduction">组件</tb-menu-item>
       <tb-submenu v-show="isShowNav" name="Components">
-        <template slot="title" > <span class="downNav">导航</span> </template>
+        <template slot="title"> <span class="downNav">导航</span> </template>
         <tb-menu-item style="color:rgba(0,0,0,0.65)!important;" name="/" to="/">首页</tb-menu-item>
         <tb-menu-item style="color:rgba(0,0,0,0.65)!important;" name="/Components/Introduction" to="/Components/Introduction">组件</tb-menu-item>
       </tb-submenu>
@@ -39,7 +39,6 @@ export default {
   },
   methods: {
     onResizeFun() {
-
       if (window.innerWidth <= 1200) {
         this.isShowNav = true;
       } else {
@@ -48,7 +47,6 @@ export default {
     },
   },
   mounted() {
-
     // 页面加载完成之后就需要执行一次onResizeFun函数
     this.onResizeFun();
     /**
@@ -62,11 +60,18 @@ export default {
 };
 </script>
 <style lang="less" scoped>
-.downNav{
+
+/deep/ .tb-menu-light.tb-menu-horizontal .tb-menu-item-active,
+.tb-menu-light.tb-menu-horizontal > .tb-menu-submenu-active,
+.tb-menu-light.tb-menu-horizontal .tb-menu-item:hover,
+.tb-menu-light.tb-menu-horizontal > .tb-menu-submenu:hover {
+  border-bottom: 3px solid #FFFFFF;
+}
+.downNav {
   color: #ffffff;
 }
-/deep/.downNav+.tb-menu-submenu-title-icon{
-  color: #ffffff!important;
+/deep/.downNav + .tb-menu-submenu-title-icon {
+  color: #ffffff !important;
 }
 .bar_img {
   margin: auto;
