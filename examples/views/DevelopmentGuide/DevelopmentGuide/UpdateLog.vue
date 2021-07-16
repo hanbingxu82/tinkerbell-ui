@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 15:47:33
- * @LastEditTime: 2021-07-14 14:10:56
+ * @LastEditTime: 2021-07-16 10:19:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/DevelopmentGuide/DevelopmentGuide/UpdateLog.vue
@@ -26,6 +26,13 @@
       <br />
     </p>
     <tb-timeline>
+            <tb-timeline-item color="success">
+        <i class="iconfont icon-setting-filling" slot="dot"></i>
+        <p class="version">0.5.9</p>
+        <p class="time">2021-07-16</p>
+        <p class="content">修调整官网 menu 样式底边框线变为白色 并为3px</p>
+        <p class="content">调menu组件对应下边框改为 IE 盒子模型</p>
+      </tb-timeline-item>
       <tb-timeline-item color="success">
         <i class="iconfont icon-setting-filling" slot="dot"></i>
         <p class="version">0.5.8</p>
