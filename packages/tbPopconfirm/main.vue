@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-07 10:56:05
- * @LastEditTime: 2021-07-03 15:47:07
+ * @LastEditTime: 2021-07-30 15:53:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbPopconfirm/main.vue
@@ -247,7 +247,7 @@ export default {
 .tb-popconfirm__action {
   text-align: right;
   margin: 0;
-  .tb-button{
+  /deep/ .tb-button{
     margin-left: 10px;
   }
 }
