@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-24 13:12:07
- * @LastEditTime: 2021-07-14 11:06:17
+ * @LastEditTime: 2021-08-26 16:27:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/Components.vue
@@ -73,6 +73,7 @@
               <tb-menu-item to="/Components/Carousel" name="Carousel">Carousel 走马灯</tb-menu-item>
               <tb-menu-item to="/Components/Calendar" name="Calendar">Calendar 日历</tb-menu-item>
               <tb-menu-item to="/Components/Backtop" name="Backtop">Backtop 回到顶部</tb-menu-item>
+                   <tb-menu-item to="/Components/Affix" name="Affix">Affix 图钉</tb-menu-item>
               <tb-menu-item to="/Components/InfiniteScroll" name="InfiniteScroll">InfiniteScroll 无限滚动</tb-menu-item>
               <!-- <tb-menu-item to="/Components/Drawer" name="Drawer">Drawer 抽屉</tb-menu-item> -->
             </tb-menu-group>

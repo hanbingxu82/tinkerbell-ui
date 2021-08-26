@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-07-01 16:35:18
+ * @LastEditTime: 2021-08-26 16:23:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/inxex.js
@@ -106,6 +106,8 @@ import tbPagination from "./tbPagination/index"; // 引入分页组件
 
 import tbTableEazy from "./tbTableEazy/index"; // table组件
 
+import tbAffix from "./tbAffix/index"; // 引入图钉组件
+
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
 // 以数组的结构保存组件，便于遍历
@@ -171,6 +173,7 @@ const components = [
   tbFormItem,
   tbPagination,
   tbTableEazy,
+  tbAffix,
 ];
 
 // 定义 install 方法
@@ -249,7 +252,7 @@ const install = function(Vue) {
    * @param {*}
    * @return {*}
    */
-  Vue.prototype.$modal = tbModal
+  Vue.prototype.$modal = tbModal;
 };
 
 if (typeof window !== "undefined" && window.Vue) {
@@ -321,5 +324,5 @@ export default {
   tbFormItem,
   tbPagination,
   tbTableEazy,
-  tbLoadingBar
+  tbLoadingBar,
 };

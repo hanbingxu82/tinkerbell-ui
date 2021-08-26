@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-07-05 08:51:25
+ * @LastEditTime: 2021-08-26 16:28:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/router/index.js
@@ -255,6 +255,11 @@ const routes = [
         path: "Backtop",
         name: "Backtop",
         component: () => import("../views/ComponentsLibrary/Others/Backtop.vue"), // 组件-->其他-->回到顶部
+      },
+      {
+        path: "Affix",
+        name: "Affix",
+        component: () => import("../views/ComponentsLibrary/Others/Affix.vue"), // 组件-->其他-->图钉
       },
       {
         path: "InfiniteScroll",
