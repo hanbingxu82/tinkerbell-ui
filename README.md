@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:50
- * @LastEditTime: 2021-07-30 15:55:09
+ * @LastEditTime: 2021-08-26 17:05:19
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/README.md
@@ -132,6 +132,8 @@ Vue.use(Tinkerbell)
 #### 0.5.9 调整官网 menu 样式底边框线变为白色 并为3px，menu组件对应下边框改为 IE 盒子模型
 
 #### 0.6.0 调整官网 弹窗Popconfirm弹窗 有boxshadow阴影 再有按钮之间间距
+
+#### 0.6.1 新增 tb-affix 图钉(sticky定位)组件
 
 ### 如有需要及时联系
 
