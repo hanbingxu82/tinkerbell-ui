@@ -1,11 +1,12 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-20 09:29:42
- * @LastEditTime: 2021-07-02 11:47:58
+ * @LastEditTime: 2021-08-30 14:08:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbBreadcrumbItem/main.vue
---><template>
+-->
+<template>
   <span class="tb-breadcrumb__item">
     <span :class="['tb-breadcrumb__inner', to ? 'is-link' : '']" ref="link">
       <slot></slot>
