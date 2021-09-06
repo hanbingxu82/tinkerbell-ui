@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-08-26 16:28:00
+ * @LastEditTime: 2021-09-06 16:44:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/router/index.js
@@ -11,6 +11,8 @@ import VueRouter from "vue-router";
 import Page from "../views/Page.vue";
 import Components from "../views/Components.vue";
 import tinkerbellUI from "../../packages/index";
+
+import testHome from "../../examples/views/Home.vue";
 Vue.use(VueRouter);
 
 const routes = [
@@ -18,6 +20,11 @@ const routes = [
     path: "/",
     name: "Page",
     component: Page,
+  },
+  {
+    path: "/testHome",
+    name: "testHome",
+    component: testHome,
   },
   {
     path: "/Components",
