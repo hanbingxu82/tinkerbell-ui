@@ -1,13 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-07-05 08:46:45
+ * @LastEditTime: 2021-09-06 16:01:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/App.vue
 -->
 <template>
   <div id="app">
+    测试提交 服务器是否响应
     <!-- <tb-button type="primary" >Info</tb-button>
     <tb-button type="primary" @click="$alert({ title: '标题', content: '我是弹窗内容', width: 500 })">Info</tb-button>
     <tb-button type="success" @click="$alert({ type: 'success', title: '标题', content: '我是弹窗内容' })">Success</tb-button>
