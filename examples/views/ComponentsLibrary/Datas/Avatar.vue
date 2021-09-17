@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-06-30 13:39:12
- * @LastEditTime: 2021-07-01 11:18:41
+ * @LastEditTime: 2021-09-17 08:30:43
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/examples/views/ComponentsLibrary/Datas/Avatar.vue
@@ -315,9 +315,9 @@ export default {
               `,
       html3: `    <template>
         <div class="demo-type">
-            <el-avatar :size="60" src="https://empty" @error="errorHandler">
+            <tb-avatar :size="60" src="https://empty" @error="errorHandler">
             <img src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png"/>
-            </el-avatar>
+            </tb-avatar>
         </div>
     </template>
     <script>
