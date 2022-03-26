@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-20 10:23:44
- * @LastEditTime: 2021-07-01 14:16:51
+ * @LastEditTime: 2022-03-24 14:47:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbAlert/main.vue
@@ -32,7 +32,7 @@ export default {
   props: {
     title: {
       type: String,
-      requre: true,
+      require: true,
       default() {
         // 判断是不是传递的单纯文本，只允许放置文本
         const defaultNode = this.$slots.default;

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-05-19 15:22:23
- * @LastEditTime: 2021-06-30 09:33:55
+ * @LastEditTime: 2022-01-05 15:09:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /hx/packages/tbRate/main.vue
@@ -186,4 +186,5 @@ export default {
 .Rate__view.disabled .desc {
   color: #ccc;
 }
+
 </style>
