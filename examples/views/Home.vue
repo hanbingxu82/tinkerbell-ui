@@ -1,19 +1,25 @@
 <!--
  * @Author: your name
  * @Date: 2021-03-16 13:46:44
- * @LastEditTime: 2021-09-28 21:47:15
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-08-25 09:20:06
+ * @LastEditors: hanbingxu
  * @Description: In User Settings Edit
- * @FilePath: /hx/examples/App.vue
+ * @FilePath: /hx/examples/views/Home.vue
 -->
 <template>
   <div id="app">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    测试数据
+    <div
+      style="height:400px;border:1px solid red;text-align:center;margin-top:100px"
+      id="test-box"
+    >123123s</div>
+
+    <br />
+    <div
+      style="height:400px;border:1px solid red;text-align:center;margin-top:100px"
+      id="test-box1"
+    >567890</div>
+
+    <br />测试数据
     <!-- <tb-button type="primary" >Info</tb-button>
     <tb-button type="primary" @click="$alert({ title: '标题', content: '我是弹窗内容', width: 500 })">Info</tb-button>
     <tb-button type="success" @click="$alert({ type: 'success', title: '标题', content: '我是弹窗内容' })">Success</tb-button>
@@ -37,7 +43,7 @@
         <p>我是弹窗内容...</p>
         <p>我是弹窗内容...</p>
       </tb-modal>
-    </tb-modal> -->
+    </tb-modal>-->
     <!-- <tb-popover trigger="hover" title="Title" content="content">
       <tb-button>Hover</tb-button>
     </tb-popover>
@@ -115,7 +121,7 @@
     <p>开启的tab：{{ activeTab }}</p>
     <!-- <tb-upload paste :format="['xlsx']" action="//jsonplaceholder.typicode.com/posts/" type="drag">
       <p slot="tip">单个文件不能超过2M</p>
-    </tb-upload> -->
+    </tb-upload>-->
     <!-- 
     <tb-steps :current="current" status="wait">
       <tb-step title="已完成" content="这里是该步骤的描述信息"></tb-step>
@@ -146,7 +152,7 @@
       <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
       <tb-step title="待进行" content="这里是该步骤的描述信息"></tb-step>
     </tb-steps>
-    <tb-button type="primary" @click="next">下一步</tb-button> -->
+    <tb-button type="primary" @click="next">下一步</tb-button>-->
 
     <!-- <tb-progress :percent="10"></tb-progress>
     <tb-progress :percent="20" status="success"></tb-progress>
@@ -155,11 +161,11 @@
     <tb-progress :percent="50" color="#9254de"></tb-progress>
     <tb-progress :percent="60" :color="['#f5af19', '#f12711', '#9254de', '#40a9ff', '#5cdbd3']" :border="false"></tb-progress>
     <tb-progress :percent="70" :color="['#40a9ff', '#5cdbd3']" bg-color="#d9f7be"></tb-progress>
-    <tb-progress :percent="percent" :color="getColor"></tb-progress> -->
+    <tb-progress :percent="percent" :color="getColor"></tb-progress>-->
     <!-- <tb-progress :percent="40" active></tb-progress>
     <tb-progress :percent="60" active active-color="#f12711"></tb-progress>
     <tb-progress :percent="80" active :color="['#f5af19', '#f12711', '#9254de', '#40a9ff', '#5cdbd3']"></tb-progress>
-    <tb-progress :percent="100" :color-flow="true"></tb-progress> -->
+    <tb-progress :percent="100" :color-flow="true"></tb-progress>-->
     <!-- <tb-progress :percent="20"></tb-progress>
     <tb-progress :percent="40" status="success" type="lump"></tb-progress>
     <tb-progress :percent="60" :line-height="10" status="warning" type="lump" active :border="false"></tb-progress>
@@ -167,12 +173,12 @@
     <tb-progress :percent="50"></tb-progress>
     <tb-progress :percent="60" status="success" :show-text="false"></tb-progress>
     <tb-progress :percent="80" status="warning" :format="format"></tb-progress>
-    <tb-progress :percent="100" status="error" :format="format"></tb-progress> -->
+    <tb-progress :percent="100" status="error" :format="format"></tb-progress>-->
     <!-- <tb-input-number :min="0" :max="100" :step="0.111111111111111"  v-model="yourVModel" /> -->
     <!-- <tb-switch @change="change" v-model="value" checked-text="开" unchecked-text="关" /> -->
     <!-- <tb-button @click="loading">开</tb-button>
     <tb-button @click="loading1">关</tb-button>
-    <tb-button @click="loading2">错误</tb-button> -->
+    <tb-button @click="loading2">错误</tb-button>-->
     <!-- <tb-timeline>
       <tb-timeline-item>
         <p class="time">2019年4月12日</p>
@@ -209,11 +215,9 @@
       <tb-timeline-item>发布2.0版本</tb-timeline-item>
       <tb-timeline-item>发布1.5版本</tb-timeline-item>
       <tb-timeline-item>发布1.0版本</tb-timeline-item>
-    </tb-timeline> -->
+    </tb-timeline>-->
     <div>
-      <tb-alert type="success">
-        123123
-      </tb-alert>
+      <tb-alert type="success">123123</tb-alert>
       <tb-alert type="info">消息提示的文案</tb-alert>
       <tb-alert type="warning" title="警告提示的文案"></tb-alert>
       <tb-alert type="danger" title="错误提示的文案"></tb-alert>
@@ -232,14 +236,21 @@
       <tb-alert type="info" close-text="知道了">自定义关闭的 alert</tb-alert>
       <tb-alert type="warning" @close="hello">设置了回调的 alert</tb-alert>
       <br />
-      <tb-alert type="success" description="这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰……">带辅助性文字介绍</tb-alert>
-      <tb-alert type="info" show-icon description="这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰……">带有 icon 和辅助性文字介绍</tb-alert>
+      <tb-alert
+        type="success"
+        description="这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰……"
+      >带辅助性文字介绍</tb-alert>
+      <tb-alert
+        type="info"
+        show-icon
+        description="这是一句绕口令：黑灰化肥会挥发发灰黑化肥挥发；灰黑化肥会挥发发黑灰化肥发挥。 黑灰化肥会挥发发灰黑化肥黑灰……"
+      >带有 icon 和辅助性文字介绍</tb-alert>
       <!-- <tb-breadcrumb separator="/" separator-class="icon-mic">
       <tb-breadcrumb-item :to="{ path: '/' }" replace>首页</tb-breadcrumb-item>
       <tb-breadcrumb-item><a href="/">活动管理</a></tb-breadcrumb-item>
       <tb-breadcrumb-item :to="{ path: '/' }" replace>活动列表</tb-breadcrumb-item>
       <tb-breadcrumb-item>活动详情</tb-breadcrumb-item>
-    </tb-breadcrumb> -->
+      </tb-breadcrumb>-->
       <!-- <tb-rate v-model="myCurrentRate" :length="5" :activecolor="activecolor" />
 
     <tb-rate :length="5" :value="3" />
@@ -258,17 +269,23 @@
 
     <tb-rate disabled showcount :length="5" :value="3" />
 
-    <tb-rate disabled :length="5" :value="3" :ratedesc="desc" /> -->
+      <tb-rate disabled :length="5" :value="3" :ratedesc="desc" />-->
 
       <!-- <tb-page-header @back="goBack" content="详情页面"> </tb-page-header> -->
       <!-- <div v-infinite-scroll="loadMore" infinite-scroll-disabled="busy" infinite-scroll-distance="10">
       <div v-for="item in data" :key="item.name">
         {{ item.name }}
       </div>
-    </div> -->
+      </div>-->
       <tb-button @click="activecolor = 'green'">123</tb-button>
-      <tb-showmore :len="10" text="文本超出显示长度，折叠起来，通过len属性显示从何处开始折叠"> </tb-showmore>
-      <tb-showmore allowFold :len="10" show-text="show" hidden-text="hidden" text="文本超出显示长度，折叠起来，通过len属性显示从何处开始折叠"> </tb-showmore>
+      <tb-showmore :len="10" text="文本超出显示长度，折叠起来，通过len属性显示从何处开始折叠"></tb-showmore>
+      <tb-showmore
+        allowFold
+        :len="10"
+        show-text="show"
+        hidden-text="hidden"
+        text="文本超出显示长度，折叠起来，通过len属性显示从何处开始折叠"
+      ></tb-showmore>
       <!-- <div class="demo">
       <tb-carousel ref="tbCarousel" @change="carouselChange" trigger="click" :interval="7000" height="260px" type="card" arrow="never">
         <tb-carousel-item :name="'小仙男' + i"  v-for="i in 6" :key="i">
@@ -283,22 +300,22 @@
     </div>
     <tb-button type="primary" @click="next">1111</tb-button>
     <tb-button type="primary" @click="prev">2222</tb-button>
-    <tb-button type="primary" @click="setActiveItem">3333</tb-button> -->
+      <tb-button type="primary" @click="setActiveItem">3333</tb-button>-->
 
       <!-- <tb-backtop text="小仙男" :visibleY="460" :duration="300" @scrolledOnTop="yourFunction()"> </tb-backtop>
     <div style="height:3000px;background:green;">
       <div @click="yourFunction" class="gotop">
         123
       </div>
-    </div> -->
+      </div>-->
       <!-- <tb-avatar :size="60" src="https://empty" :error="errorHandler">
       <img src="https://cube.elemecdn.com/e/fd/0fc7d20532fdaf769a25683617711png.png" />
-    </tb-avatar> -->
+      </tb-avatar>-->
       <!-- 
     <div class="block" v-for="fit in fits" :key="fit">
       <span class="title">{{ fit }}</span>
       <tb-avatar shape="square" :size="100" :fit="fit" :src="url"></tb-avatar>
-    </div> -->
+      </div>-->
       <!-- <div>
         <span>头上一片晴天，心中一个想念</span>
         <tb-divider content-position="left">少年包青天</tb-divider>
@@ -313,23 +330,23 @@
         <span>旧故里</span>
         <tb-divider direction="vertical"></tb-divider>
         <span>草木深</span>
-      </div> -->
+      </div>-->
 
       <!-- <tb-popconfirm @confirm="confirm" @cancel="cancel" confirm-button-text="111" cancel-button-text="222" confirm-button-type="success" cancel-button-type="danger" title="我是不是一个？" icon="icon-unlock" icon-color="red" >
         <tb-button slot="reference">123</tb-button>
-      </tb-popconfirm> -->
+      </tb-popconfirm>-->
       <!-- <tb-calendar :options="calendarArr" class="calendar" @handleClickDay="handleClickDay" @handlePrevMonth="handlePrevMonth" @handleNextMonth="handleNextMonth" /> -->
 
       <!-- 完成  颜色选择器组件 -->
       <!-- <input type="text" id="color-picker" v-model="color" auto-complete="off" @focus="openPicker" :style="'background-color:' + color" />
       <tb-color ref="tbColor" :color="color" :targetElem="'#color-picker'" @onChange="onChange"> </tb-color>
-      <tb-color-picker v-model="color" @change="headleChangeColor"></tb-color-picker> -->
+      <tb-color-picker v-model="color" @change="headleChangeColor"></tb-color-picker>-->
 
       <!-- <tb-tag effect="dark">蓝色</tb-tag>
       <tb-tag size="mini" type="success" >绿色</tb-tag>
       <tb-tag @click="click1" @close="close" size="medium" type="warning">黄色</tb-tag>
       <tb-tag @close="close" type="info">灰色</tb-tag>
-      <tb-tag effect="plain" type="danger">红色</tb-tag> -->
+      <tb-tag effect="plain" type="danger">红色</tb-tag>-->
 
       <!-- <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
       <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
@@ -344,7 +361,7 @@
       </tb-checkbox-group>
       <tb-checkbox-group :min="1" :max="2" v-model="checkedCities" @change="handleCheckedCitiesChange">
         <tb-checkbox-button v-for="city in cities" :label="city" :key="city">{{ city }}</tb-checkbox-button>
-      </tb-checkbox-group> -->
+      </tb-checkbox-group>-->
     </div>
     <div>
       <tb-checkbox v-model="checkbox" border>小仙子</tb-checkbox>
@@ -416,25 +433,32 @@
       <tb-link :underline="false" type="success">成功链接</tb-link>
       <tb-link :underline="false" type="warning">警告链接</tb-link>
       <!-- <tb-link  type="danger">危险链接</tb-link>
-      <tb-link  type="info">信息链接</tb-link> -->
+      <tb-link  type="info">信息链接</tb-link>-->
       <tb-link icon="icon-layers" type="danger">危险链接</tb-link>
-      <tb-link type="info">信息链接<i class="iconfont">&#xe6ad;</i></tb-link>
+      <tb-link type="info">
+        信息链接
+        <i class="iconfont">&#xe6ad;</i>
+      </tb-link>
     </div>
     <Xiaoxiannan></Xiaoxiannan>
     <!-- tb-row  tb-col -->
     <tb-row :gutter="20" align="bottom">
-      <tb-col :xs="{ span: 8, offset: 2 }" :sm="{ span: 6, offset: 4 }" :md="{ span: 4, offset: 6 }" :lg="{ span: 2, offset: 8 }" :xl="{ span: 1, offset: 9 }">
+      <tb-col
+        :xs="{ span: 8, offset: 2 }"
+        :sm="{ span: 6, offset: 4 }"
+        :md="{ span: 4, offset: 6 }"
+        :lg="{ span: 2, offset: 8 }"
+        :xl="{ span: 1, offset: 9 }"
+      >
         <!-- 默认最小高度为36px  所以如果不设置height:100%的话会根据流动高度来走 -->
         <div style="background:red;">123</div>
       </tb-col>
       <tb-col :span="4" :offset="4">
-        <div style="background:red;"></div>
-        456</tb-col
-      >
+        <div style="background:red;"></div>456
+      </tb-col>
       <tb-col :span="4">
-        <div style="background:red;"></div>
-        789</tb-col
-      >
+        <div style="background:red;"></div>789
+      </tb-col>
     </tb-row>
 
     <Xiaoxiannan></Xiaoxiannan>
@@ -504,22 +528,35 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
-    <router-view/> -->
+    <router-view/>-->
   </div>
 </template>
 <script>
+import tbLoadingBarNum from '../../packages/tbLoadingBarNum'
 const cityOptions = ["上海", "北京", "广州", "深圳"];
 window.COUNT = 1;
 export default {
-  created() {
+  created () {
     for (var i = 0; i < 200; i++) {
       this.list.push({
         title: "item " + COUNT++,
       });
     }
   },
-  data() {
+  mounted () {
+    this.loadingNode = tbLoadingBarNum().config({
+      speed: 1,
+      loadingNode: '#test-box'
+    })
+    this.loadingNode1 = tbLoadingBarNum().config({
+      speed: 1,
+      loadingNode: '#test-box1'
+    })
+  },
+  data () {
     return {
+      loadingNode: null,
+      loadingNode1: null,
       percent: 10,
       ifUp: true,
       yourVModel: 0,
@@ -576,7 +613,7 @@ export default {
     };
   },
   methods: {
-    showAlert() {
+    showAlert () {
       this.$confirm({
         type: "danger",
         title: "标题",
@@ -586,60 +623,60 @@ export default {
         },
       });
     },
-    ok() {
+    ok () {
       console.log(123);
     },
-    handleTabClose(tab) {
+    handleTabClose (tab) {
       this.tabs.splice(
         this.tabs.findIndex((t) => t.key === tab.key),
         1
       );
     },
     // 缓存右键选中的tab
-    handleSelect(tab) {
+    handleSelect (tab) {
       this.selectTab = { ...tab };
     },
     // 刷新当前view
-    refreshSelected() {
+    refreshSelected () {
       this.$message("刷新当前view:" + this.selectTab.title);
     },
-    closeSelected() {
+    closeSelected () {
       // 这里需要调用组件的关闭选择的tag
       this.$refs.tabs.closeSelectedTab(this.selectTab);
     },
     // 关闭其他tags
-    closeOthers() {
+    closeOthers () {
       this.tabs = [this.selectTab];
       this.activeTab = this.selectTab.key;
       this.$refs.tabs.moveToCurrentTab();
     },
     // 关闭所有
-    closeAll() {
+    closeAll () {
       this.tabs = [];
       this.activeTab = "";
       this.$refs.tabs.moveToCurrentTab();
     },
-    handleAdd() {
+    handleAdd () {
       // 这里需要保证key值唯一否则会影响渲染显示
       const newTab = { key: `tab${+new Date()}`, title: "New Tab" };
       this.tabs.push(newTab);
       // 增加完毕后通常默认选中这个新的tab，当然，你也可以不设置选中新的tab
       this.activeTab = newTab.key;
     },
-    handleTabClose(tab) {
+    handleTabClose (tab) {
       this.tabs.splice(
         this.tabs.findIndex((t) => t.key === tab.key),
         1
       );
     },
-    next() {
+    next () {
       if (this.current === 3) {
         this.current = 0;
       } else {
         this.current += 1;
       }
     },
-    loading(nodesc) {
+    loading (nodesc) {
       // this.$notify.config({
       //   top: 300,
       //   duration: 3,
@@ -716,28 +753,28 @@ export default {
       //   speed: 10,
       // });
     },
-    loading1() {
+    loading1 () {
       let num = this.$message({ type: "success", duration: 0, content: "look" });
-      setTimeout(function() {
+      setTimeout(function () {
         // num();
       }, 3000);
       // this.$loading.error()
       // this.$loading.end();
     },
-    loading2() {
+    loading2 () {
       // this.$loading.error()
       // this.$loading.error();
     },
-    change(data) {
+    change (data) {
       console.log(data);
     },
-    format(percent) {
+    format (percent) {
       if (percent == 100) {
         return "^_^";
       }
       return "QAQ";
     },
-    getColor(percent) {
+    getColor (percent) {
       if (percent < 40) {
         return "#ffc069";
       } else if (percent < 60) {
@@ -749,13 +786,13 @@ export default {
       }
     },
 
-    hello() {
+    hello () {
       alert("hello world!");
     },
-    goBack() {
+    goBack () {
       console.log("go back");
     },
-    loadMore: function() {
+    loadMore: function () {
       this.busy = true;
       setTimeout(() => {
         for (var i = 0, j = 200; i < j; i++) {
@@ -764,87 +801,87 @@ export default {
         this.busy = false;
       }, 0);
     },
-    setData(data) {
+    setData (data) {
       this.data = data;
     },
-    carouselChange(data) {
+    carouselChange (data) {
       console.log(data);
     },
-    setActiveItem(e) {
+    setActiveItem (e) {
       this.$refs.tbCarousel.setActiveItem("小仙男6");
     },
-    prev(e) {
+    prev (e) {
       this.$refs.tbCarousel.prev();
     },
-    next(e) {
+    next (e) {
       this.$refs.tbCarousel.next();
     },
-    yourFunction() {
+    yourFunction () {
       document.scrollingElement.scrollTop = 0;
     },
-    errorHandler() {
+    errorHandler () {
       console.log("我是abc！");
       return false;
     },
-    confirm() {
+    confirm () {
       console.log("成功");
     },
-    cancel() {
+    cancel () {
       console.log("取消");
     },
     // 点击某一天触发的事件
-    handleClickDay(day) {
+    handleClickDay (day) {
       console.log(day);
     },
     // 上一个月  time 是当前年月日  日期默认为1号
-    handlePrevMonth(time) {
+    handlePrevMonth (time) {
       console.log(time);
     },
     // 下一个月  time 是当前年月日  日期默认为1号
-    handleNextMonth(time) {
+    handleNextMonth (time) {
       console.log(time);
     },
-    headleChangeColor(val) {
+    headleChangeColor (val) {
       console.log(val);
     },
-    openPicker(event) {
+    openPicker (event) {
       this.$refs.tbColor.openPicker();
       this.$refs.tbColor.updateValue(event);
     },
-    closePicker() {
+    closePicker () {
       //this.$refs.colorPicker.closePicker();
     },
-    onChange(color) {
+    onChange (color) {
       this.color = color;
     },
-    click1() {
+    click1 () {
       console.log("我点击了按钮");
     },
-    close() {
+    close () {
       console.log("我点击了关闭");
     },
-    handleCheckAllChange(val) {
+    handleCheckAllChange (val) {
       this.checkedCities = val ? cityOptions : [];
       this.isIndeterminate = false;
     },
-    handleCheckedCitiesChange(value) {
+    handleCheckedCitiesChange (value) {
       let checkedCount = value.length;
       this.checkAll = checkedCount === this.cities.length;
       this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
     },
-    loadm() {
+    loadm () {
       // console.log(123)
       this.load = !this.load;
       // console.log(this.load)
     },
-    check(val) {
+    check (val) {
       console.log(val);
     },
-    abc() {
+    abc () {
       this.dis = !this.dis;
       console.log(this.radio);
     },
-    radioChange(val) {
+    radioChange (val) {
       console.log(val);
     },
   },
@@ -891,7 +928,11 @@ h1 {
   justify-content: center;
   align-items: center;
   color: #fff;
-  background: linear-gradient(90deg, rgba(88, 140, 236, 1), rgba(106, 106, 207, 1));
+  background: linear-gradient(
+    90deg,
+    rgba(88, 140, 236, 1),
+    rgba(106, 106, 207, 1)
+  );
 }
 .time {
   font-size: 13px;

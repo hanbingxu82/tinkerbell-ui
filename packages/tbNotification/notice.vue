@@ -27,7 +27,7 @@
             <b-icon :name="iconTypes"></b-icon>
             <span>{{ content }}</span>
           </div>
-          <div :class="[baseClass + '-content-text']">
+          <div :class="[baseClass + '-content-text']"></div>
             <render-cell :render="renderFunc"></render-cell>
           </div>
           <a :class="[baseClass + '-close']" @click="close" v-if="closable">

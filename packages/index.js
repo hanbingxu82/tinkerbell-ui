@@ -1,10 +1,10 @@
 /*
  * @Author: your name
  * @Date: 2021-03-16 14:05:32
- * @LastEditTime: 2021-08-26 16:23:43
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2022-08-25 09:10:43
+ * @LastEditors: hanbingxu
  * @Description: In User Settings Edit
- * @FilePath: /hx/packages/inxex.js
+ * @FilePath: /hx/packages/index.js
  */
 
 // 导入单个组件
@@ -107,6 +107,8 @@ import tbPagination from "./tbPagination/index"; // 引入分页组件
 import tbTableEazy from "./tbTableEazy/index"; // table组件
 
 import tbAffix from "./tbAffix/index"; // 引入图钉组件
+
+import tbLoadingBarNum from './tbLoadingBarNum/index' // 引入局部加载进度条组件
 
 import "./iconfont/iconfont.css"; //导入icon图标
 import "./global.css";
@@ -325,4 +327,5 @@ export default {
   tbPagination,
   tbTableEazy,
   tbLoadingBar,
+  tbLoadingBarNum
 };
