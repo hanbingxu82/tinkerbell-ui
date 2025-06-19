@@ -3,12 +3,12 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-08-20 12:00:47
- * @LastEditTime: 2022-08-25 09:11:08
- * @LastEditors: hanbingxu
+ * @LastEditTime: 2025-06-19 14:54:30
+ * @LastEditors: Please set LastEditors
  * @FilePath: /hx/packages/tbLoadingBarNum/main.vue
 -->
 <template>
-  <div class="tb__loading-bar">
+  <div class="tb__loading-bar center">
     <div
       class="tb__loading-bar--bar"
       :class="isError ? 'tb__loading-bar--error' : ''"
@@ -56,7 +56,7 @@ export default {
 }
 </script>
 <style lang="less" >
-.tb__loading-bar {
+.tb__loading-bar.center {
   &--bar {
     position: absolute;
     margin-top: 20px;
